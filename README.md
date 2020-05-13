@@ -33,7 +33,7 @@ Windows
 vendor\bin\homestead make
 ```
 
-### Step 4: Sart Vagrant machine and login
+### Step 4: Start Vagrant machine and login
 
 Start vagrant machine
 ```console 
