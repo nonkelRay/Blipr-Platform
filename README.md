@@ -11,7 +11,7 @@
 
 in new folder
 ```console
-git clone git@github.com:nonkelRay/Blipr-Platform.git
+git clone https://github.com/nonkelRay/Blipr-Platform.git
 ```
 
 ### Step 3: Composer install
