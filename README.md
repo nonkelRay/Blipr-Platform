@@ -9,32 +9,38 @@
 
 ### Step 2: Pull Repo in new folder
 
-``` in new folder
+in new folder
+```console
 git pull git@github.com:nonkelRay/Blipr-Platform.git
 ```
 
 ### Step 3: Composer install
 
-``` in project root
+in project root
+```console 
 composer install
 ```
 
 ### Step 3: Generate the Vagrantfile and Homestead.yaml file in your project root
 
-``` MAC OS
+Mac
+```console 
 php vendor/bin/homestead make
 ```
 
-``` Windows
+Windows 
+```console 
 vendor\bin\homestead make
 ```
 
 ### Step 4: Sart Vagrant machine and login
 
-``` Start vagrant machine
+Start vagrant machine
+```console 
 vagrant up
 ```
 
-``` login to vagrant machine
+login to vagrant machine
+```console
 vagrant ssh
 ```
