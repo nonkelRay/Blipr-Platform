@@ -9,14 +9,14 @@
 
 ### Step 2: Clone Repo in new folder
 
-in new folder
+In new folder
 ```console
 git clone https://github.com/nonkelRay/Blipr-Platform.git
 ```
 
 ### Step 3: Composer install
 
-in project root
+In project root
 ```console 
 composer install
 ```
@@ -40,7 +40,12 @@ Start vagrant machine
 vagrant up
 ```
 
-login to vagrant machine
+Login to vagrant machine
 ```console
 vagrant ssh
+```
+
+Shut down vagrant machine
+```console
+vagrant halt 
 ```
