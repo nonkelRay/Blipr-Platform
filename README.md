@@ -7,11 +7,11 @@
 1. Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) for your OS.
 2. Install [Vagrant](https://www.vagrantup.com/downloads.html) for your OS.
 
-### Step 2: Pull Repo in new folder
+### Step 2: Clone Repo in new folder
 
 in new folder
 ```console
-git pull git@github.com:nonkelRay/Blipr-Platform.git
+git clone git@github.com:nonkelRay/Blipr-Platform.git
 ```
 
 ### Step 3: Composer install
