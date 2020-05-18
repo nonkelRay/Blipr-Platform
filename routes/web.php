@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// landingpage
 Route::get('/', function () {
-    return view('landingspage');
+    return view('landing');
 });
+
+// all routes for authentication
+Auth::routes();
+
+// homepage
+Route::get('/home', 'HomeController@index')->name('home');
