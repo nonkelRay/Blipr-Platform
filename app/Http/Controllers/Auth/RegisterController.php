@@ -34,8 +34,6 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -45,46 +43,41 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
+     *
      * @return ValidationValidator
      */
     protected function validator(array $data): ValidationValidator
     {
         $messages = [
             'email.required' => 'We need to know your e-mail address!',
-            'date_of_birth.required' => 'We need to know your birthday!',
             'date_of_birth.before' => 'Are you a time traveler?',
             'password.required' => 'How will you log in?',
             'password.confirmed' => 'Passwords must match!',
-            'password.regex' => 'Your password needs to contain an uppercase character (A – Z), a lowercase character (a – z) and a digit (0 – 9).'
+            'password.regex' => 'Your password needs to contain an uppercase character (A – Z), a lowercase character (a – z) and a digit (0 – 9).',
         ];
 
         $rules = [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'date_of_birth' => ['required','date_format:Y-m-d','before:today'],
+            'date_of_birth' => ['date_format:Y-m-d', 'before:today'],
             'password' => [
                 'required',
                 'string',
                 'min:8',
                 'confirmed',
-                'regex:/^.*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$/'
-            ]
+                'regex:/^.*(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$/',
+            ],
         ];
 
         return Validator::make($data, $rules, $messages);
-
-        /*return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/', 'confirmed'],
-        ]);*/
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
+     *
      * @return User
      */
     protected function create(array $data): User

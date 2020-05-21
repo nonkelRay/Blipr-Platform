@@ -24,3 +24,7 @@ Auth::routes();
 
 // homepage
 Route::get('/home', 'HomeController@index')->name('home');
+
+// facebook login
+Route::get('login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
