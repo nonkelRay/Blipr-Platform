@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::SUBS;
 
     /**
      * Create a new controller instance.
@@ -52,6 +52,7 @@ class RegisterController extends Controller
         $messages = [
             'email.required' => 'We need to know your e-mail address!',
             'date_of_birth.before' => 'Are you a time traveler?',
+            'date_of_birth.required' => 'We need to know your birthday!',
             'password.required' => 'How will you log in?',
             'password.confirmed' => 'Passwords must match!',
             'password.regex' => 'Your password needs to contain an uppercase character (A – Z), a lowercase character (a – z) and a digit (0 – 9).',
@@ -60,7 +61,7 @@ class RegisterController extends Controller
         $rules = [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'date_of_birth' => ['date_format:Y-m-d', 'before:today'],
+            'date_of_birth' => ['required', 'date_format:Y-m-d', 'before:today'],
             'password' => [
                 'required',
                 'string',
