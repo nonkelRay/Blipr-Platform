@@ -1,0 +1,21 @@
+.home-nav {
+    background-color: $black;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brand {
+            color: $white;
+            background-image: url("/images/logo.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 60px;
+            width: 40px;
+            text-indent: -9999px;
+        }
+    }
+}
