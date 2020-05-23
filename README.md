@@ -40,6 +40,11 @@ Start vagrant machine
 vagrant up
 ```
 
+if vagrant machine is not working try
+```console 
+vagrant provision
+```
+
 Login to vagrant machine
 ```console
 vagrant ssh
@@ -48,4 +53,15 @@ vagrant ssh
 Shut down vagrant machine
 ```console
 vagrant halt 
+```
+### Step 5: Write frontend
+
+Install node modules (in root folder)
+```console
+npm i
+```
+
+Before writing frontend 
+```console
+npm run watch (this will look for changes in de .sass en .js files)
 ```

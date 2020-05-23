@@ -1,1 +1,17 @@
-//
+@import "common/variables";
+// @import "~some-node-module";
+/** Import theme styles */
+@import "resets/normalize";
+@import "resets/local.reset";
+
+@import "common/fonts";
+@import "common/global";
+
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/frontpage";
+
