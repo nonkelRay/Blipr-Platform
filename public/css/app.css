@@ -576,6 +576,10 @@ body {
   overflow: hidden;
 }
 
+.active {
+  display: block !important;
+}
+
 p {
   font-size: 16px;
   line-height: 1.5;
@@ -617,15 +621,22 @@ h2 {
 /** Search form */
 
 .mobile-menu {
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   z-index: 90;
   background-color: black;
   color: white;
   padding-top: 75px;
+  display: none;
+}
+
+.mobile-menu nav {
+  margin-top: 60px;
 }
 
 .mobile-menu ul {
@@ -663,6 +674,7 @@ h2 {
   height: 60px;
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 
 .home-nav .container {
