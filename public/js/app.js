@@ -19283,6 +19283,15 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+console.log('yihaa');
+var hamburger = document.querySelector('hamburger');
+
+hamburger.onclick = function () {
+  console.log('yes');
+  this.classList.toggle('is-active');
+  document.querySelector(body).classList.toggle('scroll-lock');
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

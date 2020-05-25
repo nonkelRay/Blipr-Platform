@@ -8,6 +8,25 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
     </head>
     <body class="frontpage">
+        <div class="mobile-menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Our plans</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <a href="https://www.instagram.com/blipr.app/" target="_blank"><img src="{{ asset('images/insta.png') }}" alt=""></a>
+                    <a href="https://www.facebook.com/Blipr-105156707830640" target="_blank"><img src="{{ asset('images/fb.png') }}" alt=""></a>
+                </div>
+            </div>
+        </div>
         <nav class="home-nav">
             <div class="container">
                 <a href="/" class="brand">Blipr</a>
@@ -20,7 +39,7 @@
         </nav>
         <section class="hero">
             <div class="container">
-                <h1>Enjoy at any time<span>.</span></h1>
+                <h1>Enjoy at any time</h1>
                 <img src="{{ asset('images/hero-image.png') }}" alt="">
                 <div class="text">
                     <p>Blipr is a platform that captures your musical experiences. Save your beloved memories with a single blip and relive them at any time. No more filming, distractions or empty batteries.</p>
@@ -30,7 +49,7 @@
         </section>
         <section class="tutorial">
             <div class="container">
-                <h1>How it works<span>.</span></h1>
+                <h1>How it works</h1>
                 <img src="{{ asset('images/tutorial-placeholder.png') }}" alt="">
             </div>
         </section>
@@ -38,7 +57,7 @@
             <div class="container">
                 <img src="{{ asset('images/business.png') }}" alt="">
                 <div class="text">
-                    <h1>Blipr Business<span>.</span></h1>
+                    <h1>Blipr Business</h1>
                     <p>Since the music scene depends on the hard work and dedication of venues and event organizers we want to give something in return. Next to a digital experience to offer to their audience we will offer a commission for every Blipr user. This way we can expand our Blipr family and work towards a better music experience all over the world.</p>
                     <a href="#" class="btn">discover more</a>
                 </div>
@@ -47,21 +66,48 @@
         <section class="store">
             <div class="container">
                 <div class="text">
-                    <h1>Our application<span>.</span></h1>
+                    <h1>Our application</h1>
                     <p>The Blipr application is developed so you can keep your memories as close as possible. Access your blips, find new concerts or connect with your friends. Our application knows you and your music taste very well and is completely personalized just for you.</p>
+                    <div class="download">
+                        <img src="{{ asset('images/playstore.png') }}" alt="">
+                        <img src="{{ asset('images/appstore.png') }}" alt="">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="shows">
             <div class="container">
-                <h1>Upcoming shows<span>.</span></h1>
-                <div class="show-images">
-
+                <h1>Upcoming shows</h1>
+                <div class="mobile">
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
                 </div>
             </div>
         </section>
-        <footer>
-            
+        <section class="partners">
+            <div class="container">
+                <h1>Our partners</h1>
+                <div class="partner-logos">
+                    <img src="{{ asset('images/lofelt.png') }}" alt="">
+                    <img src="{{ asset('images/tm.png') }}" alt="">
+                    <img src="{{ asset('images/made.png') }}" alt="">
+                </div> 
+            </div>
+        </section>
+        <footer class="mobile-footer">
+            <a href="/"><img src="{{ asset('images/logo-footer.png') }}" alt=""></a>
+            <a href="https://www.instagram.com/blipr.app/" target="_blank"><img src="{{ asset('images/insta.png') }}" alt=""></a>
+            <a href="https://www.facebook.com/Blipr-105156707830640" target="_blank"><img src="{{ asset('images/fb.png') }}" alt=""></a>
         </footer>
     </body>
 </html>

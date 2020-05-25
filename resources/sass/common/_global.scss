@@ -3,18 +3,32 @@ html, body {
     font-family: 'Graphik';
     font-weight: normal;
 }
+
+.scroll-lock {
+    overflow: hidden;
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;
 }
+
 h1 {
     font-size: 36px;
     margin-bottom: 25px;
     font-weight: bold;
-    span {
+    // position: relative;
+    &::after {
+        content: '.';
         color: $red;
     }
 }
+
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .container {
     padding: 0 25px;
 }
