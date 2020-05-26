@@ -603,10 +603,23 @@ h2 {
 
 .container {
   padding: 0 25px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .frontpage section {
   padding: 25px 0;
+}
+
+@media print, screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .frontpage section {
+    padding: 50px 0;
+  }
 }
 
 .btn {
@@ -701,12 +714,58 @@ h2 {
   padding: 25px 0;
 }
 
+.large-footer {
+  background-color: black;
+  padding: 50px 0;
+}
+
+.large-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.large-footer .container ul {
+  list-style: none;
+  padding: 0;
+  color: #F2F2F2;
+}
+
+.large-footer .container ul li {
+  margin-bottom: 10px;
+}
+
+.large-footer .container ul li:first-of-type {
+  font-weight: bold;
+}
+
+.large-footer .container .copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F2F2F2;
+  align-self: center;
+}
+
+.large-footer .container .copy img {
+  margin-bottom: 10px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .mobile-footer {
+    display: none;
+  }
+}
+
 .frontpage .hero {
   padding-top: 85px;
 }
 
-.frontpage .hero .container h1 {
+.frontpage .hero .container .mobile-title {
   margin-bottom: 0;
+}
+
+.frontpage .hero .container .large-title {
+  display: none;
 }
 
 .frontpage .hero .container img {
@@ -726,7 +785,11 @@ h2 {
   color: #F2F2F2;
 }
 
-.frontpage .tutorial .container img {
+.frontpage .tutorial .container .steps .hide {
+  display: none;
+}
+
+.frontpage .tutorial .container .steps img {
   width: 100%;
 }
 
@@ -764,12 +827,20 @@ h2 {
   width: 40%;
 }
 
+.frontpage .store .container .phone {
+  display: none;
+}
+
 .frontpage .shows {
   background-color: #F72806;
 }
 
 .frontpage .shows .container h1::after {
   color: #F2F2F2;
+}
+
+.frontpage .shows .container .more {
+  display: none;
 }
 
 .frontpage .shows .container .mobile {
@@ -790,9 +861,85 @@ h2 {
   background-position: center 16%;
 }
 
-.frontpage .partner-logos {
+.frontpage .partners .container .partner-logos {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@media print, screen and (min-width: 768px) {
+  .frontpage .hero {
+    padding-top: 105px;
+  }
+
+  .frontpage .hero .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .frontpage .hero .container .mobile-title {
+    display: none;
+  }
+
+  .frontpage .hero .container img {
+    width: 60%;
+    margin-right: 25px;
+  }
+
+  .frontpage .hero .container .text .large-title {
+    display: block;
+  }
+
+  .frontpage .tutorial .container .steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .frontpage .tutorial .container .steps img {
+    width: 30%;
+  }
+
+  .frontpage .tutorial .container .steps .hide {
+    display: block;
+  }
+
+  .frontpage .business {
+    overflow: hidden;
+  }
+
+  .frontpage .business .container {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  .frontpage .business .container img {
+    position: relative;
+    left: -25px;
+    bottom: -25px;
+    width: 50%;
+    margin-bottom: 0px;
+  }
+
+  .frontpage .store .container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .frontpage .store .container .phone {
+    display: block;
+    width: 50%;
+    margin-left: 25px;
+  }
+
+  .frontpage .shows .container .more {
+    display: flex;
+  }
+
+  .frontpage .partners .container .partner-logos img {
+    width: 20%;
+    max-width: 100px;
+  }
 }
 

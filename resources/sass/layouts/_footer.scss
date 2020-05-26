@@ -4,3 +4,39 @@
     justify-content: space-around;
     padding: 25px 0;
 }
+
+.large-footer {
+    background-color: $black;
+    padding: 50px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            list-style: none;
+            padding: 0;
+            color: $white;
+            li{
+                margin-bottom: 10px;
+                &:first-of-type {
+                    font-weight: bold;
+                }
+            }
+        }
+        .copy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $white;
+            align-self: center;
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    }   
+}
+
+@media print, screen and (min-width: 768px) {
+    .mobile-footer {
+        display: none;
+    }
+}

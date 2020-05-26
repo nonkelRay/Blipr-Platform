@@ -34,10 +34,25 @@ h2 {
 
 .container {
     padding: 0 25px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    // overflow: hidden;
 }
 
 .frontpage {
     section {
         padding: 25px 0;
+    }
+}
+
+@media print, screen and(min-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+    .frontpage {
+        section {
+            padding: 50px 0;
+        }
     }
 }

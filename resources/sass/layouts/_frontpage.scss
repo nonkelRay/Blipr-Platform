@@ -2,8 +2,11 @@
   .hero {
       padding-top: 85px;
       .container {
-          h1 {
+            .mobile-title {
               margin-bottom: 0;
+          }
+          .large-title {
+              display: none;
           }
         img {
             width: 100%;
@@ -22,9 +25,14 @@
           h1 {
               color: $white;
           }
-          img {
-              width: 100%;
-          }
+          .steps {
+            .hide {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+          }  
       }
   }
   .business {
@@ -62,6 +70,9 @@
                 }
             }
         }  
+        .phone {
+            display: none;
+        }
     }
   }
     .shows {
@@ -69,6 +80,9 @@
         .container {
             h1::after{
                 color: $white;
+            }
+            .more {
+                display: none;
             }
             .mobile {
                 display: flex;
@@ -88,9 +102,96 @@
             }
         }
     }
-    .partner-logos {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    .partners {
+        .container {
+            .partner-logos {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }  
+}
+
+@media print, screen and (min-width: 768px) {
+    .frontpage {
+        .hero {
+            padding-top: 105px;
+            .container {
+                display: flex;
+                align-items: center;
+                .mobile-title {
+                    display: none;
+                }
+                img {
+                    width: 60%;
+                    margin-right: 25px;
+                }
+                .text {
+                    .large-title {
+                        display: block;
+                        // margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        .tutorial {
+            .container {
+                .steps {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        width: 30%;
+                    }
+                    .hide {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .business {
+            overflow: hidden;
+            .container {
+                display: flex;
+                position: relative;
+                align-items: center;
+              img {
+                  position: relative;
+                  left: -25px;
+                  bottom: -25px;
+                  width: 50%;
+                  margin-bottom: 0px;
+              }
+            }
+        }
+        .store {
+            .container {
+                display: flex;
+                align-items: flex-end;
+                .phone {
+                    display: block;
+                    width: 50%;
+                    margin-left: 25px;
+                }
+            }   
+        }
+        .shows {
+            .container {
+                .more {
+                    display: flex;
+                }
+            }
+        }
+        .partners {
+            .container {
+                .partner-logos {
+                   img {
+                       width: 20%;
+                       max-width: 100px;
+                   }
+                }
+            }
+        }  
     }
 }

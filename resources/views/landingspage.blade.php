@@ -40,9 +40,10 @@
         </nav>
         <section class="hero">
             <div class="container">
-                <h1>Enjoy at any time</h1>
+                <h1 class="mobile-title">Enjoy at any time</h1>
                 <img src="{{ asset('images/hero-image.png') }}" alt="">
                 <div class="text">
+                    <h1 class="large-title">Enjoy at any time</h1>
                     <p>Blipr is a platform that captures your musical experiences. Save your beloved memories with a single blip and relive them at any time. No more filming, distractions or empty batteries.</p>
                     <a href="#" class="btn">try for free</a>
                 </div>
@@ -51,7 +52,11 @@
         <section class="tutorial">
             <div class="container">
                 <h1>How it works</h1>
-                <img src="{{ asset('images/tutorial-placeholder.png') }}" alt="">
+                <div class="steps">
+                    <img src="{{ asset('images/step-1.png') }}" alt="">
+                    <img class="hide" src="{{ asset('images/step-2.png') }}" alt="">
+                    <img class="hide" src="{{ asset('images/step-3.png') }}" alt="">
+                </div>
             </div>
         </section>
         <section class="business">
@@ -74,12 +79,41 @@
                         <img src="{{ asset('images/appstore.png') }}" alt="">
                     </div>
                 </div>
+                <img class="phone" src="{{ asset('images/phone.png') }}" alt="">
             </div>
         </section>
         <section class="shows">
             <div class="container">
                 <h1>Upcoming shows</h1>
                 <div class="mobile">
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                </div>
+                <div class="mobile more">
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                    <div class="artist">
+                        <h2>Jamie xx</h2>
+                    </div>
+                </div>
+                <div class="mobile more">
                     <div class="artist">
                         <h2>Jamie xx</h2>
                     </div>
@@ -109,6 +143,34 @@
             <a href="/"><img src="{{ asset('images/logo-footer.png') }}" alt=""></a>
             <a href="https://www.instagram.com/blipr.app/" target="_blank"><img src="{{ asset('images/insta.png') }}" alt=""></a>
             <a href="https://www.facebook.com/Blipr-105156707830640" target="_blank"><img src="{{ asset('images/fb.png') }}" alt=""></a>
+        </footer>
+        <footer class="large-footer">
+            <div class="container">
+                <ul>
+                    <li>Connect</li>
+                    <li><a href="https://www.facebook.com/Blipr-105156707830640" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/blipr.app/" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:hello@blipr.app">hello@blipr.app</a></li>
+                </ul>
+                <ul>
+                    <li>Info</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#app">Our application</a></li>
+                    <li><a href="#plans">Our plans</a></li>
+                </ul>
+                <ul>
+                    <li>Platform</li>
+                    <li><a href="#">Signup</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+                <div class="copy">
+                    <img src="{{ asset("images/logo.png") }}" alt="">
+                    <span> &copy; {{ date("Y") }} Blipr</span>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
