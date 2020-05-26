@@ -56,3 +56,18 @@ h2 {
         }
     }
 }
+
+
+@media print, screen and (min-width: 1024px) {
+   h1 {
+       font-size: 72px;
+   }
+   p {
+       font-size: 20px;
+   }
+   .frontpage {
+    section {
+        padding: 75px 0;
+    }
+}
+}

@@ -31,6 +31,14 @@
         <nav class="home-nav">
             <div class="container">
                 <a href="/" class="brand">Blipr</a>
+                <ul class="large-nav">
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Our plans</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li>|</li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
                 <button class="hamburger hamburger--vortex" type="button">
                     <span class="hamburger-box">
                       <span class="hamburger-inner"></span>

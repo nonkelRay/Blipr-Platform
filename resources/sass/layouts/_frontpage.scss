@@ -67,6 +67,7 @@
                 justify-content: space-around;
                 img {
                     width: 40%;
+                    max-width: 200px;
                 }
             }
         }  
@@ -80,9 +81,6 @@
         .container {
             h1::after{
                 color: $white;
-            }
-            .more {
-                display: none;
             }
             .mobile {
                 display: flex;
@@ -100,11 +98,15 @@
                     background-position: center 16%;
                 }
             }
+            .more {
+                display: none;
+            }
         }
     }
     .partners {
         .container {
             .partner-logos {
+                padding: 50px 0;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -124,7 +126,7 @@
                     display: none;
                 }
                 img {
-                    width: 60%;
+                    width: 50%;
                     margin-right: 25px;
                 }
                 .text {
@@ -168,7 +170,12 @@
         .store {
             .container {
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
+                .text {
+                    .download {
+                        margin-top: 75px;
+                    }
+                }
                 .phone {
                     display: block;
                     width: 50%;
@@ -193,5 +200,56 @@
                 }
             }
         }  
+    }
+}
+
+@media print, screen and (min-width: 1024px) {
+    .frontpage {
+        .tutorial {
+            .container {
+                h1 {
+                    margin-bottom: 75px;
+                }
+            }
+        }
+        .shows {
+            .container {
+                h1 {
+                    text-align: center;
+                    margin-bottom: 75px;
+                }
+                .mobile {
+                    .artist {
+                        width: 220px;
+                        height: 120px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        .business {
+            padding-bottom: 25px;
+            .container {
+              img {
+                  bottom: -50px;
+                  width: 60%;
+                  margin-bottom: 0px;
+              }
+            }
+        }
+        .partners {
+            h1 {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+        }
+        .store {
+            .container {
+                .text {
+                    margin-right: 60px;
+                }
+            }
+        }
     }
 }

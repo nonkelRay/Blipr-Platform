@@ -622,6 +622,20 @@ h2 {
   }
 }
 
+@media print, screen and (min-width: 1024px) {
+  h1 {
+    font-size: 72px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .frontpage section {
+    padding: 75px 0;
+  }
+}
+
 .btn {
   background-color: #F72806;
   display: inline-block;
@@ -629,6 +643,12 @@ h2 {
   padding: 10px 20px;
   border-radius: 24px;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #F72806;
+  background-color: black;
 }
 
 /** Search form */
@@ -707,6 +727,52 @@ h2 {
   text-indent: -9999px;
 }
 
+.home-nav .container .large-nav {
+  color: #F2F2F2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.home-nav .container .large-nav li {
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.home-nav .container .large-nav li a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.home-nav .container .large-nav li a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #F72806;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .home-nav {
+    height: 75px;
+  }
+
+  .home-nav .container .brand {
+    height: 75px;
+  }
+
+  .home-nav .container .hamburger {
+    display: none;
+  }
+}
+
 .mobile-footer {
   background-color: black;
   display: flex;
@@ -717,11 +783,12 @@ h2 {
 .large-footer {
   background-color: black;
   padding: 50px 0;
+  display: none;
 }
 
 .large-footer .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .large-footer .container ul {
@@ -732,10 +799,12 @@ h2 {
 
 .large-footer .container ul li {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .large-footer .container ul li:first-of-type {
   font-weight: bold;
+  cursor: default;
 }
 
 .large-footer .container .copy {
@@ -743,16 +812,21 @@ h2 {
   flex-direction: column;
   align-items: center;
   color: #F2F2F2;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .large-footer .container .copy img {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 @media print, screen and (min-width: 768px) {
   .mobile-footer {
     display: none;
+  }
+
+  .large-footer {
+    display: block;
   }
 }
 
@@ -825,6 +899,7 @@ h2 {
 
 .frontpage .store .container .text .download img {
   width: 40%;
+  max-width: 200px;
 }
 
 .frontpage .store .container .phone {
@@ -837,10 +912,6 @@ h2 {
 
 .frontpage .shows .container h1::after {
   color: #F2F2F2;
-}
-
-.frontpage .shows .container .more {
-  display: none;
 }
 
 .frontpage .shows .container .mobile {
@@ -861,7 +932,12 @@ h2 {
   background-position: center 16%;
 }
 
+.frontpage .shows .container .more {
+  display: none;
+}
+
 .frontpage .partners .container .partner-logos {
+  padding: 50px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -882,7 +958,7 @@ h2 {
   }
 
   .frontpage .hero .container img {
-    width: 60%;
+    width: 50%;
     margin-right: 25px;
   }
 
@@ -924,7 +1000,11 @@ h2 {
 
   .frontpage .store .container {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+  }
+
+  .frontpage .store .container .text .download {
+    margin-top: 75px;
   }
 
   .frontpage .store .container .phone {
@@ -940,6 +1020,43 @@ h2 {
   .frontpage .partners .container .partner-logos img {
     width: 20%;
     max-width: 100px;
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .frontpage .tutorial .container h1 {
+    margin-bottom: 75px;
+  }
+
+  .frontpage .shows .container h1 {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+
+  .frontpage .shows .container .mobile .artist {
+    width: 220px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .frontpage .business {
+    padding-bottom: 25px;
+  }
+
+  .frontpage .business .container img {
+    bottom: -50px;
+    width: 60%;
+    margin-bottom: 0px;
+  }
+
+  .frontpage .partners h1 {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+
+  .frontpage .store .container .text {
+    margin-right: 60px;
   }
 }
 
