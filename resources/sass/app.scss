@@ -1,5 +1,5 @@
 @import "common/variables";
-// @import "~some-node-module";
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 /** Import theme styles */
 @import "resets/normalize";
 @import "resets/local.reset";
@@ -12,8 +12,9 @@
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
+@import "components/mobile-nav";
 
-@import "layouts/header";
+@import "layouts/header-home";
 @import "layouts/footer";
 @import "layouts/frontpage";
 // Variables

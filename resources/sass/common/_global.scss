@@ -1,8 +1,73 @@
 html, body {
     background-color: $white;
-    color: $grey;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
+    font-family: 'Graphik';
+    font-weight: normal;
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
+.active {
+    display: block !important;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    // position: relative;
+    &::after {
+        content: '.';
+        color: $red;
+    }
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.container {
+    padding: 0 25px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    // overflow: hidden;
+}
+
+.frontpage {
+    section {
+        padding: 25px 0;
+    }
+}
+
+@media print, screen and(min-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+    .frontpage {
+        section {
+            padding: 50px 0;
+        }
+    }
+}
+
+
+@media print, screen and (min-width: 1024px) {
+   h1 {
+       font-size: 72px;
+   }
+   p {
+       font-size: 20px;
+   }
+   .frontpage {
+    section {
+        padding: 75px 0;
+    }
+}
 }

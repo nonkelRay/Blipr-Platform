@@ -1,30 +1,255 @@
 .frontpage {
-    .full-height {
-        height: 100vh;
+  .hero {
+      padding-top: 85px;
+      .container {
+            .mobile-title {
+              margin-bottom: 0;
+          }
+          .large-title {
+              display: none;
+          }
+        img {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .text {
+            p {
+                margin-bottom: 25px;
+            }
+        }
+      } 
+  }
+  .tutorial {
+      background-color: $black;
+      .container {
+          h1 {
+              color: $white;
+          }
+          .steps {
+            .hide {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+          }  
+      }
+  }
+  .business {
+      .container {
+        img {
+            display: block;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+        .text {
+            p {
+                margin-bottom: 25px;
+            }
+        }
+      }
+  }
+  .store {
+    background-color: $black;
+    .container {
+        .text {
+            h1 {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+            .download {
+                margin-top: 25px;
+                display: flex;
+                justify-content: space-around;
+                img {
+                    width: 40%;
+                    max-width: 200px;
+                }
+            }
+        }  
+        .phone {
+            display: none;
+        }
     }
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
+  }
+    .shows {
+        background-color: $red;
+        .container {
+            h1::after{
+                color: $white;
+            }
+            .mobile {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .artist {
+                    background-image: url("/images/artist.png");
+                    width: 150px;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    border-radius: 24px;
+                    background-position: center 16%;
+                }
+            }
+            .more {
+                display: none;
+            }
+        }
     }
+    .partners {
+        .container {
+            .partner-logos {
+                padding: 50px 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }  
+}
 
-    .position-ref {
-        position: relative;
+@media print, screen and (min-width: 768px) {
+    .frontpage {
+        .hero {
+            padding-top: 105px;
+            .container {
+                display: flex;
+                align-items: center;
+                .mobile-title {
+                    display: none;
+                }
+                img {
+                    width: 50%;
+                    margin-right: 25px;
+                }
+                .text {
+                    .large-title {
+                        display: block;
+                        // margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+        .tutorial {
+            .container {
+                .steps {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img {
+                        width: 30%;
+                    }
+                    .hide {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .business {
+            overflow: hidden;
+            .container {
+                display: flex;
+                position: relative;
+                align-items: center;
+              img {
+                  position: relative;
+                  left: -25px;
+                  bottom: -25px;
+                  width: 50%;
+                  margin-bottom: 0px;
+              }
+            }
+        }
+        .store {
+            .container {
+                display: flex;
+                align-items: center;
+                .text {
+                    .download {
+                        margin-top: 75px;
+                    }
+                }
+                .phone {
+                    display: block;
+                    width: 50%;
+                    margin-left: 25px;
+                }
+            }   
+        }
+        .shows {
+            .container {
+                .more {
+                    display: flex;
+                }
+            }
+        }
+        .partners {
+            .container {
+                .partner-logos {
+                   img {
+                       width: 20%;
+                       max-width: 100px;
+                   }
+                }
+            }
+        }  
     }
+}
 
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-    }
-
-    .content {
-        text-align: center;
-    }
-
-    .title {
-        font-size: 84px;
-        color: orangered;
+@media print, screen and (min-width: 1024px) {
+    .frontpage {
+        .tutorial {
+            .container {
+                h1 {
+                    margin-bottom: 75px;
+                }
+            }
+        }
+        .shows {
+            .container {
+                h1 {
+                    text-align: center;
+                    margin-bottom: 75px;
+                }
+                .mobile {
+                    .artist {
+                        width: 220px;
+                        height: 120px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        .business {
+            padding-bottom: 25px;
+            .container {
+              img {
+                  bottom: -50px;
+                  width: 60%;
+                  margin-bottom: 0px;
+              }
+            }
+        }
+        .partners {
+            h1 {
+                text-align: center;
+                margin-bottom: 75px;
+            }
+        }
+        .store {
+            .container {
+                .text {
+                    margin-right: 60px;
+                }
+            }
+        }
     }
 }
