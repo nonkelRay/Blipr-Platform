@@ -732,7 +732,7 @@ h2 {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: none;
 }
 
 .home-nav .container .large-nav li {
@@ -766,6 +766,10 @@ h2 {
 
   .home-nav .container .brand {
     height: 75px;
+  }
+
+  .home-nav .container .large-nav {
+    display: flex;
   }
 
   .home-nav .container .hamburger {

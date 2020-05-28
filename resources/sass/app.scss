@@ -4,7 +4,7 @@
 @import "resets/normalize";
 @import "resets/local.reset";
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 @import "common/fonts";
 @import "common/global";
@@ -17,8 +17,8 @@
 @import "layouts/header-home";
 @import "layouts/footer";
 @import "layouts/frontpage";
-// Variables
-@import 'variables';
+// // Variables
+// @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
