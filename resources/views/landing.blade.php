@@ -46,18 +46,18 @@
         <meta property="og:url"                content="https://www.blipr.app/" />
         <meta property="og:type"               content="Landingpage" />
         <meta property="og:title"              content="Blipr | Your moments, your memories" />
-        <meta property="og:description"        content="Blipr lets u fully experience music and reduce smartphone usage at concerts." />
+        <meta property="og:description"        content="With Blipr you can fully experience music and reduce smartphone usage at concerts." />
         <meta property="og:image"              content="https://csar.be/logo-blipr.jpg">
         <meta property="fb:app_id"             content="930729077340126" />
     
         <meta name="twitter:card" content="summary_large_image">
         <meta name=”twitter:site” content="@blipr" /> 
         <meta name=”twitter:title” content="Blipr | Your moments, your memories" /> 
-        <meta name=”twitter:description” content="Blipr lets u fully experience music and reduce smartphone usage at concerts." /> 
+        <meta name=”twitter:description” content="With Blipr you can fully experience music and reduce smartphone usage at concerts." /> 
         <meta name=”twitter:image” content="https://csar.be/logo-blipr.jpg" />
     
         <!-- META TAGS -->
-        <meta name="description" content="Blipr lets u fully experience music and reduce smartphone usage at concerts.">
+        <meta name="description" content="With Blipr you can fully experience music and reduce smartphone usage at concerts.">
         <meta name="keywords" content="blipr">
         <meta name="keywords" content="music">
         <meta name="keywords" content="reduces">
