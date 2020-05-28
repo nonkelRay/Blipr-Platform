@@ -23,7 +23,7 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
+            display: none;
             li {
                 font-weight: bold;
                 margin-left: 25px;
@@ -55,6 +55,9 @@
         .container {
             .brand {
                 height: 75px;
+            }
+            .large-nav {
+                display: flex;
             }
             .hamburger {
                 display: none;
