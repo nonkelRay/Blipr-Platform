@@ -26,10 +26,18 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // facebook login
-Route::get('login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
+Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
+Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
 
 // subscription page
 Route::get('/subscription', function () {
-    return view('subscription');
+    return view('user.subscription');
 });
+
+// authentication routes for venues
+Route::get('/venue/register', 'VenueController@register');
+Route::post('/venue/register', 'VenueController@handleRegister');
+Route::get('/venue/login', 'VenueController@login');
+Route::post('/venue/login', 'VenueController@handleLogin');
+
+Route::get('/venue/home', 'VenueController@index');
