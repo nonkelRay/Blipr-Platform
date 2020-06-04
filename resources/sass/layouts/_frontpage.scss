@@ -22,8 +22,10 @@
   .tutorial {
       background-color: $black;
       .container {
+          text-align: center;
           h1 {
               color: $white;
+              text-align: left;
           }
           .steps {
             .hide {
@@ -32,7 +34,12 @@
             img {
                 width: 100%;
             }
-          }  
+          } 
+          .btn {
+              margin-top: 25px;
+              margin-right: auto;
+              margin-left: auto;
+          } 
       }
   }
   .business {
@@ -110,6 +117,16 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                a {
+                    width: 20%;
+                    max-width: 100px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .bigger {
+                    max-width: 125px;
+                }
             }
         }
     }  
@@ -189,17 +206,7 @@
                     display: flex;
                 }
             }
-        }
-        .partners {
-            .container {
-                .partner-logos {
-                   img {
-                       width: 20%;
-                       max-width: 100px;
-                   }
-                }
-            }
-        }  
+        } 
     }
 }
 
@@ -232,6 +239,7 @@
             padding-bottom: 25px;
             .container {
               img {
+                  left: -50px;
                   bottom: -50px;
                   width: 60%;
                   margin-bottom: 0px;

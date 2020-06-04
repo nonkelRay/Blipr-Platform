@@ -44,7 +44,7 @@
 
 .hamburger-box {
   width: 40px;
-  height: 24px;
+  height: 21px;
   display: inline-block;
   position: relative;
 }
@@ -52,14 +52,14 @@
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px;
+  margin-top: -1.5px;
 }
 
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
   width: 40px;
-  height: 4px;
+  height: 3px;
   background-color: #F2F2F2;
   border-radius: 0px;
   position: absolute;
@@ -75,55 +75,46 @@
 }
 
 .hamburger-inner::before {
-  top: -10px;
+  top: -9px;
 }
 
 .hamburger-inner::after {
-  bottom: -10px;
+  bottom: -9px;
 }
 
 /*
- * Vortex
+ * Squeeze
  */
 
-.hamburger--vortex .hamburger-inner {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+.hamburger--squeeze .hamburger-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger--vortex .hamburger-inner::before,
-.hamburger--vortex .hamburger-inner::after {
-  transition-duration: 0s;
-  transition-delay: 0.1s;
-  transition-timing-function: linear;
+.hamburger--squeeze .hamburger-inner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
 
-.hamburger--vortex .hamburger-inner::before {
-  transition-property: top, opacity;
+.hamburger--squeeze .hamburger-inner::after {
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.hamburger--vortex .hamburger-inner::after {
-  transition-property: bottom, transform;
+.hamburger--squeeze.is-active .hamburger-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.hamburger--vortex.is-active .hamburger-inner {
-  transform: rotate(765deg);
-  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.hamburger--vortex.is-active .hamburger-inner::before,
-.hamburger--vortex.is-active .hamburger-inner::after {
-  transition-delay: 0s;
-}
-
-.hamburger--vortex.is-active .hamburger-inner::before {
+.hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
 
-.hamburger--vortex.is-active .hamburger-inner::after {
+.hamburger--squeeze.is-active .hamburger-inner::after {
   bottom: 0;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /** Import theme styles */
@@ -572,6 +563,10 @@ body {
   font-weight: normal;
 }
 
+a {
+  cursor: url("/images/bol.png"), auto;
+}
+
 .scroll-lock {
   overflow: hidden;
 }
@@ -631,6 +626,10 @@ h2 {
     font-size: 20px;
   }
 
+  .container {
+    padding: 0 50px;
+  }
+
   .frontpage section {
     padding: 75px 0;
   }
@@ -644,6 +643,7 @@ h2 {
   border-radius: 24px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -669,7 +669,7 @@ h2 {
 }
 
 .mobile-menu nav {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .mobile-menu ul {
@@ -723,7 +723,7 @@ h2 {
   background-size: contain;
   background-repeat: no-repeat;
   height: 60px;
-  width: 40px;
+  width: 35px;
   text-indent: -9999px;
 }
 
@@ -735,6 +735,10 @@ h2 {
   display: none;
 }
 
+.home-nav .container .large-nav .line {
+  cursor: default;
+}
+
 .home-nav .container .large-nav li {
   font-weight: bold;
   margin-left: 25px;
@@ -743,20 +747,6 @@ h2 {
 .home-nav .container .large-nav li a {
   position: relative;
   transition: all 0.3s ease;
-}
-
-.home-nav .container .large-nav li a:hover:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: #F72806;
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -820,8 +810,9 @@ h2 {
 }
 
 .large-footer .container .copy img {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 10px;
+  width: 35px;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -859,8 +850,13 @@ h2 {
   background-color: black;
 }
 
+.frontpage .tutorial .container {
+  text-align: center;
+}
+
 .frontpage .tutorial .container h1 {
   color: #F2F2F2;
+  text-align: left;
 }
 
 .frontpage .tutorial .container .steps .hide {
@@ -869,6 +865,12 @@ h2 {
 
 .frontpage .tutorial .container .steps img {
   width: 100%;
+}
+
+.frontpage .tutorial .container .btn {
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .frontpage .business .container img {
@@ -947,6 +949,19 @@ h2 {
   align-items: center;
 }
 
+.frontpage .partners .container .partner-logos a {
+  width: 20%;
+  max-width: 100px;
+}
+
+.frontpage .partners .container .partner-logos a img {
+  width: 100%;
+}
+
+.frontpage .partners .container .partner-logos .bigger {
+  max-width: 125px;
+}
+
 @media print, screen and (min-width: 768px) {
   .frontpage .hero {
     padding-top: 105px;
@@ -1020,11 +1035,6 @@ h2 {
   .frontpage .shows .container .more {
     display: flex;
   }
-
-  .frontpage .partners .container .partner-logos img {
-    width: 20%;
-    max-width: 100px;
-  }
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1049,6 +1059,7 @@ h2 {
   }
 
   .frontpage .business .container img {
+    left: -50px;
     bottom: -50px;
     width: 60%;
     margin-bottom: 0px;

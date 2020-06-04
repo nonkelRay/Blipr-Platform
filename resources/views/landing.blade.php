@@ -94,9 +94,10 @@
                         <li><a href="#">Register</a></li>
                     </ul>
                     <ul>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our plans</a></li>
-                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Venues</a></li>
+                        <li><a href="#">Pricing</a></li>
                     </ul>
                 </nav>
                 <div class="socials">
@@ -109,14 +110,15 @@
             <div class="container">
                 <a href="/" class="brand">Blipr</a>
                 <ul class="large-nav">
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">How it works</a></li>
-                    <li><a href="#">Our plans</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li>|</li>
+                    <li><a href="#">Venues</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li class="line">|</li>
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Register</a></li>
                 </ul>
-                <button class="hamburger hamburger--vortex" type="button">
+                <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                       <span class="hamburger-inner"></span>
                     </span>
@@ -142,13 +144,14 @@
                     <img class="hide" src="{{ asset('images/step-2.png') }}" alt="">
                     <img class="hide" src="{{ asset('images/step-3.png') }}" alt="">
                 </div>
+                <a href="#" class="btn">read more</a>
             </div>
         </section>
         <section class="business">
             <div class="container">
                 <img src="{{ asset('images/business.png') }}" alt="">
                 <div class="text">
-                    <h1>Blipr Business</h1>
+                    <h1>Blipr venues</h1>
                     <p>Since the music scene depends on the hard work and dedication of venues and event organizers we want to give something in return. Next to a digital experience to offer to their audience we will offer a commission for every Blipr user. This way we can expand our Blipr family and work towards a better music experience all over the world.</p>
                     <a href="#" class="btn">discover more</a>
                 </div>
@@ -218,9 +221,9 @@
             <div class="container">
                 <h1>Our partners</h1>
                 <div class="partner-logos">
-                    <img src="{{ asset('images/lofelt.png') }}" alt="">
-                    <img src="{{ asset('images/tm.png') }}" alt="">
-                    <img src="{{ asset('images/made.png') }}" alt="">
+                    <a href="https://lofelt.com/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/lofelt.jpg') }}" alt=""></a>
+                    <a class="bigger"  href="https://www.thomasmore.be/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/tm.png') }}" alt=""></a>
+                    <a href="https://www.haveitmade.be/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/made.png') }}" alt=""></a>
                 </div> 
             </div>
         </section>
@@ -241,15 +244,14 @@
                     <li>Info</li>
                     <li><a href="/">Home</a></li>
                     <li><a href="#how">How it works</a></li>
-                    <li><a href="#business">Business</a></li>
-                    <li><a href="#app">Our application</a></li>
-                    <li><a href="#plans">Our plans</a></li>
+                    <li><a href="#business">Venues</a></li>
+                    <li><a href="#plans">Pricing</a></li>
                 </ul>
                 <ul>
                     <li>Platform</li>
                     <li><a href="#">Signup</a></li>
                     <li><a href="#">Login</a></li>
-                    <li><a href="#">Download</a></li>
+                    {{-- <li><a href="#">Download</a></li> --}}
                 </ul>
                 <div class="copy">
                     <img src="{{ asset("images/logo.png") }}" alt="">
