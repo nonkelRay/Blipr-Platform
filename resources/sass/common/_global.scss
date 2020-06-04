@@ -3,7 +3,9 @@ html, body {
     font-family: 'Graphik';
     font-weight: normal;
 }
-
+a {
+    cursor: url("/images/bol.png"), auto;
+}
 .scroll-lock {
     overflow: hidden;
 }
@@ -64,6 +66,9 @@ h2 {
    }
    p {
        font-size: 20px;
+   }
+   .container{
+       padding: 0 50px;
    }
    .frontpage {
     section {

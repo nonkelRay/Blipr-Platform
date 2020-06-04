@@ -15,8 +15,9 @@
             background-size: contain;
             background-repeat: no-repeat;
             height: 60px;
-            width: 40px;
+            width: 35px;
             text-indent: -9999px;
+            // cursor: pointer;
         }
         .large-nav {
             color: $white;
@@ -24,25 +25,29 @@
             padding: 0;
             margin: 0;
             display: none;
+            .line {
+                cursor: default;
+            }
             li {
                 font-weight: bold;
                 margin-left: 25px;
                 a{
                   position: relative;  
                   transition: all 0.3s ease;
-                &:hover:after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    background-color: $red;
-                    border-radius: 100%;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: -1;
-                }
+                //   cursor: url("/images/bol.png"), auto;
+                // &:hover:after {
+                //     content: '';
+                //     display: block;
+                //     position: absolute;
+                //     width: 30px;
+                //     height: 30px;
+                //     background-color: $red;
+                //     border-radius: 100%;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                //     z-index: -1;
+                // }
             }
             }
         }
