@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -42,7 +41,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming user registration request.
+     * Get a validator for an incoming registration request.
      *
      * @param array $data
      *
@@ -90,28 +89,5 @@ class RegisterController extends Controller
             'date_of_birth' => $data['date_of_birth'],
             'password' => Hash::make($data['password']),
         ]);
-    }
-
-    public function showVenueRegister()
-    {
-        return view('venue.register');
-    }
-
-    // create a new venue and redirect to login afterwards
-    public function handleVenueRegister(Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required|min:2|max:50',
-            'email' => 'required|email',
-            'password' => 'required|confirmed|min:8',
-        ]);
-
-        $venue = new \App\Venue();
-        $venue->name = $request->input('name');
-        $venue->email = $request->input('email');
-        $venue->password = Hash::make($request->input('password'));
-        $venue->save();
-
-        return redirect()->intended('venue/login');
     }
 }

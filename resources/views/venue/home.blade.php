@@ -13,6 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    Venue is logged in!
                 </div>
             </div>
         </div>
