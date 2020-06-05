@@ -3,3 +3,112 @@
 // TODO: .search-form label {}
 // TODO: .search-form .search-field {}
 // TODO: .search-form .search-submit {}
+.form {
+    color: $white;
+    max-width: 350px;
+    margin: 0 auto;
+    input[type='date']::-webkit-calendar-picker-indicator { 
+        // background: orange; 
+        color: red;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px $black inset !important;
+    -webkit-text-fill-color: $white !important;
+    font-family: 'Graphik' !important;
+    }
+    .invalid-feedback {
+        strong{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: $red;
+        }
+    }
+    .field {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $red;
+        background-color: $black;
+        color: $white;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        &::placeholder {
+            color: $white;
+        }
+    }
+    .btn {
+        margin-bottom: 25px;
+    }
+}
+
+.login-form {
+    .form-check {
+        margin-bottom: 25px;
+        input[type='checkbox'] {
+            filter: grayscale(1);
+        }
+    }
+    .options {
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: space-between;
+        a {
+            text-decoration: underline;
+        }
+    }
+    .stripe {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        span {
+            background-color: $white;
+            height: 1px;
+            width: 45%;
+        }
+    }
+    .fb-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin-left: 10px;
+            width: 25px;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+.register-form {
+    .field {
+        border-bottom: 1px solid $white;
+    }
+    .stripe {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        span {
+            background-color: $white;
+            height: 1px;
+            width: 45%;
+        }
+    }
+    .fb-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin-left: 10px;
+            width: 25px;
+            margin-bottom: 2px;
+        }
+    }
+    button.btn {
+        margin-bottom: 50px;
+    }
+}
