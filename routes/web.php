@@ -19,10 +19,10 @@ Route::get('/', function () {
     return view('landing');
 });
 
-// authentication routes
+// authentication routes for user
 Auth::routes();
 
-// homepage
+// homepage users
 Route::get('/home', 'HomeController@index')->name('home');
 
 // facebook login
@@ -35,9 +35,11 @@ Route::get('/subscription', function () {
 });
 
 // authentication routes for venues
-Route::get('/venue/register', 'VenueController@register');
-Route::post('/venue/register', 'VenueController@handleRegister');
-Route::get('/venue/login', 'VenueController@login');
-Route::post('/venue/login', 'VenueController@handleLogin');
+Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
+Route::get('/venue/login', 'Auth\LoginController@showVenueLogin')->name('venue/login');
 
-Route::get('/venue/home', 'VenueController@index');
+Route::post('/venue/register', 'Auth\RegisterController@handleVenueRegister');
+Route::post('/venue/login', 'Auth\LoginController@handleVenueLogin');
+
+// homepage venues
+Route::get('/venue/home', 'VenueController@index')->name('venue/home');
