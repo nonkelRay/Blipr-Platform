@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// DEFENITIONS:
+// GET -> show
+// POST -> store
+// DELETE -> destroy
+// UPDATE/PATCH -> update
+
 // landingpage
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', 'LandingController@index');
 
 // authentication routes for user
 Auth::routes();
@@ -43,3 +47,13 @@ Route::post('/venue/login', 'Auth\LoginController@handleVenueLogin');
 
 // homepage venues
 Route::get('/venue/home', 'VenueController@index')->name('venue/home');
+
+// show all venue events
+Route::get('/venue/events', 'EventController@index');
+// create event as venue
+Route::get('/venue/events/create', 'EventController@createEvent');
+Route::post('/venue/events/create', 'EventController@storeEvent');
+// show event details
+Route::get('/venue/events/{id}', 'EventController@details');
+
+Route::resource('events', 'EventController');
