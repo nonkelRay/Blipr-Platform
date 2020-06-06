@@ -21,7 +21,10 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('event.events')->with('events', Event::all());
+        // Eloquent query in the db where venue_id = the same as the logged in venue
+        $events = Event::where('venue_id', Auth::guard('venue')->user()->id)->get();
+
+        return view('event.events')->with('events', $events);
     }
 
     public function createEvent()

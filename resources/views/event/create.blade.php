@@ -35,7 +35,7 @@
 
         <div>
             <label for="image">{{ __('Hero Image') }}</label>
-            <input type="file" name="image" value="{{ old('image') }}" required autocomplete="image" autofocus>
+            <input type="file" name="image" value="{{ old('image') }}" accept="image/*" required autocomplete="image" autofocus>
         </div>
 
         <button type="submit" class="btn btn-primary">
