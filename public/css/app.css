@@ -11,7 +11,7 @@
  */
 
 .hamburger {
-  padding: 15px 15px;
+  padding: 0px 0px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, -webkit-filter;
@@ -563,16 +563,16 @@ body {
   font-weight: normal;
 }
 
-a {
-  cursor: url("/images/bol.png"), auto;
-}
-
 .scroll-lock {
   overflow: hidden;
 }
 
 .active {
   display: block !important;
+}
+
+.main {
+  padding-top: 60px;
 }
 
 p {
@@ -607,6 +607,35 @@ h2 {
   padding: 25px 0;
 }
 
+/** so footer stays at bottom */
+
+.platform {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform .nav-home,
+.platform footer {
+  flex-shrink: 0;
+}
+
+.platform #app {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform #app main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.platform #app .main-content {
+  flex-grow: 1;
+}
+
 @media print, screen and (min-width: 768px) {
   h1 {
     font-size: 50px;
@@ -630,9 +659,17 @@ h2 {
     padding: 0 50px;
   }
 
+  .main {
+    padding-top: 75px;
+  }
+
   .frontpage section {
     padding: 75px 0;
   }
+}
+
+button {
+  border: none;
 }
 
 .btn {
@@ -647,11 +684,148 @@ h2 {
 }
 
 .btn:hover {
-  color: #F72806;
-  background-color: black;
+  color: #d9d9d9;
 }
 
 /** Search form */
+
+.form {
+  color: #F2F2F2;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.form input[type=date]::-webkit-calendar-picker-indicator {
+  color: red;
+}
+
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover,
+.form input:-webkit-autofill:focus,
+.form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: #F2F2F2 !important;
+  font-family: "Graphik" !important;
+}
+
+.form .invalid-feedback strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #F72806;
+}
+
+.form .field {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #F72806;
+  background-color: black;
+  color: #F2F2F2;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.form .field::-webkit-input-placeholder {
+  color: #F2F2F2;
+}
+
+.form .field::-moz-placeholder {
+  color: #F2F2F2;
+}
+
+.form .field:-ms-input-placeholder {
+  color: #F2F2F2;
+}
+
+.form .field::-ms-input-placeholder {
+  color: #F2F2F2;
+}
+
+.form .field::placeholder {
+  color: #F2F2F2;
+}
+
+.form .btn {
+  margin-bottom: 25px;
+}
+
+.login-form .form-check {
+  margin-bottom: 25px;
+}
+
+.login-form .form-check input[type=checkbox] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.login-form .options {
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.login-form .options a {
+  text-decoration: underline;
+}
+
+.login-form .stripe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.login-form .stripe span {
+  background-color: #F2F2F2;
+  height: 1px;
+  width: 45%;
+}
+
+.login-form .fb-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form .fb-login img {
+  margin-left: 10px;
+  width: 25px;
+  margin-bottom: 2px;
+}
+
+.register-form .field {
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.register-form .stripe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.register-form .stripe span {
+  background-color: #F2F2F2;
+  height: 1px;
+  width: 45%;
+}
+
+.register-form .fb-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form .fb-login img {
+  margin-left: 10px;
+  width: 25px;
+  margin-bottom: 2px;
+}
+
+.register-form button.btn {
+  margin-bottom: 50px;
+}
 
 .mobile-menu {
   position: fixed;
@@ -739,6 +913,20 @@ h2 {
   cursor: default;
 }
 
+.home-nav .container .large-nav .active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #F72806;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 .home-nav .container .large-nav li {
   font-weight: bold;
   margin-left: 25px;
@@ -747,6 +935,20 @@ h2 {
 .home-nav .container .large-nav li a {
   position: relative;
   transition: all 0.3s ease;
+}
+
+.home-nav .container .large-nav li a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #F72806;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1072,6 +1274,98 @@ h2 {
 
   .frontpage .store .container .text {
     margin-right: 60px;
+  }
+}
+
+.login {
+  background-color: black;
+  padding: 50px 0;
+}
+
+.login .container {
+  min-height: 700px;
+}
+
+.login .container h1 {
+  color: #F2F2F2;
+}
+
+.login .container .hero {
+  width: 100%;
+}
+
+.login .container .form h1 {
+  display: none;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .login {
+    overflow: hidden;
+  }
+
+  .login .container {
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  .login .container h1 {
+    display: none;
+  }
+
+  .login .container .hero {
+    width: 90%;
+    position: absolute;
+    left: -300px;
+    bottom: -150px;
+  }
+
+  .login .container .form {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+  }
+
+  .login .container .form h1 {
+    display: inline-block;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .login .container {
+    overflow: visible;
+  }
+}
+
+.register {
+  background-color: black;
+  padding: 50px 0;
+}
+
+.register .container .hero {
+  display: none;
+}
+
+.register .container h1 {
+  color: #F2F2F2;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .register .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .register .container .hero {
+    display: block;
+    width: 50%;
+  }
+
+  .register .container .form {
+    margin: 0;
   }
 }
 
