@@ -8,8 +8,13 @@
     max-width: 350px;
     margin: 0 auto;
     input[type='date']::-webkit-calendar-picker-indicator { 
-        // background: orange; 
-        color: red;
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        display: block;
+        background: url('/images/calendar.png') no-repeat;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 

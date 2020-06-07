@@ -696,7 +696,13 @@ button {
 }
 
 .form input[type=date]::-webkit-calendar-picker-indicator {
-  color: red;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("/images/calendar.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .form input:-webkit-autofill,
