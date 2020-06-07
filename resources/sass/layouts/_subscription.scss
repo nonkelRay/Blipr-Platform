@@ -1,0 +1,115 @@
+.subscription {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        p {
+            margin-bottom: 25px;
+            a {
+                text-decoration: underline;
+            }
+        }
+        .desktop-plans {
+            display: none;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            .free {
+                color: $red;
+            }
+            .option {
+                min-width: 110px;
+                width: 15%;
+            }
+            ul {
+                padding: 10px;
+                list-style: none;
+                text-align: left;
+                margin-top: 37px;
+                li {
+                    height: 20px;
+                    margin-bottom: 20px;
+                    &:last-of-type {
+                        margin: 0;
+                    } 
+                    img {
+                        height: 16px;
+                    }
+                }
+            }
+            .small-list {
+                margin-top: 10px;
+                text-align: center;
+                background-color: $grey;
+            }
+        }
+        .mobile-plans {
+            .free {
+                color: $red;
+            }
+            .options {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                max-width: 300px;
+                ul {
+                    padding: 10px;
+                    list-style: none;
+                    background-color: $grey;
+                    li {
+                        height: 20px;
+                        margin-bottom: 20px; 
+                        &:last-of-type {
+                            margin: 0;
+                        }                    
+                        img {
+                            height: 16px;
+                        }
+                    }
+                }
+                .small-list {
+                    text-align: center;
+                    font-size: 18px;
+                   li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                   }
+                }
+            } 
+            .btn {
+                margin-bottom: 50px;
+            }  
+        }
+    }
+}
+
+@media print, screen and (min-width: 768px) {
+    .subscription {
+        .container {
+            text-align: center;
+            p {
+                margin-bottom: 50px;
+            }
+            .mobile-plans {
+                display: none;
+            }
+            .desktop-plans {
+                display: flex;
+                .btn {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and (min-width: 1200px) {
+    .subscription {
+        .container {
+            .desktop-plans {
+                .btn, span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
