@@ -30,11 +30,15 @@
     .field {
         width: 100%;
         border: none;
-        border-bottom: 1px solid $red;
+        border-bottom: 1px solid $white;
         background-color: $black;
         color: $white;
         padding-bottom: 10px;
         margin-bottom: 25px;
+        transition: border 0.5s ease;
+        &:focus {
+            border-color: $red;
+        }
         &::placeholder {
             color: $white;
         }
@@ -84,9 +88,6 @@
 }
 
 .register-form {
-    .field {
-        border-bottom: 1px solid $white;
-    }
     .stripe {
         display: flex;
         justify-content: space-between;
