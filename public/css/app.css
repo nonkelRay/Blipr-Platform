@@ -913,18 +913,8 @@ button {
   cursor: default;
 }
 
-.home-nav .container .large-nav .active::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: #F72806;
-  border-radius: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+.home-nav .container .large-nav .active {
+  color: #F72806;
 }
 
 .home-nav .container .large-nav li {
@@ -941,13 +931,13 @@ button {
   content: "";
   display: block;
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   background-color: #F72806;
   border-radius: 100%;
-  top: 50%;
+  top: 20px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: -1;
 }
 

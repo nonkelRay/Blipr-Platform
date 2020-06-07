@@ -28,18 +28,8 @@
             .line {
                 cursor: default;
             }
-            .active::after {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 30px;
-                height: 30px;
-                background-color: $red;
-                border-radius: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
+            .active {
+                color: $red;
             }
             li {
                 font-weight: bold;
@@ -51,13 +41,13 @@
                     content: '';
                     display: block;
                     position: absolute;
-                    width: 30px;
-                    height: 30px;
+                    width: 10px;
+                    height: 10px;
                     background-color: $red;
                     border-radius: 100%;
-                    top: 50%;
+                    top: 20px;
                     left: 50%;
-                    transform: translate(-50%, -50%);
+                    transform: translateX(-50%);
                     z-index: -1;
                 }
             }
