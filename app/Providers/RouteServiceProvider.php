@@ -24,13 +24,6 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/home';
 
     /**
-     * The path to the "subscription" route for your application.
-     *
-     * @var string
-     */
-    public const SUBS = '/subscription';
-
-    /**
      * Define your route model bindings, pattern filters, etc.
      */
     public function boot()
