@@ -26,9 +26,6 @@ Route::get('/', 'LandingController@index');
 // authentication routes for user
 Auth::routes();
 
-// homepage users
-Route::get('/home', 'HomeController@index')->name('home');
-
 // facebook login
 Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
@@ -37,6 +34,13 @@ Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handle
 Route::get('/subscription', function () {
     return view('user.subscription');
 });
+
+// homepage users
+Route::get('/home', 'HomeController@index')->name('home');
+
+// specific landing detail eventpage
+Route::get('/calendar', 'LandingController@events');
+Route::post('/calendar', 'LandingController@searchEvent');
 
 // authentication routes for venues
 Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
