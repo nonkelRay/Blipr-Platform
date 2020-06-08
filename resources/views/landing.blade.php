@@ -86,45 +86,9 @@
         </noscript>
         <!-- End Google Tag Manager (noscript) -->
 
-        <div class="mobile-menu">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Venues</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
-                </nav>
-                <div class="socials">
-                    <a href="https://www.instagram.com/blipr.app/" target="_blank"><img src="{{ asset('images/insta.png') }}" alt=""></a>
-                    <a href="https://www.facebook.com/Blipr-105156707830640" target="_blank"><img src="{{ asset('images/fb.png') }}" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <nav class="home-nav">
-            <div class="container">
-                <a href="/" class="brand">Blipr</a>
-                <ul class="large-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Venues</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li class="line">|</li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-        </nav>
+        @include('partials.mobile-nav')
+        @include('partials.header-home')
+        
         <section class="hero">
             <div class="container">
                 <h1 class="mobile-title">Enjoy at any time</h1>
@@ -221,38 +185,9 @@
                 </div> 
             </div>
         </section>
-        <footer class="mobile-footer">
-            <a href="/"><img src="{{ asset('images/logo-footer.png') }}" alt=""></a>
-            <a href="https://www.instagram.com/blipr.app/" target="_blank"><img src="{{ asset('images/insta.png') }}" alt=""></a>
-            <a href="https://www.facebook.com/Blipr-105156707830640" target="_blank"><img src="{{ asset('images/fb.png') }}" alt=""></a>
-        </footer>
-        <footer class="large-footer">
-            <div class="container">
-                <ul>
-                    <li>Connect</li>
-                    <li><a href="https://www.facebook.com/Blipr-105156707830640" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/blipr.app/" target="_blank">Instagram</a></li>
-                    <li><a href="mailto:hello@blipr.app">hello@blipr.app</a></li>
-                </ul>
-                <ul>
-                    <li>Info</li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#how">How it works</a></li>
-                    <li><a href="#business">Venues</a></li>
-                    <li><a href="#plans">Pricing</a></li>
-                </ul>
-                <ul>
-                    <li>Platform</li>
-                    <li><a href="#">Signup</a></li>
-                    <li><a href="#">Login</a></li>
-                    {{-- <li><a href="#">Download</a></li> --}}
-                </ul>
-                <div class="copy">
-                    <img src="{{ asset("images/logo.png") }}" alt="">
-                    <span> &copy; {{ date("Y") }} Blipr</span>
-                </div>
-            </div>
-        </footer>
+        @include('partials.mobile-footer')
+        @include('partials.footer-home')
+        
 
         <!-- Mailchimp pop-up script -->
         <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c422f71116982fc0fc65ef74f/f710971e8abc49e2bea974fd5.js");</script>

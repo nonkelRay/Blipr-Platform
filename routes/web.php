@@ -42,6 +42,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/calendar', 'LandingController@events');
 Route::post('/calendar', 'LandingController@searchEvent');
 
+// pricing
+Route::view('/pricing', 'pricing')->name('pricing');
+
 // authentication routes for venues
 Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
 Route::get('/venue/login', 'Auth\LoginController@showVenueLogin')->name('venue/login');

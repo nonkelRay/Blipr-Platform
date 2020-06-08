@@ -29,6 +29,7 @@ class SocialFacebookAccountService
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
                     'password' => Hash::make(md5(rand(1, 10000))),
+                    'subscription' => 'Free',
                 ]);
             }
             $account->user()->associate($user);

@@ -1,0 +1,29 @@
+.register{
+    background-color: $black;
+    padding: 50px 0;
+    .container {
+        .hero {
+            display: none;
+        }
+        h1 {
+            color: $white;
+        }
+    }
+}
+
+@media print, screen and (min-width: 1024px) {
+    .register {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .hero {
+                display: block;
+                width: 50%;
+            }
+            .form {
+                margin: 0;
+            }
+        }
+    }
+}
