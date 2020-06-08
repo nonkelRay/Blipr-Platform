@@ -34,6 +34,9 @@ Route::get('/subscription', function () {
     return view('user.subscription');
 });
 
+// pricing
+Route::view('/pricing', 'pricing')->name('pricing');
+
 // authentication routes for venues
 Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
 Route::get('/venue/login', 'Auth\LoginController@showVenueLogin')->name('venue/login');

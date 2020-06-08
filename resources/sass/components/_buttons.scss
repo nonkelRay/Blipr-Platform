@@ -16,3 +16,7 @@ button {
     //    background-color: darken($red, 5%);
     }
 }
+
+.btn--disabled {
+    background-color: $dark-grey;
+}
