@@ -11,7 +11,7 @@ class VenueController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the venue dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */

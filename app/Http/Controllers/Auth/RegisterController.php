@@ -113,6 +113,6 @@ class RegisterController extends Controller
         $venue->password = Hash::make($request->input('password'));
         $venue->save();
 
-        return redirect()->intended('venue/login');
+        return redirect('venue/home');
     }
 }

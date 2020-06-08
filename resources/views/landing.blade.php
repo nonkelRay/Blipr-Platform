@@ -138,18 +138,12 @@
             <div class="container">
                 <h1>Upcoming shows</h1>
                 <div class="mobile">
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
+                    @foreach ($events as $event)
+                        <div class="artist">
+                            <h2>{{ $event->artist }}</h2>
+                            <h3>{{ $event->venue_name }}</h3>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="mobile more">
                     <div class="artist">
