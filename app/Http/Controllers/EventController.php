@@ -44,7 +44,7 @@ class EventController extends Controller
         $image = $request->image->store('events');
 
         // add data to new Event
-        $event = new \App\Event();
+        $event = new Event();
         $event->title = $request->input('title');
         $event->artist = $request->input('artist');
         $event->date = $request->input('date');
@@ -61,7 +61,6 @@ class EventController extends Controller
         // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
         $request->session()->flash('message', 'Event posted');
 
-        // als alles gelukt is gaan we redirecten naar de view /stages
         return redirect('venue/events');
     }
 }

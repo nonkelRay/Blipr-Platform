@@ -30,20 +30,23 @@ Auth::routes();
 Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
 
-// subscription page
-Route::get('/subscription', function () {
-    return view('user.subscription');
-});
-
-// homepage users
-Route::get('/home', 'HomeController@index')->name('home');
-
 // specific landing detail eventpage
 Route::get('/calendar', 'LandingController@events');
 Route::post('/calendar', 'LandingController@searchEvent');
 
 // pricing
 Route::view('/pricing', 'pricing')->name('pricing');
+
+// homepage users
+Route::get('user/home', 'HomeController@index')->name('home');
+
+// user blips page
+Route::get('user/blips', 'BlipController@index');
+// hidden route for creating blips easy
+Route::get('user/blips/create', 'BlipController@createBlip');
+Route::post('user/blips/create', 'BlipController@storeBlip');
+// user blip in detail
+Route::get('user/blips/{id}', 'BlipController@detail');
 
 // authentication routes for venues
 Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
