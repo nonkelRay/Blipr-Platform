@@ -30,10 +30,10 @@ Auth::routes();
 Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
 
-// subscription page
-Route::get('/subscription', function () {
-    return view('user.subscription');
-});
+// // subscription page
+// Route::get('/subscription', function () {
+//     return view('user.subscription');
+// });
 
 // homepage users
 Route::get('/home', 'HomeController@index')->name('home');
@@ -56,7 +56,7 @@ Route::post('/venue/login', 'Auth\LoginController@handleVenueLogin');
 Route::get('/venue/home', 'VenueController@index')->name('venue/home');
 
 // show all venue events
-Route::get('/venue/events', 'EventController@index');
+Route::get('/venue/events', 'EventController@index')->name('venue/events');
 // create event as venue
 Route::get('/venue/events/create', 'EventController@createEvent');
 Route::post('/venue/events/create', 'EventController@storeEvent');

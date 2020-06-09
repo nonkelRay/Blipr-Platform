@@ -1,7 +1,7 @@
 <nav class="home-nav">
     <div class="container">
         <a href="/" class="brand">Blipr</a>
-        <ul class="large-nav">
+        {{-- <ul class="large-nav">
             <li><a class="{{ (request()->is('/')) ? 'active' : '' }}" href="/">Home</a></li>
             <li><a href="#">How it works</a></li>
             <li><a class="{{ (request()->is('venue/login')) ? 'active' : '' }}" href="{{ route('venue/login') }}">Venues</a></li>
@@ -21,7 +21,7 @@
                     </form>   
                 </li>
             @endguest           
-        </ul>
+        </ul> --}}
         <button class="hamburger hamburger--squeeze" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>

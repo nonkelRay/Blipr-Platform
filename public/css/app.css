@@ -571,8 +571,8 @@ body {
   display: block !important;
 }
 
-.main {
-  padding-top: 60px;
+.main-content {
+  margin-top: 60px;
 }
 
 p {
@@ -659,8 +659,17 @@ h2 {
     padding: 0 50px;
   }
 
-  .main {
-    padding-top: 75px;
+  .main-content {
+    margin-top: 75px;
+  }
+
+  .platform-venue .main-venue .main-content {
+    margin-top: 0;
+    margin-left: 100px;
+  }
+
+  .platform-venue .home-nav {
+    display: none;
   }
 
   .frontpage section {
@@ -885,6 +894,33 @@ button {
 
 .mobile-menu .socials img {
   margin: 0 25px;
+}
+
+.vertical-nav {
+  display: none;
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  color: #F2F2F2;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.vertical-nav a {
+  margin-bottom: 50px;
+}
+
+.vertical-nav .logout {
+  position: absolute;
+  bottom: 50px;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .vertical-nav {
+    display: flex;
+  }
 }
 
 .home-nav {
@@ -1283,10 +1319,6 @@ button {
   padding: 50px 0;
 }
 
-.login .container {
-  min-height: 700px;
-}
-
 .login .container h1 {
   color: #F2F2F2;
 }
@@ -1297,6 +1329,12 @@ button {
 
 .login .container .form h1 {
   display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  .login .container {
+    min-height: 700px;
+  }
 }
 
 @media print, screen and (min-width: 1024px) {
