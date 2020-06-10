@@ -13,5 +13,6 @@ window.onload = function(){
         this.classList.toggle('is-active');
         document.querySelector('body').classList.toggle('scroll-lock');
         document.querySelector('.mobile-menu').classList.toggle('active');
+        // document.querySelector('.mobile-menu').classList.toggle('slide-in');
     };
 }

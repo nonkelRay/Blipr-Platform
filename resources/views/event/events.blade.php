@@ -1,9 +1,9 @@
 @extends('layouts.venue')
 
 @section('content')
-<div class="main-content events">
+<div class="main-content events-venue">
     <div class="container">
-        <p>Events</p>
+        <h1>Your events</h1>
         @if(Session::has('message'))
             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
         @endif
@@ -16,9 +16,8 @@
                 <p> {{ $event->venue_name }}</p>
             </div>
         @empty
-            <div>
-                No upcoming events
-            </div>
+           <p>No upcoming events yet, <a href="{{ route('venue/events/create') }}">please add an event.</a></p>
+           <a href="{{ route('venue/events/create') }}" class="btn">add event</a>
         @endforelse
     </div>    
 </div>

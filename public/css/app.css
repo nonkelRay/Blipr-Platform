@@ -1625,3 +1625,18 @@ button {
   }
 }
 
+.events-venue {
+  padding: 50px 0;
+}
+
+.events-venue .container .btn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-venue-create {
+  padding: 50px 0;
+}
+
