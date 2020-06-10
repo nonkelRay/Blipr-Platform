@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    Blips detail
+    <h1>{{ $blip->description }}</h1>
 </body>
 </html>

@@ -64,6 +64,6 @@ Route::get('/venue/events', 'EventController@index');
 Route::get('/venue/events/create', 'EventController@createEvent');
 Route::post('/venue/events/create', 'EventController@storeEvent');
 // show event details
-Route::get('/venue/events/{id}', 'EventController@details');
+Route::get('/venue/events/{id}', 'EventController@detail');
 
 Route::resource('events', 'EventController');

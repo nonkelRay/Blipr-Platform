@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Detail</p>
+    <h1>{{ $event->title }}</h1>
 </body>
 </html>

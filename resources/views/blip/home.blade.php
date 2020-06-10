@@ -9,7 +9,8 @@
     <h1>blips</h1>
 
     @foreach ($blips as $blip)
-        <div>   
+        <div> 
+            <a href="blips/{{$blip->id}}">link</a>
             <video width="320" height="240" controls>
                 <source src="{{ asset('storage/' . $blip->video) }}" type="video/mp4">
                 Your browser does not support the video tag.

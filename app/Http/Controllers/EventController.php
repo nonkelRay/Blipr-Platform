@@ -27,6 +27,13 @@ class EventController extends Controller
         return view('event.events')->with('events', $events);
     }
 
+    public function detail($id)
+    {
+        $event = Event::where('id', $id)->first();
+
+        return view('event.detail')->with('event', $event);
+    }
+
     public function createEvent()
     {
         return view('event.create');

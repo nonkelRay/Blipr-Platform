@@ -13,7 +13,7 @@
 
     @foreach ($events as $event)
         <div>
-            <h1>{{ $event->title }}</h1>
+            <a href="{{$event->id}}">{{ $event->title }}</a>
             <h4>{{ $event->artist }}</h2>   
             <img src="{{ asset('storage/' . $event->image) }}" width="60px" height="60px" alt="">
             <p> {{ $event->venue_name }}</p>

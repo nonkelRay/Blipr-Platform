@@ -21,9 +21,11 @@ class BlipController extends Controller
         return view('blip.home')->with('blips', $blips);
     }
 
-    public function detail()
+    public function detail($id)
     {
-        return view('blip.detail');
+        $blip = Blip::where('id', $id)->first();
+
+        return view('blip.detail')->with('blip', $blip);
     }
 
     public function createBlip()
