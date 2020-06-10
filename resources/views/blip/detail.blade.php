@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $event->title }}</h1>
+    <h1>{{ $blip->description }}</h1>
 </body>
 </html>
