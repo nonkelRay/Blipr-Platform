@@ -12,8 +12,8 @@
 
             </ul>
             <ul>
-                    <li><a class="nav-link" href="{{ route('venue/home') }}">{{ __('Venue home') }}</a></li>
-                    <li><a class="nav-link" href="{{ route('venue/events') }}">{{ __('My events') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('venue/events') }}">{{ __('Your events') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('venue/events/create') }}">{{ __('Add event') }}</a></li>
             </ul>
         </nav>
         <div class="socials">

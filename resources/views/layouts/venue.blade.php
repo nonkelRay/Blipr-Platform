@@ -23,7 +23,6 @@
     <div id="app">
         @include('partials.header-venue')
         @include('partials.mobile-nav-venue')
-        @include('partials.vertical-nav-venue')
         <main class="main main-venue">
             @yield('content')
         </main>

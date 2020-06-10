@@ -1,12 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="login main-content">
+<div class="login-venue main-content">
+    <div class="filler"></div>
     <div class="container">
-        <h1>Login for venues</h1>
-        <img class="hero" src="{{ asset('images/login-image.png') }}" alt="">
+        <p class="info info--large">
+            This is where we welcome our participating venues.
+            We made a platform where venues can add their events. This way our users will get a heads up of your upcoming event. After the show you will be able to upload the recordings of the concert. Basically all the features you need to make your venue Blipr-ready in one place!
+            <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> 
+        </p>
         <form class="form login-form" method="POST" action="">
-            <h1>Login for venues</h1>
+            <h1>Venue login</h1>
+            <p class="info info--small">
+                This is where we welcome our participating venues.
+                We made a platform where venues can add their events. This way our users will get a heads up of your upcoming event. After the show you will be able to upload the recordings of the concert. Basically all the features you need to make your venue Blipr-ready in one place!
+                <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> 
+            </p>
             @csrf
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -30,10 +39,8 @@
                         {{ __('Forgot Your Password?') }}
                     </a>
                 @endif
-                {{-- <a class="btn-link" href="{{ route('register') }}">No account yet?</a> --}}
+                <a class="btn-link" href="{{ route('login') }}">Not a venue?</a>
             </div>
-            {{-- <div class="stripe"><span></span>or<span></span></div>
-            <a href="{{url('/login/facebook')}}" class="btn fb-login">Login with Facebook<img src="{{ asset('images/fb.png') }}" alt=""></a> --}}
         </form>
     </div>
 </div>

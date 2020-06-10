@@ -663,15 +663,6 @@ h2 {
     margin-top: 75px;
   }
 
-  .platform-venue .main-venue .main-content {
-    margin-top: 0;
-    margin-left: 100px;
-  }
-
-  .platform-venue .home-nav {
-    display: none;
-  }
-
   .frontpage section {
     padding: 75px 0;
   }
@@ -704,7 +695,6 @@ button {
 
 .form {
   color: #F2F2F2;
-  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -948,12 +938,19 @@ button {
   text-indent: -9999px;
 }
 
+.home-nav .container .brand-venue {
+  background-image: url("/images/venue-logo.png");
+  width: 100px;
+}
+
 .home-nav .container .large-nav {
   color: #F2F2F2;
   list-style: none;
   padding: 0;
   margin: 0;
   display: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .home-nav .container .large-nav .line {
@@ -1327,6 +1324,10 @@ button {
   width: 100%;
 }
 
+.login .container .form {
+  max-width: 350px;
+}
+
 .login .container .form h1 {
   display: none;
 }
@@ -1389,6 +1390,10 @@ button {
 
 .register .container h1 {
   color: #F2F2F2;
+}
+
+.register .container .form {
+  max-width: 350px;
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1533,6 +1538,90 @@ button {
   .subscription .container .desktop-plans .btn,
   .subscription .container .desktop-plans span {
     font-size: 16px;
+  }
+}
+
+.login-venue {
+  background-color: black;
+  padding: 50px 0;
+  position: relative;
+}
+
+.login-venue .container .info--large {
+  display: none;
+}
+
+.login-venue .container .info {
+  margin-bottom: 25px;
+}
+
+.login-venue .container .info span {
+  display: block;
+  margin-top: 25px;
+}
+
+.login-venue .container .info span a {
+  text-decoration: underline;
+}
+
+@media print, screen and (min-width: 768px) {
+  .login-venue {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-venue .container {
+    display: flex;
+    padding: 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-venue .container .info--large {
+    display: block;
+    background-color: #F2F2F2;
+    width: 50%;
+    padding: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .login-venue .container .login-form {
+    width: 50%;
+    padding: 50px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .login-venue .container .login-form h1 {
+    white-space: nowrap;
+    font-size: 50px;
+  }
+
+  .login-venue .container .login-form .info--small {
+    display: none;
+  }
+
+  .login-venue .container .login-form .options {
+    width: 100%;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .login-venue .filler {
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
   }
 }
 
