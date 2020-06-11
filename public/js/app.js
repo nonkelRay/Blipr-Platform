@@ -106,8 +106,29 @@ window.onload = function () {
   hamburger.onclick = function () {
     this.classList.toggle('is-active');
     document.querySelector('body').classList.toggle('scroll-lock');
-    document.querySelector('.mobile-menu').classList.toggle('active');
-  };
+    document.querySelector('.mobile-menu').classList.toggle('active'); // document.querySelector('.mobile-menu').classList.toggle('slide-in');
+  }; // upload button
+
+
+  var inputs = document.querySelectorAll('.inputfile');
+  Array.prototype.forEach.call(inputs, function (input) {
+    var label = input.nextElementSibling;
+    var labelVal = label.innerHTML;
+    input.addEventListener('change', function (e) {
+      var fileName = '';
+      fileName = e.target.value.split('\\').pop(); // if( this.files && this.files.length > 1 ) {
+      //     fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+      // }
+      // else {
+      // }
+
+      if (fileName) {
+        label.innerHTML = fileName;
+      } else {
+        label.innerHTML = labelVal;
+      }
+    });
+  });
 };
 
 /***/ }),

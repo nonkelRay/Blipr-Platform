@@ -19,12 +19,18 @@
             text-indent: -9999px;
             // cursor: pointer;
         }
+        .brand-venue {
+            background-image: url("/images/venue-logo.png");
+            width: 100px;
+        }
         .large-nav {
             color: $white;
             list-style: none;
             padding: 0;
             margin: 0;
             display: none;
+            text-transform: uppercase;
+            font-size: 14px;
             .line {
                 cursor: default;
             }

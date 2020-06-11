@@ -48,7 +48,7 @@ class LoginController extends Controller
         // check if credentials email and password match with one of the database venues
         $credentials = $request->only(['email', 'password']);
         if (Auth::guard('venue')->attempt($credentials)) {
-            return redirect()->route('venue/home');
+            return redirect()->route('venue/events');
         }
 
         return redirect()->back();

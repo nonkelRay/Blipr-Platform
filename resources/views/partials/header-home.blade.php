@@ -4,7 +4,7 @@
         <ul class="large-nav">
             <li><a class="{{ (request()->is('/')) ? 'active' : '' }}" href="/">Home</a></li>
             <li><a href="#">How it works</a></li>
-            <li><a href="#">Venues</a></li>
+            <li><a class="{{ (request()->is('venue/login')) ? 'active' : '' }}" href="{{ route('venue/login') }}">Venues</a></li>
             <li><a class="{{ (request()->is('pricing')) ? 'active' : '' }}" href="{{ route('pricing') }}">{{ __('Pricing') }}</a></li>
             <li class="line">|</li>
             @guest

@@ -18,14 +18,25 @@
 </head>
 <body class="platform">
     <div id="app">
-        @include('partials.mobile-nav')
-        @include('partials.header-home')
+        {{-- @if ( (request()->is('venue/*')) )
+            @include('partials.header-venue')
+            @include('partials.mobile-nav-venue')
+        @else --}}
+            @include('partials.mobile-nav')
+            @include('partials.header-home')
+        {{-- @endif --}}
+        
 
         <main class="main">
             @yield('content')
         </main>
     </div>
-    @include('partials.mobile-footer')
-    @include('partials.footer-home')
+    
+    
+    
+    {{-- @if ( !(request()->is('venue/*')) ) --}}
+        @include('partials.mobile-footer')
+        @include('partials.footer-home')
+    {{-- @endif --}}
 </body>
 </html>
