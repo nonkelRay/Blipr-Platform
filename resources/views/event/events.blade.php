@@ -14,6 +14,7 @@
                 <h4>{{ $event->artist }}</h2>   
                 <img src="{{ asset('storage/' . $event->image) }}" width="60px" height="60px" alt="">
                 <p> {{ $event->venue_name }}</p>
+                <a href="{{$event->id}}">{{ $event->title }}</a>
             </div>
         @empty
            <p>No upcoming events yet, <a href="{{ route('venue/events/create') }}">please add an event.</a></p>
