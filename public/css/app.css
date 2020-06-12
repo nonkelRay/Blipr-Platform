@@ -571,8 +571,8 @@ body {
   display: block !important;
 }
 
-.main {
-  padding-top: 60px;
+.main-content {
+  margin-top: 60px;
 }
 
 p {
@@ -593,6 +593,10 @@ h1::after {
 
 h2 {
   font-weight: bold;
+  font-size: 24px;
+}
+
+h3 {
   font-size: 24px;
 }
 
@@ -630,6 +634,7 @@ h2 {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .platform #app .main-content {
@@ -659,8 +664,8 @@ h2 {
     padding: 0 50px;
   }
 
-  .main {
-    padding-top: 75px;
+  .main-content {
+    margin-top: 75px;
   }
 
   .frontpage section {
@@ -691,11 +696,14 @@ button {
   background-color: #B6B6B6;
 }
 
+.btn--black {
+  background-color: black;
+}
+
 /** Search form */
 
 .form {
   color: #F2F2F2;
-  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -734,6 +742,10 @@ button {
   padding-bottom: 10px;
   margin-bottom: 25px;
   transition: border 0.5s ease;
+}
+
+.form .field:hover {
+  border-color: #F72806;
 }
 
 .form .field:focus {
@@ -838,6 +850,71 @@ button {
   margin-bottom: 50px;
 }
 
+.event-form {
+  color: black;
+}
+
+.event-form input[type=date]::-webkit-calendar-picker-indicator {
+  background: url("/images/calendar_black.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+}
+
+.event-form .field {
+  border-bottom: 1px solid black;
+  background-color: #F2F2F2;
+  color: black;
+}
+
+.event-form .field::-webkit-input-placeholder {
+  color: black;
+}
+
+.event-form .field::-moz-placeholder {
+  color: black;
+}
+
+.event-form .field:-ms-input-placeholder {
+  color: black;
+}
+
+.event-form .field::-ms-input-placeholder {
+  color: black;
+}
+
+.event-form .field::placeholder {
+  color: black;
+}
+
+.event-form .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.event-form .inputfile + label {
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.event-form .inputfile:focus + label,
+.event-form .inputfile + label:hover {
+  border-color: #F72806;
+}
+
+.event-form .inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -887,6 +964,33 @@ button {
   margin: 0 25px;
 }
 
+.vertical-nav {
+  display: none;
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  color: #F2F2F2;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.vertical-nav a {
+  margin-bottom: 50px;
+}
+
+.vertical-nav .logout {
+  position: absolute;
+  bottom: 50px;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .vertical-nav {
+    display: flex;
+  }
+}
+
 .home-nav {
   background-color: black;
   height: 60px;
@@ -912,12 +1016,19 @@ button {
   text-indent: -9999px;
 }
 
+.home-nav .container .brand-venue {
+  background-image: url("/images/venue-logo.png");
+  width: 100px;
+}
+
 .home-nav .container .large-nav {
   color: #F2F2F2;
   list-style: none;
   padding: 0;
   margin: 0;
   display: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .home-nav .container .large-nav .line {
@@ -1026,6 +1137,10 @@ button {
   .large-footer {
     display: block;
   }
+}
+
+.frontpage {
+  position: relative;
 }
 
 .frontpage .hero {
@@ -1283,10 +1398,6 @@ button {
   padding: 50px 0;
 }
 
-.login .container {
-  min-height: 700px;
-}
-
 .login .container h1 {
   color: #F2F2F2;
 }
@@ -1295,8 +1406,18 @@ button {
   width: 100%;
 }
 
+.login .container .form {
+  max-width: 350px;
+}
+
 .login .container .form h1 {
   display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  .login .container {
+    min-height: 700px;
+  }
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1351,6 +1472,10 @@ button {
 
 .register .container h1 {
   color: #F2F2F2;
+}
+
+.register .container .form {
+  max-width: 350px;
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1495,6 +1620,182 @@ button {
   .subscription .container .desktop-plans .btn,
   .subscription .container .desktop-plans span {
     font-size: 16px;
+  }
+}
+
+.login-venue {
+  background-color: black;
+  padding: 50px 0;
+  position: relative;
+}
+
+.login-venue .container .info--large {
+  display: none;
+}
+
+.login-venue .container .info {
+  margin-bottom: 25px;
+}
+
+.login-venue .container .info span {
+  display: block;
+  margin-top: 25px;
+}
+
+.login-venue .container .info span a {
+  text-decoration: underline;
+}
+
+@media print, screen and (min-width: 768px) {
+  .login-venue {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-venue .container {
+    display: flex;
+    padding: 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-venue .container .info--large {
+    display: block;
+    background-color: #F2F2F2;
+    width: 50%;
+    padding: 50px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .login-venue .container .login-form {
+    width: 50%;
+    padding: 50px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .login-venue .container .login-form h1 {
+    white-space: nowrap;
+    font-size: 50px;
+  }
+
+  .login-venue .container .login-form .info--small {
+    display: none;
+  }
+
+  .login-venue .container .login-form .options {
+    width: 100%;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .login-venue .filler {
+    background-color: #F2F2F2;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.events-venue {
+  padding: 50px 0;
+}
+
+.events-venue .container .alert {
+  margin-bottom: 25px;
+}
+
+.events-venue .container .btn-center {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-venue .container .upcoming-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.events-venue-create {
+  padding: 50px 0;
+}
+
+.events-venue-create .container .img-container {
+  display: none;
+}
+
+.events-venue-create .container .img-container img {
+  width: 80%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .events-venue-create {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-venue-create .container {
+    display: flex;
+    padding: 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .events-venue-create .container .img-container {
+    background-color: black;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .events-venue-create .container .form-container {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .events-venue-create .container .form-container .event-form {
+    max-width: 350px;
+  }
+
+  .events-venue-create .container .form-container h1 {
+    white-space: nowrap;
+    font-size: 50px;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .events-venue-create .filler {
+    background-color: black;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
   }
 }
 

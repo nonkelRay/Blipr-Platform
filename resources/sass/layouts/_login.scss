@@ -2,7 +2,7 @@
     background-color: $black;
     padding: 50px 0;
     .container {
-        min-height: 700px;
+
         h1 {
             color: $white;
         }
@@ -10,13 +10,18 @@
             width: 100%;
         }
         .form {
+            max-width: 350px;
             h1 {
                 display: none;
             }
         }
     }
 }
-
+@media print, screen and(min-width: 768px) {
+    .login .container {
+        min-height: 700px;
+    }
+}
 @media print, screen and (min-width: 1024px) {
     .login {
         overflow: hidden;

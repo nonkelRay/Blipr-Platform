@@ -1,48 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Create new Event</h1>
+@extends('layouts.venue')
 
-    <form method="POST" action="" enctype="multipart/form-data">
-        
-        @csrf
-
-        <div>
-            <label for="title">{{ __('Title') }}</label>
-            <input type="text" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus>
+@section('content')
+<div class="main-content events-venue-create">
+    <div class="filler"></div>
+    <div class="container">
+        <div class="form-container">
+            <form class="form event-form" method="POST" action="" enctype="multipart/form-data">
+                <h1>Add event</h1>
+                @csrf
+                <input  class="field" type="text" name="title" placeholder="Event name" value="{{ old('title') }}" required autocomplete="title" autofocus>
+                <input class="field" type="text" name="artist" placeholder="Artist name" value="{{ old('artist') }}" required autocomplete="artist" autofocus>
+                <input class="field" type="date" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
+                <input type="file" name="image" id="image" class="inputfile" value="{{ old('image') }}" accept="image/*" required autocomplete="image" autofocus>
+                <label for="image">Click to upload photo</label>
+                <br>
+                <button type="submit" class="btn btn-primary">
+                    {{ __('Create') }}
+                </button>
+            </form>
         </div>
-
-        <br>
-
-        <div>
-            <label for="artist">{{ __('Artist') }}</label>
-            <input type="text" name="artist" value="{{ old('artist') }}" required autocomplete="artist" autofocus>
+        <div class="img-container">
+            <img src="{{ asset('images/mic.png') }}" alt="">
         </div>
-
-        <br>
-
-        <div>
-            <label for="date">{{ __('Date') }}</label>
-            <input type="date" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
-        </div>
-
-        <br>
-
-        <div>
-            <label for="image">{{ __('Hero Image') }}</label>
-            <input type="file" name="image" value="{{ old('image') }}" accept="image/*" required autocomplete="image" autofocus>
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-            {{ __('Create') }}
-         </button>
-        
-
-    </form>
-</body>
-</html>
+    </div>
+</div>
+@endsection

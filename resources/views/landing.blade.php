@@ -88,7 +88,7 @@
 
         @include('partials.mobile-nav')
         @include('partials.header-home')
-        
+            {{-- <div class="wearable-pic"></div> --}}
         <section class="hero">
             <div class="container">
                 <h1 class="mobile-title">Enjoy at any time</h1>

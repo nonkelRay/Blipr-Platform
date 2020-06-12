@@ -13,6 +13,7 @@
 @import "components/comments";
 @import "components/forms";
 @import "components/mobile-nav";
+@import "components/vertical-nav";
 
 @import "layouts/header-home";
 @import "layouts/footer";
@@ -20,6 +21,9 @@
 @import "layouts/login";
 @import "layouts/register";
 @import "layouts/subscription";
+@import "layouts/login-venue";
+@import "layouts/events-venue";
+@import "layouts/events-venue-create";
 // // Variables
 // @import 'variables';
 
