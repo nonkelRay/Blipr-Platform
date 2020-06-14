@@ -1,0 +1,73 @@
+.blip-detail {
+    padding: 50px 25px;
+    h1 {
+        color: $red;
+        margin-bottom: 10px;
+        &:after {
+            display: none;
+        }
+    }
+    .subtitle {
+        display: block;
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    video {
+        width: 100%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .info {
+        width: 100%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        .not {
+            filter: grayscale(1);
+        }
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            img {
+                width: 30px;
+            }
+            .heart {
+                display: flex;
+                align-items: center;
+                span {
+                    font-weight: bold;
+                    margin-left: 5px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and (min-width: 768px) {
+    .blip-detail {
+        video {
+            margin-top: 75px;
+        }
+        .info {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .icons {
+                margin-top: 0;
+                width: 50%;
+            }
+            strong {
+                max-width: 40%;
+            }
+        }
+    }
+}

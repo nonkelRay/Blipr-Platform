@@ -1996,3 +1996,137 @@ button {
   }
 }
 
+.main-app .your-blips .container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.main-app .your-blips .container .blips-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+
+.main-app .your-blips .container .blips-container .blip {
+  background-image: url("/images/dua.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .your-blips .container .blips-container .blip span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media print, screen and (min-width: 768px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.blip-detail {
+  padding: 50px 25px;
+}
+
+.blip-detail h1 {
+  color: #F72806;
+  margin-bottom: 10px;
+}
+
+.blip-detail h1:after {
+  display: none;
+}
+
+.blip-detail .subtitle {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.blip-detail video {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.blip-detail .info {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blip-detail .info .not {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.blip-detail .info .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.blip-detail .info .icons img {
+  width: 30px;
+}
+
+.blip-detail .info .icons .heart {
+  display: flex;
+  align-items: center;
+}
+
+.blip-detail .info .icons .heart span {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .blip-detail video {
+    margin-top: 75px;
+  }
+
+  .blip-detail .info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .blip-detail .info .icons {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .blip-detail .info strong {
+    max-width: 40%;
+  }
+}
+
