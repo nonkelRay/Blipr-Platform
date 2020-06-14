@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Register Venue') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" style="margin: 200px 0px;">
                     <form method="POST" action="">
                         @csrf
 

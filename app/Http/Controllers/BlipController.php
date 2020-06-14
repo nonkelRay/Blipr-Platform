@@ -8,6 +8,11 @@ use App\Blip;
 
 class BlipController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Show the blip dashboard.
      *
@@ -38,17 +43,18 @@ class BlipController extends Controller
         $this->validate($request, [
             'video' => 'required',
             'description' => 'required',
-            'feeling' => 'required',
+            //'feeling' => 'required',
         ]);
 
         $video = $request->video->store('blips');
 
-        // add data to new Event
+        // add data to new Blip
         $blip = new Blip();
         $blip->video = $video;
         $blip->description = $request->input('description');
-        $blip->feeling = $request->input('feeling');
+        //$blip->feeling = $request->input('feeling');
         $blip->user_id = Auth::user()->id;
+        $blip->event_id = 1;
         $blip->active = true;
         $blip->save();
 

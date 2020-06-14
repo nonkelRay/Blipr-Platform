@@ -12,7 +12,7 @@ class CreateEventsTable extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id', true);
             $table->string('title');
             $table->string('artist');
             $table->date('date');
@@ -21,10 +21,14 @@ class CreateEventsTable extends Migration
             $table->string('link_tickets')->nullable();
             $table->integer('duration')->nullable();
             $table->string('video_link')->nullable();
-            $table->integer('venue_id');
+            $table->integer('venue_id')->unsigned();
             $table->string('venue_name');
             $table->boolean('active');
             $table->timestamps();
+        });
+
+        Schema::table('events', function (Blueprint $table) {
+            $table->foreign('venue_id')->references('id')->on('venues');
         });
     }
 
