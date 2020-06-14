@@ -1,0 +1,180 @@
+.main-app {
+    .container {
+        max-width: none;
+        width: 100%;
+        padding: 50px 0;
+        padding-bottom: 50px;
+        .welcome {
+            margin-bottom: 50px;
+            padding: 0 25px;
+           .welcome-container {
+               .info {
+                   span {
+                       color: $red;
+                   }
+               }
+               .img-container {
+                   display: none;
+               }
+           }
+        }
+        .events {
+            padding: 25px;
+            background-color: $black;
+            h1 {
+                color: $white;
+            }
+            .events-container {
+                display: grid;
+               justify-items: center;
+                justify-content: center;
+                .event {
+                    // background-image: url('/images/artist.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 250px;
+                    height: 150px;
+                    margin: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px;
+                    span {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .blips {
+            padding: 25px;
+            text-align: center;
+            h1 {
+                text-align: left;
+            }
+            .blips-container {
+                display: grid;
+                justify-items: center;
+                margin-bottom: 25px;
+                .blip {
+                    background-image: url('/images/dua.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 250px;
+                    height: 150px;
+                    margin: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px;
+                    span {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            // .btn {
+            //     text-align: ;
+            // }
+        }
+    }
+}
+
+
+@media print, screen and  (min-width: 768px) {
+    .main-app {
+        .container {
+            .welcome {
+                margin-bottom: 0;
+                .welcome-container {
+                    display: flex;
+                    .info {
+                        min-width: 370px;
+                    }
+                    .img-container {
+                        display: block;
+                        margin-left: 25px;
+                        position: relative;
+                        top: -40px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .events {
+                margin-top: -44px;
+            }
+            .events {
+                .events-container {
+                    grid-template-columns: 50% 50%;
+                }
+            }
+            .blips {
+                .blips-container {
+                    grid-template-columns: 50% 50%;
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and  (min-width: 1024px) {
+    .main-app {
+        .container {
+            .welcome {
+                h1 {
+                    margin-bottom: 75px;
+                }
+                .welcome-container {
+                    .info {
+                        min-width: 460px;
+                    }
+                }
+            }
+            .events {
+                .events-container {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+            }
+            .blips {
+                .blips-container {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and  (min-width: 1024px) {
+    .main-app {
+        .container {
+            .welcome {
+                .welcome-container {
+                    .img-container {
+                        margin-left: 75px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and  (min-width: 1440px) {
+    .main-app {
+        .container {
+            .events{
+                .events-container {
+                    grid-template-columns: repeat(5, minmax(0, 1fr));
+                }
+            }
+            .blips {
+                .blips-container {
+                    grid-template-columns: repeat(5, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}

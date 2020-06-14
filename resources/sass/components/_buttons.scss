@@ -13,12 +13,15 @@ button {
     font-weight: bold;
     &:hover {
        color: darken($white, 10%);
-    //    background-color: darken($red, 5%);
+       transform: scale(1.05);
     }
 }
 
 .btn--disabled {
     background-color: $dark-grey;
+    &:hover {
+        transform: scale(1);
+    }
 }
 
 .btn--black {

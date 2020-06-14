@@ -701,10 +701,15 @@ button {
 
 .btn:hover {
   color: #d9d9d9;
+  transform: scale(1.05);
 }
 
 .btn--disabled {
   background-color: #B6B6B6;
+}
+
+.btn--disabled:hover {
+  transform: scale(1);
 }
 
 .btn--black {
@@ -1830,6 +1835,164 @@ button {
     right: 0;
     width: 50%;
     height: 100%;
+  }
+}
+
+.main-app .container {
+  max-width: none;
+  width: 100%;
+  padding: 50px 0;
+  padding-bottom: 50px;
+}
+
+.main-app .container .welcome {
+  margin-bottom: 50px;
+  padding: 0 25px;
+}
+
+.main-app .container .welcome .welcome-container .info span {
+  color: #F72806;
+}
+
+.main-app .container .welcome .welcome-container .img-container {
+  display: none;
+}
+
+.main-app .container .events {
+  padding: 25px;
+  background-color: black;
+}
+
+.main-app .container .events h1 {
+  color: #F2F2F2;
+}
+
+.main-app .container .events .events-container {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.main-app .container .events .events-container .event {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .container .events .events-container .event span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-app .container .blips {
+  padding: 25px;
+  text-align: center;
+}
+
+.main-app .container .blips h1 {
+  text-align: left;
+}
+
+.main-app .container .blips .blips-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+
+.main-app .container .blips .blips-container .blip {
+  background-image: url("/images/dua.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .container .blips .blips-container .blip span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media print, screen and (min-width: 768px) {
+  .main-app .container .welcome {
+    margin-bottom: 0;
+  }
+
+  .main-app .container .welcome .welcome-container {
+    display: flex;
+  }
+
+  .main-app .container .welcome .welcome-container .info {
+    min-width: 370px;
+  }
+
+  .main-app .container .welcome .welcome-container .img-container {
+    display: block;
+    margin-left: 25px;
+    position: relative;
+    top: -40px;
+  }
+
+  .main-app .container .welcome .welcome-container .img-container img {
+    width: 100%;
+  }
+
+  .main-app .container .events {
+    margin-top: -44px;
+  }
+
+  .main-app .container .events .events-container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .container .welcome h1 {
+    margin-bottom: 75px;
+  }
+
+  .main-app .container .welcome .welcome-container .info {
+    min-width: 460px;
+  }
+
+  .main-app .container .events .events-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .container .welcome .welcome-container .img-container {
+    margin-left: 75px;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .main-app .container .events .events-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
