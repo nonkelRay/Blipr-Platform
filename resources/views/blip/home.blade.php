@@ -15,6 +15,8 @@
                 <source src="{{ asset('storage/' . $blip->video) }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <p>{{ $blip->event->title }}</p>
+            <p>{{ $blip->event->venue_name }}</p>
             <p>{{ $blip->description }}</p>
             <p>{{ $blip->feeling }}</p>
             <h4>{{ $blip->heartbeat }}</h4>

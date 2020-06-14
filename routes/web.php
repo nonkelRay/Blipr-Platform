@@ -38,15 +38,15 @@ Route::post('/calendar', 'LandingController@searchEvent');
 Route::view('/pricing', 'pricing')->name('pricing');
 
 // homepage users
-Route::get('user/home', 'HomeController@index')->name('home');
+Route::get('/user/home', 'HomeController@index')->name('home');
 
 // user blips page
-Route::get('user/blips', 'BlipController@index');
+Route::get('/user/blips', 'BlipController@index');
 // hidden route for creating blips easy
-Route::get('user/blips/create', 'BlipController@createBlip');
-Route::post('user/blips/create', 'BlipController@storeBlip');
+Route::get('/user/blips/create', 'BlipController@createBlip');
+Route::post('/user/blips/create', 'BlipController@storeBlip');
 // user blip in detail
-Route::get('user/blips/{id}', 'BlipController@detail');
+Route::get('/user/blips/{id}', 'BlipController@detail');
 
 // authentication routes for venues
 Route::get('/venue/register', 'Auth\RegisterController@showVenueRegister')->name('venue/register');
