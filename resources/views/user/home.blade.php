@@ -89,18 +89,5 @@
         </div>
         <a href="{{ route('user/blips') }}" class="btn">All blips</a>
    </section>
-    
-
-    <div>
-    @foreach ($blips as $blip)
-        <div>   
-            <a href="blips/{{$blip->id}}">link</a>
-            <p>{{ $blip->description }}</p>
-        </div>
-        @if ($loop->iteration == 10)
-            @break
-        @endif
-    @endforeach
-    </div>
 </div>
 @endsection
