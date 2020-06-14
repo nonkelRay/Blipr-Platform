@@ -9,7 +9,7 @@
             <h1>{{ $event->artist }}</h1>
             <p>{{ $event->title }} @ {{ $event->venue_name }} </p>
             <p>{{ $event->date }}</p>
-            <a href="" class="btn">upload recording</a>
+            <a href="{{ url('venue/events/'.$event->id.'/upload') }}" class="btn">upload recording</a>
         </div>
     </div> 
 </div>

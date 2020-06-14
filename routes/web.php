@@ -60,10 +60,16 @@ Route::get('/venue/home', 'VenueController@index')->name('venue/home');
 
 // show all venue events
 Route::get('/venue/events', 'EventController@index')->name('venue/events');
+
 // create event as venue
 Route::get('/venue/events/create', 'EventController@createEvent')->name('venue/events/create');
 Route::post('/venue/events/create', 'EventController@storeEvent');
+
 // show event details
 Route::get('/venue/events/{id}', 'EventController@detail');
+
+// upload event video
+Route::get('/venue/events/{id}/upload', 'EventController@uploadVideo');
+Route::post('/venue/events/{id}/upload', 'EventController@storeVideo');
 
 Route::resource('events', 'EventController');
