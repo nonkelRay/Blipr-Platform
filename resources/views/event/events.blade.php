@@ -5,7 +5,7 @@
     <div class="container">
         <h1>Your events</h1>
         @if(Session::has('message'))
-            <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+            <p style="background: green; color:white; border-radius: 40px; padding: 0 10px" class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
         @endif
 
         @forelse ($events as $event)

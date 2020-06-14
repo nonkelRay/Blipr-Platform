@@ -70,4 +70,26 @@ class EventController extends Controller
 
         return redirect('venue/events');
     }
+
+    public function uploadVideo($id)
+    {
+        $event = Event::where('id', $id)->first();
+
+        return view('event.upload')->with('event', $event);
+    }
+
+    public function storeVideo(Request $request, $id)
+    {
+        $event = Event::where('id', $id)->first();
+
+        $video = $request->video->store('video_link');
+
+        $event->video_link = $video;
+        $event->save();
+
+        // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
+        $request->session()->flash('message', 'Video uploaded');
+
+        return redirect('venue/events');
+    }
 }
