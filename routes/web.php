@@ -41,7 +41,7 @@ Route::view('/pricing', 'pricing')->name('pricing');
 Route::get('user/home', 'HomeController@index')->name('home');
 
 // user blips page
-Route::get('user/blips', 'BlipController@index');
+Route::get('user/blips', 'BlipController@index')->name('user/blips');
 // hidden route for creating blips easy
 Route::get('user/blips/create', 'BlipController@createBlip');
 Route::post('user/blips/create', 'BlipController@storeBlip');

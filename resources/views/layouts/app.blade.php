@@ -18,25 +18,26 @@
 </head>
 <body class="platform">
     <div id="app">
-        {{-- @if ( (request()->is('venue/*')) )
-            @include('partials.header-venue')
-            @include('partials.mobile-nav-venue')
-        @else --}}
+        @if ( (request()->is('user/*')) )
+            @include('partials.header-app')
+            @include('partials.mobile-nav-app')
+            @include('partials.vertical-nav-app')
+        @else
             @include('partials.mobile-nav')
             @include('partials.header-home')
-        {{-- @endif --}}
+        @endif
         
 
-        <main class="main">
+        <main class="main {{ (request()->is('user/*')) ? 'main-app' : '' }}">
             @yield('content')
         </main>
     </div>
     
     
     
-    {{-- @if ( !(request()->is('venue/*')) ) --}}
+    @if ( !(request()->is('user/*')) )
         @include('partials.mobile-footer')
         @include('partials.footer-home')
-    {{-- @endif --}}
+    @endif
 </body>
 </html>
