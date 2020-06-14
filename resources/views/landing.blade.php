@@ -92,7 +92,9 @@
         <section class="hero">
             <div class="container">
                 <h1 class="mobile-title">Enjoy at any time</h1>
-                <img src="{{ asset('images/hero-image.png') }}" alt="">
+                <div class="img-container">
+                    <img src="{{ asset('images/hero-image.png') }}" alt="">
+                </div>
                 <div class="text">
                     <h1 class="large-title">Enjoy at any time</h1>
                     <p>Blipr is a platform that captures your musical experiences. Save your beloved memories with a single blip and relive them at any time. No more filming, distractions or empty batteries.</p>

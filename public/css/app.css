@@ -854,6 +854,15 @@ button {
   color: black;
 }
 
+.event-form input:-webkit-autofill,
+.event-form input:-webkit-autofill:hover,
+.event-form input:-webkit-autofill:focus,
+.event-form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #F2F2F2 inset !important;
+  -webkit-text-fill-color: black !important;
+  font-family: "Graphik" !important;
+}
+
 .event-form input[type=date]::-webkit-calendar-picker-indicator {
   background: url("/images/calendar_black.png") no-repeat;
   width: 20px;
@@ -1155,9 +1164,13 @@ button {
   display: none;
 }
 
-.frontpage .hero .container img {
+.frontpage .hero .container .img-container {
   width: 100%;
   margin-bottom: 25px;
+}
+
+.frontpage .hero .container .img-container img {
+  width: 100%;
 }
 
 .frontpage .hero .container .text p {
@@ -1294,9 +1307,13 @@ button {
     display: none;
   }
 
-  .frontpage .hero .container img {
+  .frontpage .hero .container .img-container {
     width: 50%;
     margin-right: 25px;
+  }
+
+  .frontpage .hero .container .text {
+    width: 50%;
   }
 
   .frontpage .hero .container .text .large-title {
@@ -1335,9 +1352,17 @@ button {
     margin-bottom: 0px;
   }
 
+  .frontpage .business .container .text {
+    width: 50%;
+  }
+
   .frontpage .store .container {
     display: flex;
     align-items: center;
+  }
+
+  .frontpage .store .container .text {
+    width: 50%;
   }
 
   .frontpage .store .container .text .download {
@@ -1711,24 +1736,42 @@ button {
   padding: 50px 0;
 }
 
+.events-venue .container {
+  position: relative;
+  margin-bottom: 50px;
+}
+
 .events-venue .container .alert {
   margin-bottom: 25px;
 }
 
+.events-venue .container .btn {
+  font-size: 14px;
+}
+
 .events-venue .container .btn-center {
   position: absolute;
-  bottom: 50px;
+  bottom: -75px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.events-venue .container .btn-fixed {
+  position: fixed;
+  bottom: 50px;
 }
 
 .events-venue .container .upcoming-event {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   padding-bottom: 25px;
   margin-bottom: 25px;
+}
+
+.events-venue .container .upcoming-event .info {
+  max-width: 60%;
 }
 
 .events-venue-create {
@@ -1796,6 +1839,69 @@ button {
     right: 0;
     width: 50%;
     height: 100%;
+  }
+}
+
+.events-venue-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.events-venue-detail .container {
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.events-venue-detail .container .event-picture {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.events-venue-detail .container .info p {
+  font-size: 20px;
+}
+
+.events-venue-detail .container .info .btn {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media print, screen and (min-width: 768px) {
+  .events-venue-detail .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .events-venue-detail .container .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .events-venue-detail .container .info .btn {
+    position: static;
+    transform: translateX(0);
+    margin-top: 25px;
+  }
+
+  .events-venue-detail .container .event-picture {
+    width: 40%;
+    margin: 50px;
   }
 }
 
