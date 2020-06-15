@@ -31,7 +31,7 @@ Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvi
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
 
 // specific landing detail eventpage
-Route::get('/calendar', 'LandingController@events');
+Route::get('/calendar', 'LandingController@events')->name('calendar');
 Route::post('/calendar', 'LandingController@searchEvent');
 
 // pricing

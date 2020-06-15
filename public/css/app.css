@@ -98,6 +98,93 @@
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir=rtl] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 /** Import theme styles */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -617,6 +704,8 @@ button {
   text-transform: uppercase;
   transition: all 0.3s ease;
   font-weight: bold;
+  position: relative;
+  z-index: 10;
 }
 .btn:hover {
   color: #d9d9d9;
@@ -631,6 +720,10 @@ button {
 }
 
 .btn--black {
+  background-color: black;
+}
+
+.btn-search {
   background-color: black;
 }
 
@@ -903,6 +996,33 @@ button {
     display: flex;
   }
 }
+.slider .slick-slide {
+  margin: 0 75px;
+  width: 200px;
+}
+.slider .artist {
+  background-image: url("/images/artist.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background-position: center;
+  background-size: cover;
+}
+.slider .artist h2 {
+  padding: 25px 0;
+}
+
+@media print, screen and (min-width: 1024px) {
+  .slider .slick-slide {
+    width: 300px;
+  }
+  .slider .slick-slide .artist {
+    height: 150px;
+  }
+}
 .home-nav {
   background-color: black;
   height: 60px;
@@ -1068,22 +1188,35 @@ button {
   color: #F2F2F2;
   text-align: left;
 }
-.frontpage .tutorial .container .steps .hide {
-  display: none;
-}
-.frontpage .tutorial .container .steps img {
+.frontpage .tutorial .container .steps .img-container {
   width: 100%;
+}
+.frontpage .tutorial .container .steps .img-container span {
+  color: #F2F2F2;
+  font-weight: bold;
+  display: block;
+  margin: 25px 0;
+}
+.frontpage .tutorial .container .steps .img-container img {
+  width: 100%;
+  border-radius: 100%;
 }
 .frontpage .tutorial .container .btn {
   margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
 }
-.frontpage .business .container img {
+.frontpage .business .container .business-pic {
   display: block;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
+}
+.frontpage .business .container .text img {
+  width: 100px;
+  margin-right: auto;
+  margin-left: 0;
   margin-bottom: 25px;
 }
 .frontpage .business .container .text p {
@@ -1112,28 +1245,14 @@ button {
 }
 .frontpage .shows {
   background-color: #F72806;
+  padding-bottom: 50px;
 }
-.frontpage .shows .container h1::after {
+.frontpage .shows h1 {
+  padding-left: 25px;
+  margin-bottom: 50px;
+}
+.frontpage .shows h1::after {
   color: #F2F2F2;
-}
-.frontpage .shows .container .mobile {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.frontpage .shows .container .mobile .artist {
-  background-image: url("/images/artist.png");
-  width: 150px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-  border-radius: 24px;
-  background-position: center 16%;
-}
-.frontpage .shows .container .more {
-  display: none;
 }
 .frontpage .partners .container .partner-logos {
   padding: 50px 0;
@@ -1164,8 +1283,9 @@ button {
     display: none;
   }
   .frontpage .hero .container .img-container {
-    width: 50%;
-    margin-right: 25px;
+    width: 70%;
+    margin-left: -19%;
+    margin-right: 6%;
   }
   .frontpage .hero .container .text {
     width: 50%;
@@ -1176,9 +1296,9 @@ button {
   .frontpage .tutorial .container .steps {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
-  .frontpage .tutorial .container .steps img {
+  .frontpage .tutorial .container .steps .img-container {
     width: 30%;
   }
   .frontpage .tutorial .container .steps .hide {
@@ -1192,7 +1312,7 @@ button {
     position: relative;
     align-items: center;
   }
-  .frontpage .business .container img {
+  .frontpage .business .container .business-pic {
     position: relative;
     left: -25px;
     bottom: -25px;
@@ -1217,26 +1337,47 @@ button {
     width: 50%;
     margin-left: 25px;
   }
-  .frontpage .shows .container .more {
-    display: flex;
+  .frontpage .shows {
+    padding-bottom: 75px;
   }
 }
 @media print, screen and (min-width: 1024px) {
+  .frontpage .hero {
+    padding-bottom: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+  .frontpage .hero .container::after {
+    content: "";
+    display: block;
+    background-image: url("/images/bandje-side.png");
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    z-index: 0;
+  }
+  .frontpage .hero .container .img-container {
+    margin-left: -14%;
+    margin-right: 0;
+  }
   .frontpage .tutorial .container h1 {
     margin-bottom: 75px;
   }
-  .frontpage .shows .container h1 {
+  .frontpage .tutorial .container .steps .img-container span {
+    font-size: 20px;
+  }
+  .frontpage .shows h1 {
     text-align: center;
+    padding-left: 0;
     margin-bottom: 75px;
   }
-  .frontpage .shows .container .mobile .artist {
-    width: 220px;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .frontpage .business {
-    padding-bottom: 25px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
   .frontpage .business .container img {
     left: -50px;
@@ -1244,12 +1385,18 @@ button {
     width: 60%;
     margin-bottom: 0px;
   }
+  .frontpage .business .container .text img {
+    width: 150px;
+  }
   .frontpage .partners h1 {
     text-align: center;
     margin-bottom: 75px;
   }
   .frontpage .store .container .text {
     margin-right: 60px;
+  }
+  .frontpage .shows {
+    padding-bottom: 100px;
   }
 }
 .login {
@@ -1446,6 +1593,10 @@ button {
 .login-venue .container .info--large {
   display: none;
 }
+.login-venue .container .info--large img {
+  width: 150px;
+  margin-bottom: 50px;
+}
 .login-venue .container .info {
   margin-bottom: 25px;
 }
@@ -1472,7 +1623,8 @@ button {
   }
   .login-venue .container .info--large {
     display: block;
-    background-color: #F2F2F2;
+    background-color: black;
+    color: #F2F2F2;
     width: 50%;
     padding: 50px;
     margin-bottom: 0;
@@ -1503,7 +1655,7 @@ button {
 }
 @media print, screen and (min-width: 1440px) {
   .login-venue .filler {
-    background-color: #F2F2F2;
+    background-color: black;
     position: absolute;
     left: 0;
     width: 50%;
@@ -1868,6 +2020,7 @@ button {
 }
 .events-venue-detail .container .info p {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .events-venue-detail .container .info .btn {
   position: absolute;
@@ -1892,6 +2045,7 @@ button {
     align-items: flex-start;
     justify-content: center;
     width: 50%;
+    text-align: left;
   }
   .events-venue-detail .container .info .btn {
     position: static;
@@ -1901,5 +2055,98 @@ button {
   .events-venue-detail .container .event-picture {
     width: 40%;
     margin: 50px;
+  }
+}
+.events-venue-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.events-venue-upload .container {
+  width: 100%;
+}
+.events-venue-upload .container .form-container {
+  text-align: center;
+  width: 100%;
+}
+.events-venue-upload .container .form-container .event-form {
+  width: 100%;
+}
+.events-venue-upload .container .form-container .event-form h1 {
+  margin-bottom: 75px;
+}
+.events-venue-upload .container .form-container .event-form .inputfile + label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px auto;
+  display: block;
+}
+
+.calendar {
+  flex-grow: 1;
+  background-color: #F72806;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.calendar .container .header-shows h1:after {
+  color: #F2F2F2;
+}
+.calendar .container .header-shows form .input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.calendar .container .header-shows form .input-group input {
+  border-radius: 24px;
+  border: none;
+  padding: 10px 20px;
+  flex-grow: 1;
+  margin-right: 5px;
+}
+.calendar .container .event-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+.calendar .container .event-container .event {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.calendar .container .event-container .event span {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media print, screen and (min-width: 768px) {
+  .calendar .container .event-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media print, screen and (min-width: 1024px) {
+  .calendar .container .header-shows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .calendar .container .header-shows h1 {
+    font-size: 60px;
+  }
+  .calendar .container .event-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media print, screen and (min-width: 1440px) {
+  .calendar .container .event-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }

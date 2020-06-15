@@ -96,12 +96,12 @@
             <div class="container">
                 <h1 class="mobile-title">Enjoy at any time</h1>
                 <div class="img-container">
-                    <img src="{{ asset('images/hero-image.png') }}" alt="">
+                    <img src="{{ asset('images/bandje.png') }}" alt="">
                 </div>
                 <div class="text">
                     <h1 class="large-title">Enjoy at any time</h1>
-                    <p>Blipr is a platform that captures your musical experiences. Save your beloved memories with a single blip and relive them at any time. No more filming, distractions or empty batteries.</p>
-                    <a href="#" class="btn">try for free</a>
+                    <p>Blipr is a tool that captures your favourite music experiences. Save your beloved memories with just a press of a button and relive them at any time. No more filming, distractions or empty phone batteries.</p>
+                    <a href="{{ route('login') }}" class="btn">try for free</a>
                 </div>
             </div>
         </section>
@@ -109,19 +109,28 @@
             <div class="container">
                 <h1>How it works</h1>
                 <div class="steps">
-                    <img src="{{ asset('images/step-1.png') }}" alt="">
-                    <img class="hide" src="{{ asset('images/step-2.png') }}" alt="">
-                    <img class="hide" src="{{ asset('images/step-3.png') }}" alt="">
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-1.gif') }}" alt="">
+                        <span>Connect your wearable</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-2.gif') }}" alt="">
+                        <span>Blip your favourite moments</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-3.gif') }}" alt="">
+                        <span>Relive them at any time</span>
+                    </div>
                 </div>
-                <a href="#" class="btn">read more</a>
+                {{-- <a href="#" class="btn">read more</a> --}}
             </div>
         </section>
         <section class="business">
             <div class="container">
-                <img src="{{ asset('images/business.png') }}" alt="">
+                <img class="business-pic" src="{{ asset('images/venue-gif.gif') }}" alt="">
                 <div class="text">
-                    <h1>Blipr venues</h1>
-                    <p>Since the music scene depends on the hard work and dedication of venues and event organizers we want to give something in return. Next to a digital experience to offer to their audience we will offer a commission for every Blipr user. This way we can expand our Blipr family and work towards a better music experience all over the world.</p>
+                    <img src="{{ asset('images/venue-black.png') }}" alt="">
+                    <p>Since the music scene depends on the hard work and dedication of venues and event organizers we want to give them something in return. Next to a digitalised experience of their concerts we will offer a commission for every Blipr user. This way we can expand our Blipr family and work towards a better music experience worldwide.</p>
                     <a href="#" class="btn">discover more</a>
                 </div>
             </div>
@@ -130,7 +139,7 @@
             <div class="container">
                 <div class="text">
                     <h1>Our application</h1>
-                    <p>The Blipr application is developed so you can keep your memories as close as possible. Access your blips, find new concerts or connect with your friends. Our application knows you and your music taste very well and is completely personalized just for you.</p>
+                    <p>The Blipr application is developed so you can keep your memories as close as possible. Access your Blips, find new concerts and connect with your friends. Our application knows you very well and is completely personalized just for you.</p>
                     <div class="download">
                         <img src="{{ asset('images/playstore.png') }}" alt="">
                         <img src="{{ asset('images/appstore.png') }}" alt="">
@@ -140,31 +149,22 @@
             </div>
         </section>
         <section class="shows">
-            <div class="container">
+            {{-- <div class="container"> --}}
                 <h1>Upcoming shows</h1>
-                <div class="mobile">
+                <div class="slider">
                     @foreach ($events as $event)
                         <div class="artist">
-                            <h2>{{ $event->artist }}</h2>
-                            <h3>{{ $event->venue_name }}</h3>
+                            <a href="{{ route('calendar') }}"><h2>{{ $event->artist }}</h2></a>
                         </div>
                     @endforeach
                 </div>
-                <div class="mobile more">
+                {{-- <div class="slider">
                     <div class="artist">
-                        <h2>Jamie xx</h2>
+                        <a href="{{ route('calendar') }}"><h2>Jamie xx1</h2></a>
                     </div>
                     <div class="artist">
                         <h2>Jamie xx</h2>
                     </div>
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
-                    <div class="artist">
-                        <h2>Jamie xx</h2>
-                    </div>
-                </div>
-                <div class="mobile more">
                     <div class="artist">
                         <h2>Jamie xx</h2>
                     </div>
@@ -177,8 +177,10 @@
                     <div class="artist">
                         <h2>Jamie xx</h2>
                     </div>
-                </div>
-            </div>
+                    <div class="artist">
+                        <h2>Jamie xx5</h2>
+                    </div>
+                </div> --}}
         </section>
         <section class="partners">
             <div class="container">

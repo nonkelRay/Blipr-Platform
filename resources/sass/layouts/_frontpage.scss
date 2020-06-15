@@ -21,6 +21,7 @@
             margin-bottom: 25px;
             img {
                 width: 100%;
+               
             }
         }
         .text {
@@ -39,11 +40,18 @@
               text-align: left;
           }
           .steps {
-            .hide {
-                display: none;
-            }
-            img {
+            .img-container {
                 width: 100%;
+                span {
+                    color: $white;
+                    font-weight: bold;
+                    display: block;
+                    margin: 25px 0;
+                }
+                img {
+                    width: 100%;
+                    border-radius: 100%;
+                }
             }
           } 
           .btn {
@@ -55,7 +63,7 @@
   }
   .business {
       .container {
-        img {
+        .business-pic {
             display: block;
             width: 70%;
             margin-left: auto;
@@ -63,6 +71,12 @@
             margin-bottom: 25px;
         }
         .text {
+            img {
+                width: 100px;
+                margin-right: auto;
+                margin-left: 0;
+                margin-bottom: 25px;
+            }
             p {
                 margin-bottom: 25px;
             }
@@ -96,30 +110,35 @@
   }
     .shows {
         background-color: $red;
-        .container {
+        padding-bottom: 50px;
+            h1 {
+                padding-left: 25px;
+                margin-bottom: 50px;
+            }
             h1::after{
                 color: $white;
+                
             }
-            .mobile {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                .artist {
-                    background-image: url("/images/artist.png");
-                    width: 150px;
-                    height: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 25px;
-                    border-radius: 24px;
-                    background-position: center 16%;
-                }
-            }
-            .more {
-                display: none;
-            }
-        }
+            // .mobile {
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     justify-content: space-between;
+            //     .artist {
+            //         background-image: url("/images/artist.png");
+            //         width: 150px;
+            //         height: 100px;
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         margin-bottom: 25px;
+            //         border-radius: 24px;
+            //         background-position: center;
+            //     }
+            // }
+            // .more {
+            //     display: none;
+            // }
+        // }
     }
     .partners {
         .container {
@@ -154,8 +173,9 @@
                     display: none;
                 }
                 .img-container {
-                    width: 50%;
-                    margin-right: 25px;
+                    width: 70%;
+                    margin-left: -19%;
+                    margin-right: 6%;
                 }
                 .text {
                     width: 50%;
@@ -171,8 +191,8 @@
                 .steps {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
-                    img {
+                    align-items: flex-start;
+                    .img-container {
                         width: 30%;
                     }
                     .hide {
@@ -187,7 +207,7 @@
                 display: flex;
                 position: relative;
                 align-items: center;
-              img {
+              .business-pic {
                   position: relative;
                   left: -25px;
                   bottom: -25px;
@@ -196,6 +216,9 @@
               }
               .text {
                   width: 50%;
+                //   img {
+                //       width: 200px;
+                //   }
               }
             }
         }
@@ -217,48 +240,73 @@
             }   
         }
         .shows {
-            .container {
-                .more {
-                    display: flex;
-                }
-            }
-        } 
+            padding-bottom: 75px;
+        }
     }
 }
 
 @media print, screen and (min-width: 1024px) {
     .frontpage {
+        .hero {
+            padding-bottom: 150px;
+            position: relative;
+            overflow: hidden;
+            .container {
+                // position: relative;
+                &::after {
+                    content: '';
+                    display: block;
+                    background-image: url('/images/bandje-side.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 400px;
+                    height: 200px;
+                    position: absolute;
+                    bottom: -25px;
+                    right: 0px;
+                    z-index: 0;
+                }
+                .img-container {
+                    margin-left: -14%;
+                    margin-right: 0;
+                }
+            }
+        }
         .tutorial {
             .container {
                 h1 {
                     margin-bottom: 75px;
                 }
-            }
-        }
-        .shows {
-            .container {
-                h1 {
-                    text-align: center;
-                    margin-bottom: 75px;
-                }
-                .mobile {
-                    .artist {
-                        width: 220px;
-                        height: 120px;
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                .steps {
+                    .img-container {
+                        span {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
         }
+        .shows {
+                h1 {
+                    text-align: center;
+                    padding-left: 0;
+                    margin-bottom: 75px;
+                }
+        }
         .business {
-            padding-bottom: 25px;
+            padding-bottom: 0;
+            padding-top: 0;
             .container {
               img {
                   left: -50px;
                   bottom: -50px;
                   width: 60%;
                   margin-bottom: 0px;
+              }
+              .text {
+                  img {
+                      width: 150px;
+                  }
               }
             }
         }
@@ -274,6 +322,9 @@
                     margin-right: 60px;
                 }
             }
+        }
+        .shows {
+            padding-bottom: 100px;
         }
     }
 }
