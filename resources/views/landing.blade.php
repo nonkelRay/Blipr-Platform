@@ -140,7 +140,7 @@
             </div>
         </section>
         <section class="shows">
-            <div class="container">
+            {{-- <div class="container"> --}}
                 <h1>Upcoming shows</h1>
                 {{-- <div class="mobile">
                     @foreach ($events as $event)
@@ -150,7 +150,7 @@
                         </div>
                     @endforeach
                 </div> --}}
-                <div class="mobile more slider">
+                <div class="mobile slider">
                     <div class="artist">
                         <h2>Jamie xx1</h2>
                     </div>
@@ -187,7 +187,7 @@
                         <h2>Jamie xx</h2>
                     </div>
                 </div> --}}
-            </div>
+            {{-- </div> --}}
         </section>
         <section class="partners">
             <div class="container">

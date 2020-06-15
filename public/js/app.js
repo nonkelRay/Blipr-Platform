@@ -14041,7 +14041,25 @@ window.onload = function () {
 
   $('.slider').slick({
     slidesToShow: 5,
-    dots: false
+    dots: false,
+    autoplay: true,
+    arrows: false,
+    cssEase: 'linear',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    autoplaySpeed: 0,
+    speed: 5000,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
 };
 

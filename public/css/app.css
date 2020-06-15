@@ -1,7 +1,5 @@
 /** Colors */
-
 /** Hamburger */
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -9,7 +7,6 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-
 .hamburger {
   padding: 0px 0px;
   display: inline-block;
@@ -27,15 +24,12 @@
   margin: 0;
   overflow: visible;
 }
-
 .hamburger:hover {
   opacity: 1;
 }
-
 .hamburger.is-active:hover {
   opacity: 1;
 }
-
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
@@ -54,10 +48,7 @@
   top: 50%;
   margin-top: -1.5px;
 }
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 3px;
   background-color: #F2F2F2;
@@ -67,17 +58,13 @@
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
-
-.hamburger-inner::before,
-.hamburger-inner::after {
+.hamburger-inner::before, .hamburger-inner::after {
   content: "";
   display: block;
 }
-
 .hamburger-inner::before {
   top: -9px;
 }
-
 .hamburger-inner::after {
   bottom: -9px;
 }
@@ -85,32 +72,26 @@
 /*
  * Squeeze
  */
-
 .hamburger--squeeze .hamburger-inner {
   transition-duration: 0.075s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-
 .hamburger--squeeze .hamburger-inner::before {
   transition: top 0.075s 0.12s ease, opacity 0.075s ease;
 }
-
 .hamburger--squeeze .hamburger-inner::after {
   transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-
 .hamburger--squeeze.is-active .hamburger-inner {
   transform: rotate(45deg);
   transition-delay: 0.12s;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 .hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
   transition: top 0.075s ease, opacity 0.075s 0.12s ease;
 }
-
 .hamburger--squeeze.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
@@ -118,7 +99,6 @@
 }
 
 /* Slider */
-
 .slick-slider {
   position: relative;
   display: block;
@@ -139,11 +119,9 @@
   margin: 0;
   padding: 0;
 }
-
 .slick-list:focus {
   outline: none;
 }
-
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
@@ -162,17 +140,13 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.slick-track:before,
-.slick-track:after {
+.slick-track:before, .slick-track:after {
   content: "";
   display: table;
 }
-
 .slick-track:after {
   clear: both;
 }
-
 .slick-loading .slick-track {
   visibility: hidden;
 }
@@ -183,31 +157,24 @@
   min-height: 1px;
   display: none;
 }
-
 [dir=rtl] .slick-slide {
   float: right;
 }
-
 .slick-slide img {
   display: block;
 }
-
 .slick-slide.slick-loading img {
   display: none;
 }
-
 .slick-slide.dragging img {
   pointer-events: none;
 }
-
 .slick-initialized .slick-slide {
   display: block;
 }
-
 .slick-loading .slick-slide {
   visibility: hidden;
 }
-
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
@@ -219,17 +186,13 @@
 }
 
 /** Import theme styles */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
    ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
 html {
   line-height: 1.15;
   /* 1 */
@@ -239,11 +202,9 @@ html {
 
 /* Sections
    ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
-
 body {
   margin: 0;
 }
@@ -251,7 +212,6 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
-
 main {
   display: block;
 }
@@ -260,7 +220,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -268,12 +227,10 @@ h1 {
 
 /* Grouping content
    ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -287,7 +244,6 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -297,11 +253,9 @@ pre {
 
 /* Text-level semantics
    ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
-
 a {
   background-color: transparent;
 }
@@ -310,7 +264,6 @@ a {
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -324,7 +277,6 @@ abbr[title] {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-
 b,
 strong {
   font-weight: bolder;
@@ -334,7 +286,6 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 code,
 kbd,
 samp {
@@ -347,7 +298,6 @@ samp {
 /**
  * Add the correct font size in all browsers.
  */
-
 small {
   font-size: 80%;
 }
@@ -356,7 +306,6 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-
 sub,
 sup {
   font-size: 75%;
@@ -375,23 +324,19 @@ sup {
 
 /* Embedded content
    ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
-
 img {
   border-style: none;
 }
 
 /* Forms
    ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-
 button,
 input,
 optgroup,
@@ -411,7 +356,6 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-
 button,
 input {
   /* 1 */
@@ -422,7 +366,6 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-
 button,
 select {
   /* 1 */
@@ -432,7 +375,6 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-
 button,
 [type=button],
 [type=reset],
@@ -443,7 +385,6 @@ button,
 /**
  * Remove the inner border and padding in Firefox.
  */
-
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -455,7 +396,6 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-
 button:-moz-focusring,
 [type=button]:-moz-focusring,
 [type=reset]:-moz-focusring,
@@ -466,7 +406,6 @@ button:-moz-focusring,
 /**
  * Correct the padding in Firefox.
  */
-
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
@@ -477,7 +416,6 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -496,7 +434,6 @@ legend {
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-
 progress {
   vertical-align: baseline;
 }
@@ -504,7 +441,6 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-
 textarea {
   overflow: auto;
 }
@@ -513,7 +449,6 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-
 [type=checkbox],
 [type=radio] {
   box-sizing: border-box;
@@ -525,7 +460,6 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
@@ -535,7 +469,6 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-
 [type=search] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -546,7 +479,6 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -555,7 +487,6 @@ textarea {
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -565,11 +496,9 @@ textarea {
 
 /* Interactive
    ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
-
 details {
   display: block;
 }
@@ -577,18 +506,15 @@ details {
 /*
  * Add the correct display in all browsers.
  */
-
 summary {
   display: list-item;
 }
 
 /* Misc
    ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
-
 template {
   display: none;
 }
@@ -596,15 +522,12 @@ template {
 /**
  * Add the correct display in IE 10.
  */
-
 [hidden] {
   display: none;
 }
 
 /********************** Sam's reset **********************/
-
 /*** box sizing border-box for all elements ***/
-
 *,
 *::before,
 *::after {
@@ -622,12 +545,7 @@ a {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
@@ -648,7 +566,6 @@ textarea {
   font-weight: bold;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Graphik";
   src: url("/fonts/Graphik-Regular.eot");
@@ -656,9 +573,7 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-
-html,
-body {
+html, body {
   background-color: #F2F2F2;
   font-family: "Graphik";
   font-weight: normal;
@@ -686,7 +601,6 @@ h1 {
   margin-bottom: 25px;
   font-weight: bold;
 }
-
 h1::after {
   content: ".";
   color: #F72806;
@@ -713,37 +627,31 @@ h3 {
 }
 
 /** so footer stays at bottom */
-
 .platform {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 .platform .nav-home,
 .platform footer {
   flex-shrink: 0;
 }
-
 .platform #app {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-
 .platform #app main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
-
 .platform #app .main-content {
   flex-grow: 1;
 }
 
 /** seperate for app  */
-
 .platform .main-app {
   margin-top: 60px;
 }
@@ -762,7 +670,6 @@ h3 {
     margin-left: 100px;
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   h1 {
     font-size: 72px;
@@ -784,7 +691,6 @@ h3 {
     padding: 75px 0;
   }
 }
-
 button {
   border: none;
 }
@@ -799,7 +705,6 @@ button {
   transition: all 0.3s ease;
   font-weight: bold;
 }
-
 .btn:hover {
   color: #d9d9d9;
   transform: scale(1.05);
@@ -808,7 +713,6 @@ button {
 .btn--disabled {
   background-color: #B6B6B6;
 }
-
 .btn--disabled:hover {
   transform: scale(1);
 }
@@ -818,12 +722,10 @@ button {
 }
 
 /** Search form */
-
 .form {
   color: #F2F2F2;
   margin: 0 auto;
 }
-
 .form input[type=date]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
   opacity: 1;
@@ -833,7 +735,6 @@ button {
   height: 20px;
   cursor: pointer;
 }
-
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
@@ -842,14 +743,12 @@ button {
   -webkit-text-fill-color: #F2F2F2 !important;
   font-family: "Graphik" !important;
 }
-
 .form .invalid-feedback strong {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
   color: #F72806;
 }
-
 .form .field {
   width: 100%;
   border: none;
@@ -860,35 +759,27 @@ button {
   margin-bottom: 25px;
   transition: border 0.5s ease;
 }
-
 .form .field:hover {
   border-color: #F72806;
 }
-
 .form .field:focus {
   border-color: #F72806;
 }
-
 .form .field::-webkit-input-placeholder {
   color: #F2F2F2;
 }
-
 .form .field::-moz-placeholder {
   color: #F2F2F2;
 }
-
 .form .field:-ms-input-placeholder {
   color: #F2F2F2;
 }
-
 .form .field::-ms-input-placeholder {
   color: #F2F2F2;
 }
-
 .form .field::placeholder {
   color: #F2F2F2;
 }
-
 .form .btn {
   margin-bottom: 25px;
 }
@@ -896,42 +787,35 @@ button {
 .login-form .form-check {
   margin-bottom: 25px;
 }
-
 .login-form .form-check input[type=checkbox] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
-
 .login-form .options {
   font-size: 14px;
   display: flex;
   margin-bottom: 50px;
   justify-content: space-between;
 }
-
 .login-form .options a {
   text-decoration: underline;
 }
-
 .login-form .stripe {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
 }
-
 .login-form .stripe span {
   background-color: #F2F2F2;
   height: 1px;
   width: 45%;
 }
-
 .login-form .fb-login {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-form .fb-login img {
   margin-left: 10px;
   width: 25px;
@@ -944,25 +828,21 @@ button {
   align-items: center;
   margin-bottom: 25px;
 }
-
 .register-form .stripe span {
   background-color: #F2F2F2;
   height: 1px;
   width: 45%;
 }
-
 .register-form .fb-login {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .register-form .fb-login img {
   margin-left: 10px;
   width: 25px;
   margin-bottom: 2px;
 }
-
 .register-form button.btn {
   margin-bottom: 50px;
 }
@@ -970,7 +850,6 @@ button {
 .event-form {
   color: black;
 }
-
 .event-form input:-webkit-autofill,
 .event-form input:-webkit-autofill:hover,
 .event-form input:-webkit-autofill:focus,
@@ -979,7 +858,6 @@ button {
   -webkit-text-fill-color: black !important;
   font-family: "Graphik" !important;
 }
-
 .event-form input[type=date]::-webkit-calendar-picker-indicator {
   background: url("/images/calendar_black.png") no-repeat;
   width: 20px;
@@ -987,33 +865,26 @@ button {
   background-position: center;
   background-size: contain;
 }
-
 .event-form .field {
   border-bottom: 1px solid black;
   background-color: #F2F2F2;
   color: black;
 }
-
 .event-form .field::-webkit-input-placeholder {
   color: black;
 }
-
 .event-form .field::-moz-placeholder {
   color: black;
 }
-
 .event-form .field:-ms-input-placeholder {
   color: black;
 }
-
 .event-form .field::-ms-input-placeholder {
   color: black;
 }
-
 .event-form .field::placeholder {
   color: black;
 }
-
 .event-form .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -1022,7 +893,6 @@ button {
   position: absolute;
   z-index: -1;
 }
-
 .event-form .inputfile + label {
   width: 100%;
   border-bottom: 1px solid black;
@@ -1030,12 +900,10 @@ button {
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
-
 .event-form .inputfile:focus + label,
 .event-form .inputfile + label:hover {
   border-color: #F72806;
 }
-
 .event-form .inputfile + label {
   cursor: pointer;
   /* "hand" cursor */
@@ -1055,28 +923,23 @@ button {
   padding-top: 75px;
   display: none;
 }
-
 .mobile-menu nav {
   margin-top: 30px;
 }
-
 .mobile-menu ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 75px;
 }
-
 .mobile-menu ul li {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 .mobile-menu ul li::after {
   content: ".";
   color: #F72806;
 }
-
 .mobile-menu .socials {
   display: flex;
   justify-content: center;
@@ -1085,7 +948,6 @@ button {
   left: 0;
   width: 100%;
 }
-
 .mobile-menu .socials img {
   margin: 0 25px;
 }
@@ -1101,28 +963,23 @@ button {
   align-items: center;
   padding: 50px 0;
 }
-
 .vertical-nav a {
   margin-bottom: 50px;
   width: 40px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
-
 .vertical-nav a:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
-
 .vertical-nav a img {
   width: 100%;
 }
-
 .vertical-nav .active {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
-
 .vertical-nav .logout {
   position: absolute;
   bottom: 50px;
@@ -1133,14 +990,16 @@ button {
     display: flex;
   }
 }
-
-.shows {
-  position: relative;
-}
-
-.shows .slider {
-  position: absolute;
-  width: 100%;
+.slider .artist {
+  background-image: url("/images/artist.png");
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 100px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background-position: center;
 }
 
 .home-nav {
@@ -1150,13 +1009,11 @@ button {
   width: 100%;
   z-index: 99;
 }
-
 .home-nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .home-nav .container .brand {
   color: #F2F2F2;
   background-image: url("/images/logo.png");
@@ -1167,12 +1024,10 @@ button {
   width: 35px;
   text-indent: -9999px;
 }
-
 .home-nav .container .brand-venue {
   background-image: url("/images/venue-logo.png");
   width: 100px;
 }
-
 .home-nav .container .large-nav {
   color: #F2F2F2;
   list-style: none;
@@ -1182,25 +1037,20 @@ button {
   text-transform: uppercase;
   font-size: 14px;
 }
-
 .home-nav .container .large-nav .line {
   cursor: default;
 }
-
 .home-nav .container .large-nav .active {
   color: #F72806;
 }
-
 .home-nav .container .large-nav li {
   font-weight: bold;
   margin-left: 25px;
 }
-
 .home-nav .container .large-nav li a {
   position: relative;
   transition: all 0.3s ease;
 }
-
 .home-nav .container .large-nav li a:hover:after {
   content: "";
   display: block;
@@ -1220,25 +1070,20 @@ button {
     display: none;
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   .home-nav {
     height: 75px;
   }
-
   .home-nav .container .brand {
     height: 75px;
   }
-
   .home-nav .container .large-nav {
     display: flex;
   }
-
   .home-nav .container .hamburger {
     display: none;
   }
 }
-
 .mobile-footer {
   background-color: black;
   display: flex;
@@ -1251,28 +1096,23 @@ button {
   padding: 50px 0;
   display: none;
 }
-
 .large-footer .container {
   display: flex;
   justify-content: space-around;
 }
-
 .large-footer .container ul {
   list-style: none;
   padding: 0;
   color: #F2F2F2;
 }
-
 .large-footer .container ul li {
   margin-bottom: 10px;
   cursor: pointer;
 }
-
 .large-footer .container ul li:first-of-type {
   font-weight: bold;
   cursor: default;
 }
-
 .large-footer .container .copy {
   display: flex;
   flex-direction: column;
@@ -1280,7 +1120,6 @@ button {
   color: #F2F2F2;
   align-self: flex-start;
 }
-
 .large-footer .container .copy img {
   margin-top: 15px;
   margin-bottom: 10px;
@@ -1296,63 +1135,49 @@ button {
     display: block;
   }
 }
-
 .frontpage {
   position: relative;
 }
-
 .frontpage .hero {
   padding-top: 85px;
 }
-
 .frontpage .hero .container .mobile-title {
   margin-bottom: 0;
 }
-
 .frontpage .hero .container .large-title {
   display: none;
 }
-
 .frontpage .hero .container .img-container {
   width: 100%;
   margin-bottom: 25px;
 }
-
 .frontpage .hero .container .img-container img {
   width: 100%;
 }
-
 .frontpage .hero .container .text p {
   margin-bottom: 25px;
 }
-
 .frontpage .tutorial {
   background-color: black;
 }
-
 .frontpage .tutorial .container {
   text-align: center;
 }
-
 .frontpage .tutorial .container h1 {
   color: #F2F2F2;
   text-align: left;
 }
-
 .frontpage .tutorial .container .steps .hide {
   display: none;
 }
-
 .frontpage .tutorial .container .steps img {
   width: 100%;
 }
-
 .frontpage .tutorial .container .btn {
   margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
 }
-
 .frontpage .business .container img {
   display: block;
   width: 70%;
@@ -1360,84 +1185,54 @@ button {
   margin-right: auto;
   margin-bottom: 25px;
 }
-
 .frontpage .business .container .text p {
   margin-bottom: 25px;
 }
-
 .frontpage .store {
   background-color: black;
 }
-
 .frontpage .store .container .text h1 {
   color: #F2F2F2;
 }
-
 .frontpage .store .container .text p {
   color: #F2F2F2;
 }
-
 .frontpage .store .container .text .download {
   margin-top: 25px;
   display: flex;
   justify-content: space-around;
 }
-
 .frontpage .store .container .text .download img {
   width: 40%;
   max-width: 200px;
 }
-
 .frontpage .store .container .phone {
   display: none;
 }
-
 .frontpage .shows {
   background-color: #F72806;
+  padding-bottom: 50px;
 }
-
-.frontpage .shows .container h1::after {
+.frontpage .shows h1 {
+  padding-left: 25px;
+  margin-bottom: 50px;
+}
+.frontpage .shows h1::after {
   color: #F2F2F2;
 }
-
-.frontpage .shows .container .mobile {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.frontpage .shows .container .mobile .artist {
-  background-image: url("/images/artist.png");
-  width: 150px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-  border-radius: 24px;
-  background-position: center 16%;
-}
-
-.frontpage .shows .container .more {
-  display: none;
-}
-
 .frontpage .partners .container .partner-logos {
   padding: 50px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 .frontpage .partners .container .partner-logos a {
   width: 20%;
   max-width: 100px;
 }
-
 .frontpage .partners .container .partner-logos a img {
   width: 100%;
 }
-
 .frontpage .partners .container .partner-logos .bigger {
   max-width: 125px;
 }
@@ -1446,53 +1241,42 @@ button {
   .frontpage .hero {
     padding-top: 105px;
   }
-
   .frontpage .hero .container {
     display: flex;
     align-items: center;
   }
-
   .frontpage .hero .container .mobile-title {
     display: none;
   }
-
   .frontpage .hero .container .img-container {
     width: 50%;
     margin-right: 25px;
   }
-
   .frontpage .hero .container .text {
     width: 50%;
   }
-
   .frontpage .hero .container .text .large-title {
     display: block;
   }
-
   .frontpage .tutorial .container .steps {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .frontpage .tutorial .container .steps img {
     width: 30%;
   }
-
   .frontpage .tutorial .container .steps .hide {
     display: block;
   }
-
   .frontpage .business {
     overflow: hidden;
   }
-
   .frontpage .business .container {
     display: flex;
     position: relative;
     align-items: center;
   }
-
   .frontpage .business .container img {
     position: relative;
     left: -25px;
@@ -1500,90 +1284,64 @@ button {
     width: 50%;
     margin-bottom: 0px;
   }
-
   .frontpage .business .container .text {
     width: 50%;
   }
-
   .frontpage .store .container {
     display: flex;
     align-items: center;
   }
-
   .frontpage .store .container .text {
     width: 50%;
   }
-
   .frontpage .store .container .text .download {
     margin-top: 75px;
   }
-
   .frontpage .store .container .phone {
     display: block;
     width: 50%;
     margin-left: 25px;
   }
-
-  .frontpage .shows .container .more {
-    display: flex;
-  }
 }
-
 @media print, screen and (min-width: 1024px) {
   .frontpage .tutorial .container h1 {
     margin-bottom: 75px;
   }
-
-  .frontpage .shows .container h1 {
+  .frontpage .shows h1 {
     text-align: center;
+    padding-left: 0;
     margin-bottom: 75px;
   }
-
-  .frontpage .shows .container .mobile .artist {
-    width: 220px;
-    height: 120px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
   .frontpage .business {
     padding-bottom: 25px;
   }
-
   .frontpage .business .container img {
     left: -50px;
     bottom: -50px;
     width: 60%;
     margin-bottom: 0px;
   }
-
   .frontpage .partners h1 {
     text-align: center;
     margin-bottom: 75px;
   }
-
   .frontpage .store .container .text {
     margin-right: 60px;
   }
 }
-
 .login {
   background-color: black;
   padding: 50px 0;
 }
-
 .login .container h1 {
   color: #F2F2F2;
 }
-
 .login .container .hero {
   width: 100%;
 }
-
 .login .container .form {
   max-width: 350px;
 }
-
 .login .container .form h1 {
   display: none;
 }
@@ -1593,12 +1351,10 @@ button {
     min-height: 700px;
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   .login {
     overflow: hidden;
   }
-
   .login .container {
     display: flex;
     overflow: hidden;
@@ -1606,48 +1362,39 @@ button {
     align-items: center;
     position: relative;
   }
-
   .login .container h1 {
     display: none;
   }
-
   .login .container .hero {
     width: 90%;
     position: absolute;
     left: -300px;
     bottom: -150px;
   }
-
   .login .container .form {
     position: relative;
     z-index: 10;
     margin: 0;
   }
-
   .login .container .form h1 {
     display: inline-block;
   }
 }
-
 @media print, screen and (min-width: 1440px) {
   .login .container {
     overflow: visible;
   }
 }
-
 .register {
   background-color: black;
   padding: 50px 0;
 }
-
 .register .container .hero {
   display: none;
 }
-
 .register .container h1 {
   color: #F2F2F2;
 }
-
 .register .container .form {
   max-width: 350px;
 }
@@ -1658,112 +1405,90 @@ button {
     justify-content: space-between;
     align-items: center;
   }
-
   .register .container .hero {
     display: block;
     width: 50%;
   }
-
   .register .container .form {
     margin: 0;
   }
 }
-
 .subscription .container {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
 .subscription .container p {
   margin-bottom: 25px;
 }
-
 .subscription .container p a {
   text-decoration: underline;
 }
-
 .subscription .container .desktop-plans {
   display: none;
   justify-content: space-between;
   margin-bottom: 50px;
 }
-
 .subscription .container .desktop-plans .free {
   color: #F72806;
 }
-
 .subscription .container .desktop-plans .option {
   min-width: 110px;
   width: 15%;
 }
-
 .subscription .container .desktop-plans ul {
   padding: 10px;
   list-style: none;
   text-align: left;
   margin-top: 37px;
 }
-
 .subscription .container .desktop-plans ul li {
   height: 20px;
   margin-bottom: 20px;
 }
-
 .subscription .container .desktop-plans ul li:last-of-type {
   margin: 0;
 }
-
 .subscription .container .desktop-plans ul li img {
   height: 16px;
 }
-
 .subscription .container .desktop-plans .small-list {
   margin-top: 10px;
   text-align: center;
   background-color: #ECECEC;
 }
-
 .subscription .container .mobile-plans .free {
   color: #F72806;
 }
-
 .subscription .container .mobile-plans .options {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
   max-width: 300px;
 }
-
 .subscription .container .mobile-plans .options ul {
   padding: 10px;
   list-style: none;
   background-color: #ECECEC;
 }
-
 .subscription .container .mobile-plans .options ul li {
   height: 20px;
   margin-bottom: 20px;
 }
-
 .subscription .container .mobile-plans .options ul li:last-of-type {
   margin: 0;
 }
-
 .subscription .container .mobile-plans .options ul li img {
   height: 16px;
 }
-
 .subscription .container .mobile-plans .options .small-list {
   text-align: center;
   font-size: 18px;
 }
-
 .subscription .container .mobile-plans .options .small-list li {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .subscription .container .mobile-plans .btn {
   margin-bottom: 50px;
 }
@@ -1772,50 +1497,39 @@ button {
   .subscription .container {
     text-align: center;
   }
-
   .subscription .container p {
     margin-bottom: 50px;
   }
-
   .subscription .container .mobile-plans {
     display: none;
   }
-
   .subscription .container .desktop-plans {
     display: flex;
   }
-
   .subscription .container .desktop-plans .btn {
     font-size: 10px;
   }
 }
-
 @media print, screen and (min-width: 1200px) {
-  .subscription .container .desktop-plans .btn,
-  .subscription .container .desktop-plans span {
+  .subscription .container .desktop-plans .btn, .subscription .container .desktop-plans span {
     font-size: 16px;
   }
 }
-
 .login-venue {
   background-color: black;
   padding: 50px 0;
   position: relative;
 }
-
 .login-venue .container .info--large {
   display: none;
 }
-
 .login-venue .container .info {
   margin-bottom: 25px;
 }
-
 .login-venue .container .info span {
   display: block;
   margin-top: 25px;
 }
-
 .login-venue .container .info span a {
   text-decoration: underline;
 }
@@ -1826,7 +1540,6 @@ button {
     display: flex;
     flex-direction: column;
   }
-
   .login-venue .container {
     display: flex;
     padding: 0;
@@ -1834,7 +1547,6 @@ button {
     position: relative;
     z-index: 1;
   }
-
   .login-venue .container .info--large {
     display: block;
     background-color: #F2F2F2;
@@ -1846,7 +1558,6 @@ button {
     align-items: flex-start;
     justify-content: center;
   }
-
   .login-venue .container .login-form {
     width: 50%;
     padding: 50px;
@@ -1856,21 +1567,17 @@ button {
     align-items: flex-start;
     justify-content: center;
   }
-
   .login-venue .container .login-form h1 {
     white-space: nowrap;
     font-size: 50px;
   }
-
   .login-venue .container .login-form .info--small {
     display: none;
   }
-
   .login-venue .container .login-form .options {
     width: 100%;
   }
 }
-
 @media print, screen and (min-width: 1440px) {
   .login-venue .filler {
     background-color: #F2F2F2;
@@ -1880,36 +1587,29 @@ button {
     height: 100%;
   }
 }
-
 .events-venue {
   padding: 50px 0;
 }
-
 .events-venue .container {
   position: relative;
   margin-bottom: 50px;
 }
-
 .events-venue .container .alert {
   margin-bottom: 25px;
 }
-
 .events-venue .container .btn {
   font-size: 14px;
 }
-
 .events-venue .container .btn-center {
   position: absolute;
   bottom: -75px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .events-venue .container .btn-fixed {
   position: fixed;
   bottom: 50px;
 }
-
 .events-venue .container .upcoming-event {
   display: flex;
   justify-content: space-between;
@@ -1918,7 +1618,6 @@ button {
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
-
 .events-venue .container .upcoming-event .info {
   max-width: 60%;
 }
@@ -1926,11 +1625,9 @@ button {
 .events-venue-create {
   padding: 50px 0;
 }
-
 .events-venue-create .container .img-container {
   display: none;
 }
-
 .events-venue-create .container .img-container img {
   width: 80%;
 }
@@ -1941,7 +1638,6 @@ button {
     display: flex;
     flex-direction: column;
   }
-
   .events-venue-create .container {
     display: flex;
     padding: 0;
@@ -1950,7 +1646,6 @@ button {
     z-index: 1;
     width: 100%;
   }
-
   .events-venue-create .container .img-container {
     background-color: black;
     width: 50%;
@@ -1960,7 +1655,6 @@ button {
     align-items: center;
     justify-content: center;
   }
-
   .events-venue-create .container .form-container {
     width: 50%;
     padding: 50px;
@@ -1970,17 +1664,14 @@ button {
     justify-content: center;
     margin: 0;
   }
-
   .events-venue-create .container .form-container .event-form {
     max-width: 350px;
   }
-
   .events-venue-create .container .form-container h1 {
     white-space: nowrap;
     font-size: 50px;
   }
 }
-
 @media print, screen and (min-width: 1440px) {
   .events-venue-create .filler {
     background-color: black;
@@ -1990,42 +1681,34 @@ button {
     height: 100%;
   }
 }
-
 .main-app .container {
   max-width: none;
   width: 100%;
   padding: 50px 0;
   padding-bottom: 50px;
 }
-
 .main-app .container .welcome {
   margin-bottom: 50px;
   padding: 0 25px;
 }
-
 .main-app .container .welcome .welcome-container .info span {
   color: #F72806;
 }
-
 .main-app .container .welcome .welcome-container .img-container {
   display: none;
 }
-
 .main-app .container .events {
   padding: 25px;
   background-color: black;
 }
-
 .main-app .container .events h1 {
   color: #F2F2F2;
 }
-
 .main-app .container .events .events-container {
   display: grid;
   justify-items: center;
   justify-content: center;
 }
-
 .main-app .container .events .events-container .event {
   background-size: cover;
   background-position: center;
@@ -2038,27 +1721,22 @@ button {
   align-items: center;
   border-radius: 25px;
 }
-
 .main-app .container .events .events-container .event span {
   font-size: 24px;
   font-weight: bold;
 }
-
 .main-app .container .blips {
   padding: 25px;
   text-align: center;
 }
-
 .main-app .container .blips h1 {
   text-align: left;
 }
-
 .main-app .container .blips .blips-container {
   display: grid;
   justify-items: center;
   margin-bottom: 25px;
 }
-
 .main-app .container .blips .blips-container .blip {
   background-image: url("/images/dua.png");
   background-size: cover;
@@ -2072,7 +1750,6 @@ button {
   align-items: center;
   border-radius: 25px;
 }
-
 .main-app .container .blips .blips-container .blip span {
   font-size: 24px;
   font-weight: bold;
@@ -2082,84 +1759,67 @@ button {
   .main-app .container .welcome {
     margin-bottom: 0;
   }
-
   .main-app .container .welcome .welcome-container {
     display: flex;
   }
-
   .main-app .container .welcome .welcome-container .info {
     min-width: 370px;
   }
-
   .main-app .container .welcome .welcome-container .img-container {
     display: block;
     margin-left: 25px;
     position: relative;
     top: -40px;
   }
-
   .main-app .container .welcome .welcome-container .img-container img {
     width: 100%;
   }
-
   .main-app .container .events {
     margin-top: -44px;
   }
-
   .main-app .container .events .events-container {
     grid-template-columns: 50% 50%;
   }
-
   .main-app .container .blips .blips-container {
     grid-template-columns: 50% 50%;
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   .main-app .container .welcome h1 {
     margin-bottom: 75px;
   }
-
   .main-app .container .welcome .welcome-container .info {
     min-width: 460px;
   }
-
   .main-app .container .events .events-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .main-app .container .blips .blips-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   .main-app .container .welcome .welcome-container .img-container {
     margin-left: 75px;
   }
 }
-
 @media print, screen and (min-width: 1440px) {
   .main-app .container .events .events-container {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-
   .main-app .container .blips .blips-container {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
-
 .main-app .your-blips .container {
   padding-left: 25px;
   padding-right: 25px;
 }
-
 .main-app .your-blips .container .blips-container {
   display: grid;
   justify-items: center;
   margin-bottom: 25px;
 }
-
 .main-app .your-blips .container .blips-container .blip {
   background-image: url("/images/dua.png");
   background-size: cover;
@@ -2173,7 +1833,6 @@ button {
   align-items: center;
   border-radius: 25px;
 }
-
 .main-app .your-blips .container .blips-container .blip span {
   font-size: 24px;
   font-weight: bold;
@@ -2184,39 +1843,32 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media print, screen and (min-width: 1024px) {
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
 @media print, screen and (min-width: 1440px) {
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
-
 .blip-detail {
   padding: 50px 25px;
 }
-
 .blip-detail h1 {
   color: #F72806;
   margin-bottom: 10px;
 }
-
 .blip-detail h1:after {
   display: none;
 }
-
 .blip-detail .subtitle {
   display: block;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 50px;
 }
-
 .blip-detail video {
   width: 100%;
   max-width: 1000px;
@@ -2225,7 +1877,6 @@ button {
   display: block;
   margin-bottom: 25px;
 }
-
 .blip-detail .info {
   width: 100%;
   max-width: 1000px;
@@ -2234,28 +1885,23 @@ button {
   display: flex;
   flex-direction: column;
 }
-
 .blip-detail .info .not {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
-
 .blip-detail .info .icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 25px;
 }
-
 .blip-detail .info .icons img {
   width: 30px;
 }
-
 .blip-detail .info .icons .heart {
   display: flex;
   align-items: center;
 }
-
 .blip-detail .info .icons .heart span {
   font-weight: bold;
   margin-left: 5px;
@@ -2266,36 +1912,30 @@ button {
   .blip-detail video {
     margin-top: 75px;
   }
-
   .blip-detail .info {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-
   .blip-detail .info .icons {
     margin-top: 0;
     width: 50%;
   }
-
   .blip-detail .info strong {
     max-width: 40%;
   }
 }
-
 .events-venue-detail {
   display: flex;
   flex-direction: column;
   padding: 50px 0;
 }
-
 .events-venue-detail .container {
   flex-grow: 1;
   width: 100%;
   text-align: center;
   position: relative;
 }
-
 .events-venue-detail .container .event-picture {
   width: 70%;
   display: block;
@@ -2303,11 +1943,9 @@ button {
   margin-right: auto;
   margin-bottom: 50px;
 }
-
 .events-venue-detail .container .info p {
   font-size: 20px;
 }
-
 .events-venue-detail .container .info .btn {
   position: absolute;
   bottom: 25px;
@@ -2325,7 +1963,6 @@ button {
     justify-content: space-between;
     align-items: center;
   }
-
   .events-venue-detail .container .info {
     display: flex;
     flex-direction: column;
@@ -2333,16 +1970,13 @@ button {
     justify-content: center;
     width: 50%;
   }
-
   .events-venue-detail .container .info .btn {
     position: static;
     transform: translateX(0);
     margin-top: 25px;
   }
-
   .events-venue-detail .container .event-picture {
     width: 40%;
     margin: 50px;
   }
 }
-
