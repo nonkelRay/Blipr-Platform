@@ -1,0 +1,68 @@
+.main-app {
+    .your-blips {
+        .container {
+            padding-left: 25px;
+            padding-right: 25px;
+            .blips-container {
+                display: grid;
+                justify-items: center;
+                margin-bottom: 25px;
+                .blip {
+                    background-image: url('/images/dua.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 250px;
+                    height: 150px;
+                    margin: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px;
+                    span {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+               }
+            }
+        }
+    }
+}
+
+@media print, screen and  (min-width: 768px) {
+    .main-app {
+        .your-blips {
+            .container {
+                .blips-container {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
+
+@media print, screen and  (min-width: 1024px) {
+    .main-app {
+        .your-blips {
+            .container {
+                .blips-container {
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}
+
+
+@media print, screen and  (min-width: 1440px) {
+    .main-app {
+        .your-blips {
+            .container {
+                .blips-container {
+                    grid-template-columns: repeat(5, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+}

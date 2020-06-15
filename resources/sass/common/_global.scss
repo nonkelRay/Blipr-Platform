@@ -80,6 +80,13 @@ h3 {
     }
 }
 
+/** seperate for app  */
+
+.platform {
+    .main-app {
+        margin-top: 60px;
+    }
+}
 
 
 @media print, screen and(min-width: 768px) {
@@ -89,6 +96,13 @@ h3 {
     .frontpage {
         section {
             padding: 50px 0;
+        }
+    }
+
+    .platform {
+        .main-app {
+            margin-top: 0;
+            margin-left: 100px;
         }
     }
 }

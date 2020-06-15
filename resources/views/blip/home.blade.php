@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>blips</h1>
+@extends('layouts.app')
 
-    @foreach ($blips as $blip)
-        <div> 
-            <a href="blips/{{$blip->id}}">link</a>
-            <video width="320" height="240" controls>
-                <source src="{{ asset('storage/' . $blip->video) }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>{{ $blip->event->title }}</p>
-            <p>{{ $blip->event->venue_name }}</p>
-            <p>{{ $blip->description }}</p>
-            <p>{{ $blip->feeling }}</p>
-            <h4>{{ $blip->heartbeat }}</h4>
+@section('content')
+<div class="your-blips">
+    <div class="container">
+        <h1>Your Blips</h1>
+        <div class="blips-container">
+            {{-- @for ($i = 0; $i < 24; $i++)
+            <div class="blip">
+                <span>Wat een blip</span>
+            </div>
+            @endfor --}}
+            @foreach ($blips as $blip)
+            <a href="blips/{{$blip->id}}">
+                <div class="blip">   
+                    <span>{{ $blip->description }}</span>
+                </div>
+            </a>
+            @endforeach
         </div>
-    @endforeach
-</body>
-</html>
+    </div>
+</div>
+@endsection

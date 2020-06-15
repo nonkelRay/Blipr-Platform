@@ -641,6 +641,12 @@ h3 {
   flex-grow: 1;
 }
 
+/** seperate for app  */
+
+.platform .main-app {
+  margin-top: 60px;
+}
+
 @media print, screen and (min-width: 768px) {
   h1 {
     font-size: 50px;
@@ -648,6 +654,11 @@ h3 {
 
   .frontpage section {
     padding: 50px 0;
+  }
+
+  .platform .main-app {
+    margin-top: 0;
+    margin-left: 100px;
   }
 }
 
@@ -690,10 +701,15 @@ button {
 
 .btn:hover {
   color: #d9d9d9;
+  transform: scale(1.05);
 }
 
 .btn--disabled {
   background-color: #B6B6B6;
+}
+
+.btn--disabled:hover {
+  transform: scale(1);
 }
 
 .btn--black {
@@ -987,6 +1003,23 @@ button {
 
 .vertical-nav a {
   margin-bottom: 50px;
+  width: 40px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.vertical-nav a:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.vertical-nav a img {
+  width: 100%;
+}
+
+.vertical-nav .active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .vertical-nav .logout {
@@ -994,7 +1027,7 @@ button {
   bottom: 50px;
 }
 
-@media print, screen and (min-width: 1024px) {
+@media print, screen and (min-width: 768px) {
   .vertical-nav {
     display: flex;
   }
@@ -1070,6 +1103,12 @@ button {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+}
+
+@media print, screen and (min-width: 768px) {
+  .app-nav {
+    display: none;
+  }
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1842,6 +1881,296 @@ button {
   }
 }
 
+.main-app .container {
+  max-width: none;
+  width: 100%;
+  padding: 50px 0;
+  padding-bottom: 50px;
+}
+
+.main-app .container .welcome {
+  margin-bottom: 50px;
+  padding: 0 25px;
+}
+
+.main-app .container .welcome .welcome-container .info span {
+  color: #F72806;
+}
+
+.main-app .container .welcome .welcome-container .img-container {
+  display: none;
+}
+
+.main-app .container .events {
+  padding: 25px;
+  background-color: black;
+}
+
+.main-app .container .events h1 {
+  color: #F2F2F2;
+}
+
+.main-app .container .events .events-container {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.main-app .container .events .events-container .event {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .container .events .events-container .event span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-app .container .blips {
+  padding: 25px;
+  text-align: center;
+}
+
+.main-app .container .blips h1 {
+  text-align: left;
+}
+
+.main-app .container .blips .blips-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+
+.main-app .container .blips .blips-container .blip {
+  background-image: url("/images/dua.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .container .blips .blips-container .blip span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media print, screen and (min-width: 768px) {
+  .main-app .container .welcome {
+    margin-bottom: 0;
+  }
+
+  .main-app .container .welcome .welcome-container {
+    display: flex;
+  }
+
+  .main-app .container .welcome .welcome-container .info {
+    min-width: 370px;
+  }
+
+  .main-app .container .welcome .welcome-container .img-container {
+    display: block;
+    margin-left: 25px;
+    position: relative;
+    top: -40px;
+  }
+
+  .main-app .container .welcome .welcome-container .img-container img {
+    width: 100%;
+  }
+
+  .main-app .container .events {
+    margin-top: -44px;
+  }
+
+  .main-app .container .events .events-container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .container .welcome h1 {
+    margin-bottom: 75px;
+  }
+
+  .main-app .container .welcome .welcome-container .info {
+    min-width: 460px;
+  }
+
+  .main-app .container .events .events-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .container .welcome .welcome-container .img-container {
+    margin-left: 75px;
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .main-app .container .events .events-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .main-app .container .blips .blips-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.main-app .your-blips .container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.main-app .your-blips .container .blips-container {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 25px;
+}
+
+.main-app .your-blips .container .blips-container .blip {
+  background-image: url("/images/dua.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.main-app .your-blips .container .blips-container .blip span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media print, screen and (min-width: 768px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media print, screen and (min-width: 1440px) {
+  .main-app .your-blips .container .blips-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+.blip-detail {
+  padding: 50px 25px;
+}
+
+.blip-detail h1 {
+  color: #F72806;
+  margin-bottom: 10px;
+}
+
+.blip-detail h1:after {
+  display: none;
+}
+
+.blip-detail .subtitle {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.blip-detail video {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.blip-detail .info {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blip-detail .info .not {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.blip-detail .info .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.blip-detail .info .icons img {
+  width: 30px;
+}
+
+.blip-detail .info .icons .heart {
+  display: flex;
+  align-items: center;
+}
+
+.blip-detail .info .icons .heart span {
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .blip-detail video {
+    margin-top: 75px;
+  }
+
+  .blip-detail .info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .blip-detail .info .icons {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .blip-detail .info strong {
+    max-width: 40%;
+
 .events-venue-detail {
   display: flex;
   flex-direction: column;
@@ -1902,6 +2231,7 @@ button {
   .events-venue-detail .container .event-picture {
     width: 40%;
     margin: 50px;
+
   }
 }
 
