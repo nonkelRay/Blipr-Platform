@@ -109,11 +109,20 @@
             <div class="container">
                 <h1>How it works</h1>
                 <div class="steps">
-                    <img src="{{ asset('images/step-1.png') }}" alt="">
-                    <img class="hide" src="{{ asset('images/step-2.png') }}" alt="">
-                    <img class="hide" src="{{ asset('images/step-3.png') }}" alt="">
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-1.gif') }}" alt="">
+                        <span>Connect your wearable</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-2.gif') }}" alt="">
+                        <span>Blip your favourite moments</span>
+                    </div>
+                    <div class="img-container">
+                        <img src="{{ asset('images/animation-3.gif') }}" alt="">
+                        <span>Relive them at any time</span>
+                    </div>
                 </div>
-                <a href="#" class="btn">read more</a>
+                {{-- <a href="#" class="btn">read more</a> --}}
             </div>
         </section>
         <section class="business">

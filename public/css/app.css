@@ -1188,11 +1188,18 @@ button {
   color: #F2F2F2;
   text-align: left;
 }
-.frontpage .tutorial .container .steps .hide {
-  display: none;
-}
-.frontpage .tutorial .container .steps img {
+.frontpage .tutorial .container .steps .img-container {
   width: 100%;
+}
+.frontpage .tutorial .container .steps .img-container span {
+  color: #F2F2F2;
+  font-weight: bold;
+  display: block;
+  margin: 25px 0;
+}
+.frontpage .tutorial .container .steps .img-container img {
+  width: 100%;
+  border-radius: 100%;
 }
 .frontpage .tutorial .container .btn {
   margin-top: 25px;
@@ -1289,9 +1296,9 @@ button {
   .frontpage .tutorial .container .steps {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
-  .frontpage .tutorial .container .steps img {
+  .frontpage .tutorial .container .steps .img-container {
     width: 30%;
   }
   .frontpage .tutorial .container .steps .hide {
@@ -1359,6 +1366,9 @@ button {
   }
   .frontpage .tutorial .container h1 {
     margin-bottom: 75px;
+  }
+  .frontpage .tutorial .container .steps .img-container span {
+    font-size: 20px;
   }
   .frontpage .shows h1 {
     text-align: center;
@@ -2010,6 +2020,7 @@ button {
 }
 .events-venue-detail .container .info p {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .events-venue-detail .container .info .btn {
   position: absolute;
@@ -2034,6 +2045,7 @@ button {
     align-items: flex-start;
     justify-content: center;
     width: 50%;
+    text-align: left;
   }
   .events-venue-detail .container .info .btn {
     position: static;
