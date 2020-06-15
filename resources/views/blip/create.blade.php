@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="csrf" value="{{ csrf_token() }}">
 </head>
 <body>
     <h1>Create Blip</h1>
 
     <form method="POST" action="" enctype="multipart/form-data">
-        
         @csrf
-
         <div>
             <label for="video">{{ __('Video') }}</label>
             <input type="file" name="video" value="{{ old('video') }}" accept="video/*" required autocomplete="video" autofocus>
@@ -26,7 +25,7 @@
 
         <br>
 
-        <div>
+        <!-- <div>
             <label for="feeling">{{ __('Feeling') }}</label>
             <select name="feeling" form="feelingform" value="{{ old('feeling') }}" required autofocus>
                 <option value="Happy">Happy</option>
@@ -35,7 +34,7 @@
                 <option value="Speechless">Speechless</option>
                 <option value="Relaxed">Relaxed</option>
             </select>
-        </div>
+        </div> -->
         
         <br>
 

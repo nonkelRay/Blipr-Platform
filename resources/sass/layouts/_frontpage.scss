@@ -16,9 +16,12 @@
           .large-title {
               display: none;
           }
-        img {
+        .img-container {
             width: 100%;
             margin-bottom: 25px;
+            img {
+                width: 100%;
+            }
         }
         .text {
             p {
@@ -150,11 +153,12 @@
                 .mobile-title {
                     display: none;
                 }
-                img {
+                .img-container {
                     width: 50%;
                     margin-right: 25px;
                 }
                 .text {
+                    width: 50%;
                     .large-title {
                         display: block;
                         // margin-bottom: 25px;
@@ -190,6 +194,9 @@
                   width: 50%;
                   margin-bottom: 0px;
               }
+              .text {
+                  width: 50%;
+              }
             }
         }
         .store {
@@ -197,6 +204,7 @@
                 display: flex;
                 align-items: center;
                 .text {
+                    width: 50%;
                     .download {
                         margin-top: 75px;
                     }

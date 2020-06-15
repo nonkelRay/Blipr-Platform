@@ -10,6 +10,7 @@
                 @csrf
                 <input  class="field" type="text" name="title" placeholder="Event name" value="{{ old('title') }}" required autocomplete="title" autofocus>
                 <input class="field" type="text" name="artist" placeholder="Artist name" value="{{ old('artist') }}" required autocomplete="artist" autofocus>
+                <input class="field" type="text" name="link_socials" placeholder="Link to event" value="{{ old('link_socials') }}" required autocomplete="link_socials" autofocus>
                 <input class="field" type="date" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
                 <input type="file" name="image" id="image" class="inputfile" value="{{ old('image') }}" accept="image/*" required autocomplete="image" autofocus>
                 <label for="image">Click to upload photo</label>
