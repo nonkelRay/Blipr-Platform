@@ -52,7 +52,7 @@ class BlipController extends Controller
         $blip = new Blip();
         $blip->video = $video;
         $blip->description = $request->input('description');
-        //$blip->feeling = $request->input('feeling');
+        $blip->feeling = $request->input('feeling');
         $blip->user_id = Auth::user()->id;
         $blip->event_id = 1;
         $blip->active = true;
