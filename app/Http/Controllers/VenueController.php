@@ -11,11 +11,7 @@ class VenueController extends Controller
     }
 
     /**
-<<<<<<< HEAD
      * Show the venue dashboard.
-=======
-     * Show the application dashboard.
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */

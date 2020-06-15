@@ -26,12 +26,6 @@ Route::get('/', 'LandingController@index');
 // authentication routes for user
 Auth::routes();
 
-<<<<<<< HEAD
-=======
-// homepage users
-Route::get('/home', 'HomeController@index')->name('home');
-
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
 // facebook login
 Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
@@ -64,7 +58,6 @@ Route::post('/venue/login', 'Auth\LoginController@handleVenueLogin');
 
 // homepage venues
 Route::get('/venue/home', 'VenueController@index')->name('venue/home');
-<<<<<<< HEAD
 
 // show all venue events
 Route::get('/venue/events', 'EventController@index')->name('venue/events');
@@ -81,5 +74,3 @@ Route::get('/venue/events/{id}/upload', 'EventController@uploadVideo');
 Route::post('/venue/events/{id}/upload', 'EventController@storeVideo');
 
 Route::resource('events', 'EventController');
-=======
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login

@@ -48,11 +48,7 @@ class LoginController extends Controller
         // check if credentials email and password match with one of the database venues
         $credentials = $request->only(['email', 'password']);
         if (Auth::guard('venue')->attempt($credentials)) {
-<<<<<<< HEAD
             return redirect()->route('venue/events');
-=======
-            return redirect()->route('venue/home');
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
         }
 
         return redirect()->back();

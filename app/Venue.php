@@ -25,12 +25,9 @@ class Venue extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-<<<<<<< HEAD
 
     public function events()
     {
         return $this->hasMany('\App\Event');
     }
-=======
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
 }

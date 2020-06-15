@@ -113,10 +113,6 @@ class RegisterController extends Controller
         $venue->password = Hash::make($request->input('password'));
         $venue->save();
 
-<<<<<<< HEAD
         return redirect('venue/events');
-=======
-        return redirect()->intended('venue/login');
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
     }
 }
