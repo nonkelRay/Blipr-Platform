@@ -1,5 +1,6 @@
 @import "common/variables";
 @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "~slick-carousel/slick/slick";
 /** Import theme styles */
 @import "resets/normalize";
 @import "resets/local.reset";
@@ -14,6 +15,7 @@
 @import "components/forms";
 @import "components/mobile-nav";
 @import "components/vertical-nav";
+@import "components/slider";
 
 @import "layouts/header-home";
 @import "layouts/footer";
@@ -28,6 +30,8 @@
 @import "layouts/user-blips";
 @import "layouts/user-blips-detail";
 @import "layouts/events-venue-detail";
+@import "layouts/events-venue-upload";
+@import "layouts/calendar";
 // // Variables
 // @import 'variables';
 

@@ -9,9 +9,9 @@
         <ul>
             <li>Info</li>
             <li><a href="/">Home</a></li>
-            <li><a href="#how">How it works</a></li>
-            <li><a href="#business">Venues</a></li>
-            <li><a href="#plans">Pricing</a></li>
+            {{-- <li><a href="#how">How it works</a></li> --}}
+            <li><a href="{{ route('venue/login') }}">Venues</a></li>
+            <li><a href="{{ route('pricing') }}">Pricing</a></li>
         </ul>
         <ul>
             <li>Platform</li>
