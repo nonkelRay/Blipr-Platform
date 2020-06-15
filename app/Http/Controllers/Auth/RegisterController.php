@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::SUBS;
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -88,6 +88,30 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'date_of_birth' => $data['date_of_birth'],
             'password' => Hash::make($data['password']),
+            'subscription' => 'Free',
         ]);
+    }
+
+    public function showVenueRegister()
+    {
+        return view('venue.register');
+    }
+
+    // create a new venue and redirect to login afterwards
+    public function handleVenueRegister(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|min:2|max:50',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:8',
+        ]);
+
+        $venue = new \App\Venue();
+        $venue->name = $request->input('name');
+        $venue->email = $request->input('email');
+        $venue->password = Hash::make($request->input('password'));
+        $venue->save();
+
+        return redirect('venue/events');
     }
 }

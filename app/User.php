@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'date_of_birth', 'password',
+        'name', 'email', 'date_of_birth', 'password', 'subscription',
     ];
 
     /**
@@ -37,4 +37,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function blips()
+    {
+        return $this->hasMany('\App\Blip');
+    }
 }

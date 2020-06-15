@@ -14,25 +14,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// DEFENITIONS:
+// GET -> show
+// POST -> store
+// DELETE -> destroy
+// UPDATE/PATCH -> update
+
 // landingpage
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', 'LandingController@index');
 
 // authentication routes
 Auth::routes();
-
-// homepage
-Route::get('/home', 'HomeController@index')->name('home');
 
 // facebook login
 Route::get('/login/facebook', 'Auth\SocialAuthFacebookController@redirectToProvider');
 Route::get('/login/facebook/callback', 'Auth\SocialAuthFacebookController@handleProviderCallback');
 
-// subscription page
-Route::get('/subscription', function () {
-    return view('user.subscription');
-});
+// specific landing detail eventpage
+Route::get('/calendar', 'LandingController@events')->name('calendar');
+Route::post('/calendar', 'LandingController@searchEvent');
+
+// pricing
+Route::view('/pricing', 'pricing')->name('pricing');
+
+// homepage users
+Route::get('/user/home', 'HomeController@index')->name('home');
+
+// user blips page
+Route::get('/user/blips', 'BlipController@index')->name('user/blips');
+
+// hidden route for creating blips easy
+Route::get('/user/blips/create', 'BlipController@createBlip');
+Route::post('/user/blips/create', 'BlipController@storeBlip');
+// user blip in detail
+Route::get('/user/blips/{id}', 'BlipController@detail');
 
 // authentication routes for venues
 Route::get('/venue/register', 'VenueController@register');
@@ -40,4 +55,24 @@ Route::post('/venue/register', 'VenueController@handleRegister');
 Route::get('/venue/login', 'VenueController@login');
 Route::post('/venue/login', 'VenueController@handleLogin');
 
-Route::get('/venue/home', 'VenueController@index');
+Route::post('/venue/register', 'Auth\RegisterController@handleVenueRegister');
+Route::post('/venue/login', 'Auth\LoginController@handleVenueLogin');
+
+// homepage venues
+Route::get('/venue/home', 'VenueController@index')->name('venue/home');
+
+// show all venue events
+Route::get('/venue/events', 'EventController@index')->name('venue/events');
+
+// create event as venue
+Route::get('/venue/events/create', 'EventController@createEvent')->name('venue/events/create');
+Route::post('/venue/events/create', 'EventController@storeEvent');
+
+// show event details
+Route::get('/venue/events/{id}', 'EventController@detail');
+
+// upload event video
+Route::get('/venue/events/{id}/upload', 'EventController@uploadVideo');
+Route::post('/venue/events/{id}/upload', 'EventController@storeVideo');
+
+Route::resource('events', 'EventController');

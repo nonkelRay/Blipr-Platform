@@ -1,0 +1,34 @@
+.events-venue {
+    padding: 50px 0;
+    .container {
+        position: relative;
+        margin-bottom: 50px;
+        .alert {
+            margin-bottom: 25px;
+        }
+        .btn {
+            font-size: 14px;
+        }
+        .btn-center {
+            position: absolute;
+            bottom: -75px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .btn-fixed {
+            position: fixed;
+            bottom: 50px;
+        }
+        .upcoming-event {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid $black;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            .info {
+                max-width: 60%;
+            }
+        }
+    }
+}

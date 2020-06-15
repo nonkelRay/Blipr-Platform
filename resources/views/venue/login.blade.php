@@ -1,73 +1,54 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login Venue') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="login-venue main-content">
+    <div class="filler"></div>
+    <div class="container">
+        {{-- <img src="{{ asset('images/venue-black.png') }}" alt=""> --}}
+        <div class="info info--large">
+            <img src="{{ asset('images/venue-logo.png') }}" alt="">
+            <p>This is where we welcome our participating venues.
+            We made a platform where venues can add their events. This way our users will get a heads up of your upcoming event. After the show you will be able to upload the recordings of the concert. Basically all the features you need to make your venue Blipr-ready in one place!
+            <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> </p>
         </div>
+        <form class="form login-form" method="POST" action="">
+            <h1>Venue login</h1>
+            <p class="info info--small">
+                This is where we welcome our participating venues.
+                We made a platform where venues can add their events. This way our users will get a heads up of your upcoming event. After the show you will be able to upload the recordings of the concert. Basically all the features you need to make your venue Blipr-ready in one place!
+                <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> 
+            </p>
+            @csrf
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+            <input id="email" type="email" placeholder="E-mail" class="form-control field @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <input id="password" type="password" placeholder="Password" class="form-control field @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                <label class="form-check-label" for="remember">
+                    {{ __('Remember Me') }}
+                </label>
+            </div>
+            <button type="submit" class="btn btn-submit">
+                {{ __('Login') }}
+            </button>
+            <div class="options">
+                @if (Route::has('password.request'))
+                    <a class="btn-link" href="{{ route('password.request') }}">
+                        {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
+                <a class="btn-link" href="{{ route('login') }}">Not a venue?</a>
+            </div>
+        </form>
     </div>
 </div>
 @endsection

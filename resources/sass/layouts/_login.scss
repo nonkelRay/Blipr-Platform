@@ -1,0 +1,62 @@
+.login {
+    background-color: $black;
+    padding: 50px 0;
+    .container {
+
+        h1 {
+            color: $white;
+        }
+        .hero {
+            width: 100%;
+        }
+        .form {
+            max-width: 350px;
+            h1 {
+                display: none;
+            }
+        }
+    }
+}
+@media print, screen and(min-width: 768px) {
+    .login .container {
+        min-height: 700px;
+    }
+}
+@media print, screen and (min-width: 1024px) {
+    .login {
+        overflow: hidden;
+        .container {
+            display: flex;
+            overflow: hidden;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            h1 {
+                display: none;
+            }
+            .hero {
+                width: 90%;
+                position: absolute;
+                left: -300px;
+                bottom: -150px;
+            }
+            .form {
+                position: relative;
+                z-index: 10;
+                margin: 0;
+                // margin-left: 60%;
+                h1 {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media print, screen and(min-width: 1440px) {
+    .login {
+        .container {
+            overflow: visible;
+        }
+    }
+}
