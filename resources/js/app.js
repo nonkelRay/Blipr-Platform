@@ -5,6 +5,8 @@
  */
 
 // require('./bootstrap');
+window.$ = window.jQuery = require('jquery');
+require("slick-carousel");
 
 window.onload = function(){
     // mobile menu
@@ -41,5 +43,5 @@ window.onload = function(){
             }
         });
     });
-
+    // slick-slider
 }
