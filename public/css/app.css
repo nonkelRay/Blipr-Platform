@@ -704,6 +704,8 @@ button {
   text-transform: uppercase;
   transition: all 0.3s ease;
   font-weight: bold;
+  position: relative;
+  z-index: 10;
 }
 .btn:hover {
   color: #d9d9d9;
@@ -990,18 +992,33 @@ button {
     display: flex;
   }
 }
+.slider .slick-slide {
+  margin: 0 75px;
+  width: 200px;
+}
 .slider .artist {
   background-image: url("/images/artist.png");
   background-repeat: no-repeat;
-  width: 150px;
   height: 100px;
   display: flex !important;
   justify-content: center;
   align-items: center;
   border-radius: 24px;
   background-position: center;
+  background-size: cover;
+}
+.slider .artist h2 {
+  padding: 25px 0;
 }
 
+@media print, screen and (min-width: 1024px) {
+  .slider .slick-slide {
+    width: 300px;
+  }
+  .slider .slick-slide .artist {
+    height: 150px;
+  }
+}
 .home-nav {
   background-color: black;
   height: 60px;
@@ -1178,11 +1195,17 @@ button {
   margin-right: auto;
   margin-left: auto;
 }
-.frontpage .business .container img {
+.frontpage .business .container .business-pic {
   display: block;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
+}
+.frontpage .business .container .text img {
+  width: 100px;
+  margin-right: auto;
+  margin-left: 0;
   margin-bottom: 25px;
 }
 .frontpage .business .container .text p {
@@ -1249,8 +1272,9 @@ button {
     display: none;
   }
   .frontpage .hero .container .img-container {
-    width: 50%;
-    margin-right: 25px;
+    width: 70%;
+    margin-left: -19%;
+    margin-right: 6%;
   }
   .frontpage .hero .container .text {
     width: 50%;
@@ -1277,7 +1301,7 @@ button {
     position: relative;
     align-items: center;
   }
-  .frontpage .business .container img {
+  .frontpage .business .container .business-pic {
     position: relative;
     left: -25px;
     bottom: -25px;
@@ -1302,8 +1326,33 @@ button {
     width: 50%;
     margin-left: 25px;
   }
+  .frontpage .shows {
+    padding-bottom: 75px;
+  }
 }
 @media print, screen and (min-width: 1024px) {
+  .frontpage .hero {
+    padding-bottom: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+  .frontpage .hero .container::after {
+    content: "";
+    display: block;
+    background-image: url("/images/bandje-side.png");
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    z-index: 0;
+  }
+  .frontpage .hero .container .img-container {
+    margin-left: -14%;
+    margin-right: 0;
+  }
   .frontpage .tutorial .container h1 {
     margin-bottom: 75px;
   }
@@ -1313,7 +1362,8 @@ button {
     margin-bottom: 75px;
   }
   .frontpage .business {
-    padding-bottom: 25px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
   .frontpage .business .container img {
     left: -50px;
@@ -1321,12 +1371,18 @@ button {
     width: 60%;
     margin-bottom: 0px;
   }
+  .frontpage .business .container .text img {
+    width: 150px;
+  }
   .frontpage .partners h1 {
     text-align: center;
     margin-bottom: 75px;
   }
   .frontpage .store .container .text {
     margin-right: 60px;
+  }
+  .frontpage .shows {
+    padding-bottom: 100px;
   }
 }
 .login {
@@ -1523,6 +1579,10 @@ button {
 .login-venue .container .info--large {
   display: none;
 }
+.login-venue .container .info--large img {
+  width: 150px;
+  margin-bottom: 50px;
+}
 .login-venue .container .info {
   margin-bottom: 25px;
 }
@@ -1549,7 +1609,8 @@ button {
   }
   .login-venue .container .info--large {
     display: block;
-    background-color: #F2F2F2;
+    background-color: black;
+    color: #F2F2F2;
     width: 50%;
     padding: 50px;
     margin-bottom: 0;
@@ -1580,7 +1641,7 @@ button {
 }
 @media print, screen and (min-width: 1440px) {
   .login-venue .filler {
-    background-color: #F2F2F2;
+    background-color: black;
     position: absolute;
     left: 0;
     width: 50%;

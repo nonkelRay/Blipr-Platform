@@ -4,11 +4,13 @@
 <div class="login-venue main-content">
     <div class="filler"></div>
     <div class="container">
-        <p class="info info--large">
-            This is where we welcome our participating venues.
+        {{-- <img src="{{ asset('images/venue-black.png') }}" alt=""> --}}
+        <div class="info info--large">
+            <img src="{{ asset('images/venue-logo.png') }}" alt="">
+            <p>This is where we welcome our participating venues.
             We made a platform where venues can add their events. This way our users will get a heads up of your upcoming event. After the show you will be able to upload the recordings of the concert. Basically all the features you need to make your venue Blipr-ready in one place!
-            <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> 
-        </p>
+            <span>Are you interested in getting a venue account? <br> Contact us at <a href="mailto:">venue@blipr.app</a></span> </p>
+        </div>
         <form class="form login-form" method="POST" action="">
             <h1>Venue login</h1>
             <p class="info info--small">

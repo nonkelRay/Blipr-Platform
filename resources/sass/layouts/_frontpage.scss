@@ -55,7 +55,7 @@
   }
   .business {
       .container {
-        img {
+        .business-pic {
             display: block;
             width: 70%;
             margin-left: auto;
@@ -63,6 +63,12 @@
             margin-bottom: 25px;
         }
         .text {
+            img {
+                width: 100px;
+                margin-right: auto;
+                margin-left: 0;
+                margin-bottom: 25px;
+            }
             p {
                 margin-bottom: 25px;
             }
@@ -159,8 +165,9 @@
                     display: none;
                 }
                 .img-container {
-                    width: 50%;
-                    margin-right: 25px;
+                    width: 70%;
+                    margin-left: -19%;
+                    margin-right: 6%;
                 }
                 .text {
                     width: 50%;
@@ -192,7 +199,7 @@
                 display: flex;
                 position: relative;
                 align-items: center;
-              img {
+              .business-pic {
                   position: relative;
                   left: -25px;
                   bottom: -25px;
@@ -201,6 +208,9 @@
               }
               .text {
                   width: 50%;
+                //   img {
+                //       width: 200px;
+                //   }
               }
             }
         }
@@ -221,11 +231,39 @@
                 }
             }   
         }
+        .shows {
+            padding-bottom: 75px;
+        }
     }
 }
 
 @media print, screen and (min-width: 1024px) {
     .frontpage {
+        .hero {
+            padding-bottom: 150px;
+            position: relative;
+            overflow: hidden;
+            .container {
+                // position: relative;
+                &::after {
+                    content: '';
+                    display: block;
+                    background-image: url('/images/bandje-side.png');
+                    background-size: cover;
+                    background-position: center;
+                    width: 400px;
+                    height: 200px;
+                    position: absolute;
+                    bottom: -25px;
+                    right: 0px;
+                    z-index: 0;
+                }
+                .img-container {
+                    margin-left: -14%;
+                    margin-right: 0;
+                }
+            }
+        }
         .tutorial {
             .container {
                 h1 {
@@ -241,13 +279,19 @@
                 }
         }
         .business {
-            padding-bottom: 25px;
+            padding-bottom: 0;
+            padding-top: 0;
             .container {
               img {
                   left: -50px;
                   bottom: -50px;
                   width: 60%;
                   margin-bottom: 0px;
+              }
+              .text {
+                  img {
+                      width: 150px;
+                  }
               }
             }
         }
@@ -263,6 +307,9 @@
                     margin-right: 60px;
                 }
             }
+        }
+        .shows {
+            padding-bottom: 100px;
         }
     }
 }
