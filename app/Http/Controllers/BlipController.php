@@ -46,7 +46,7 @@ class BlipController extends Controller
             //'feeling' => 'required',
         ]);
 
-        $video = $request->video->store('blips');
+        $video = $request->video->store('public/blips');
 
         // add data to new Blip
         $blip = new Blip();
