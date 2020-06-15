@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -46,7 +48,11 @@ class LoginController extends Controller
         // check if credentials email and password match with one of the database venues
         $credentials = $request->only(['email', 'password']);
         if (Auth::guard('venue')->attempt($credentials)) {
+<<<<<<< HEAD
             return redirect()->route('venue/events');
+=======
+            return redirect()->route('venue/home');
+>>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
         }
 
         return redirect()->back();

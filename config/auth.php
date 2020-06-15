@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -46,6 +45,11 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'venue' => [
+            'driver' => 'session',
+            'provider' => 'venues',
+        ],
     ],
 
     /*
@@ -69,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'venues' => [
+            'driver' => 'eloquent',
+            'model' => App\Venue::class,
         ],
 
         // 'users' => [
@@ -99,6 +108,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'venues' => [
+            'provider' => 'venues',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*
@@ -113,5 +128,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
 ];

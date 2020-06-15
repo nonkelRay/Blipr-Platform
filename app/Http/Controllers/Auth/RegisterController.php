@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -41,7 +42,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Get a validator for an incoming user registration request.
      *
      * @param array $data
      *
@@ -112,6 +113,10 @@ class RegisterController extends Controller
         $venue->password = Hash::make($request->input('password'));
         $venue->save();
 
+<<<<<<< HEAD
         return redirect('venue/events');
+=======
+        return redirect()->intended('venue/login');
+>>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
     }
 }
