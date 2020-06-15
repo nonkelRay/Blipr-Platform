@@ -118,7 +118,7 @@
         </section>
         <section class="business">
             <div class="container">
-                <img class="business-pic" src="{{ asset('images/business.png') }}" alt="">
+                <img class="business-pic" src="{{ asset('images/venue-gif.gif') }}" alt="">
                 <div class="text">
                     <img src="{{ asset('images/venue-black.png') }}" alt="">
                     <p>Since the music scene depends on the hard work and dedication of venues and event organizers we want to give them something in return. Next to a digitalised experience of their concerts we will offer a commission for every Blipr user. This way we can expand our Blipr family and work towards a better music experience worldwide.</p>

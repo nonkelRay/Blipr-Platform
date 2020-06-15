@@ -1,0 +1,24 @@
+.events-venue-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        width: 100%;
+        .form-container {
+            text-align: center;
+            width: 100%;
+            .event-form {
+                width: 100%;
+                h1 {
+                    margin-bottom: 75px;
+                }
+                .inputfile + label {
+                    width: fit-content;
+                    margin: 50px auto;
+                    display: block;
+                }
+
+            }
+        }
+    }
+}
