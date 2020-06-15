@@ -14038,6 +14038,11 @@ window.onload = function () {
       }
     });
   }); // slick-slider
+
+  $('.slider').slick({
+    slidesToShow: 5,
+    dots: false
+  });
 };
 
 /***/ }),

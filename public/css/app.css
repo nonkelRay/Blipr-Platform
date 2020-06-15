@@ -1134,6 +1134,15 @@ button {
   }
 }
 
+.shows {
+  position: relative;
+}
+
+.shows .slider {
+  position: absolute;
+  width: 100%;
+}
+
 .home-nav {
   background-color: black;
   height: 60px;
