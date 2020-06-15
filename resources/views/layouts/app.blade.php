@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'Blipr') }}</title>
 
+    <link rel="icon" type="image/png" href="{{ @asset('images/favicon/Favicon.png') }}" media="screen">
+
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

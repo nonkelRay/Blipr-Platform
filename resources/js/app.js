@@ -7,6 +7,10 @@
 // require('./bootstrap');
 window.$ = window.jQuery = require('jquery');
 require("slick-carousel");
+const jQueryBridget = require('jquery-bridget');
+const Isotope = require("isotope-layout");
+
+jQueryBridget('isotope', Isotope, $);
 
 window.onload = function(){
     // mobile menu
@@ -55,19 +59,35 @@ window.onload = function(){
         pauseOnHover: false,
         autoplaySpeed: 0,
         speed: 5000,
-        // responsive: [
-        //     {
-        //       breakpoint: 1200,
-        //       settings: {
-        //         // slidesToShow: 3,
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 600,
-        //       settings: {
-        //         // slidesToShow: 1,
-        //       }
-        //     }
-        // ]
     });
+
+    //isotop filter
+    const grid = $('.isotope-grid').isotope({
+        // options
+        itemSelector: '.isotope-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+            description: '.description',
+            aritst: '.artist',
+            venue: '.venue',
+        } 
+      });
+
+      $('.filter-button-group button').on( 'click', function() {
+        const filterValue = $(this).attr('data-filter');
+        grid.isotope({ filter: filterValue });
+      });
+
+      $('.sort-by-button-group').on( 'click', 'button', function() {
+        var sortByValue = $(this).attr('data-sort-by');
+        grid.isotope({ sortBy: sortByValue });
+      });
+
+      $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $( this ).addClass('is-checked');
+        });
+      });
 }

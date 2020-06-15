@@ -1890,6 +1890,58 @@ button {
   padding-left: 25px;
   padding-right: 25px;
 }
+.main-app .your-blips .container .filters {
+  display: flex;
+  flex-direction: column;
+}
+.main-app .your-blips .container .filters .button-group {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+.main-app .your-blips .container .filters .button-group span {
+  position: relative;
+}
+.main-app .your-blips .container .filters .button-group span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+}
+.main-app .your-blips .container .filters .button-group button {
+  text-transform: capitalize;
+}
+.main-app .your-blips .container .filters .button-group .emo {
+  background-image: url("/images/emotional_red.png");
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 99999px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  margin: 0 5px;
+}
+.main-app .your-blips .container .filters .button-group .hap {
+  background-image: url("/images/happy_red.png");
+}
+.main-app .your-blips .container .filters .button-group .ene {
+  background-image: url("/images/energetic_red.png");
+}
+.main-app .your-blips .container .filters .button-group .rel {
+  background-image: url("/images/relaxed_red.png");
+}
+.main-app .your-blips .container .filters .button-group .spe {
+  background-image: url("/images/speechless_red.png");
+}
+.main-app .your-blips .container .filters .button-group .is-checked {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  color: #F72806;
+}
 .main-app .your-blips .container .blips-container {
   display: grid;
   justify-items: center;
@@ -1904,16 +1956,24 @@ button {
   height: 150px;
   margin: 25px;
   display: flex;
+  flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
 }
-.main-app .your-blips .container .blips-container .blip span {
+.main-app .your-blips .container .blips-container .blip .description {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 @media print, screen and (min-width: 768px) {
+  .main-app .your-blips .container .filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1924,6 +1984,15 @@ button {
   }
 }
 @media print, screen and (min-width: 1440px) {
+  .main-app .your-blips .container .filters {
+    align-items: center;
+  }
+  .main-app .your-blips .container .filters .filter-container {
+    display: flex;
+  }
+  .main-app .your-blips .container .filters .filter-container .button-group {
+    margin: 50px;
+  }
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
