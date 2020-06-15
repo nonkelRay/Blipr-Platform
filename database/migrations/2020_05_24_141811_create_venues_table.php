@@ -12,11 +12,7 @@ class CreateVenuesTable extends Migration
     public function up()
     {
         Schema::create('venues', function (Blueprint $table) {
-<<<<<<< HEAD
             $table->increments('id', true);
-=======
-            $table->id();
->>>>>>> parent of 7fcf52d... Merge pull request #5 from nonkelRay/revert-4-feature/venue-can-login
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
