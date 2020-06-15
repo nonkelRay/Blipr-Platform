@@ -23,18 +23,23 @@
             <input type="text" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
         </div>
 
-        <br>
 
-        <!-- <div>
+        <p>
+        1: Happy
+        <br>
+        2: Emotional
+        <br>
+        3: Energetic
+        <br>
+        4: Speechless
+        <br>
+        5: Relaxed 
+        </p>
+
+        <div>
             <label for="feeling">{{ __('Feeling') }}</label>
-            <select name="feeling" form="feelingform" value="{{ old('feeling') }}" required autofocus>
-                <option value="Happy">Happy</option>
-                <option value="Emotional">Emotional</option>
-                <option value="Energetic">Energetic</option>
-                <option value="Speechless">Speechless</option>
-                <option value="Relaxed">Relaxed</option>
-            </select>
-        </div> -->
+            <input type="text" name="feeling" value="{{ old('feeling') }}" required autocomplete="feeling" autofocus>
+        </div>
         
         <br>
 

@@ -15,7 +15,7 @@ class CreateBlipsTable extends Migration
             $table->increments('id', true);
             $table->string('video');
             $table->string('description');
-            //$table->string('feeling')->nullable();
+            $table->string('feeling')->nullable();
             $table->integer('heartbeat')->nullable();
             $table->integer('user_id')->unsigned();
             $table->integer('event_id')->unsigned();

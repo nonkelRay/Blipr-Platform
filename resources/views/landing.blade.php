@@ -42,6 +42,9 @@
         </script>
         <!-- End Google Tag Manager -->
 
+        <!-- Mailchimp -->
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c422f71116982fc0fc65ef74f/f710971e8abc49e2bea974fd5.js");</script>
+
         <!-- FACEBOOK AND TWITTER CARD -->
         <meta property="og:url"                content="https://www.blipr.app/" />
         <meta property="og:type"               content="Landingpage" />
@@ -189,10 +192,5 @@
         </section>
         @include('partials.mobile-footer')
         @include('partials.footer-home')
-        
-
-        <!-- Mailchimp pop-up script -->
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c422f71116982fc0fc65ef74f/f710971e8abc49e2bea974fd5.js");</script>
-
     </body>
 </html>
