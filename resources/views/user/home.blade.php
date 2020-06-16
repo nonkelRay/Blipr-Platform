@@ -59,7 +59,7 @@
                 </div>
             @endfor --}}
             @foreach ($events as $event)
-                <div class="event" style="background-image: url('{{ asset('storage/app/public/' . $event->image) }}')"> 
+                <div class="event" style="background-image: url('{{ asset('public/' . $event->image) }}')"> 
                     <span>{{ $event->artist }}</span>
                 </div>
                 @if ($loop->iteration == 5)
