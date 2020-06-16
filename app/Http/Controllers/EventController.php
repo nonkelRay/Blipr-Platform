@@ -48,7 +48,7 @@ class EventController extends Controller
             'image' => 'required|image',
         ]);
 
-        $image = $request->image->store('public/events');
+        $image = $request->image->store('events');
 
         // add data to new Event
         $event = new Event();
@@ -82,7 +82,7 @@ class EventController extends Controller
     {
         $event = Event::where('id', $id)->first();
 
-        $video = $request->video->store('public/video_link');
+        $video = $request->video->store('video_link');
 
         $event->video_link = $video;
         $event->save();
