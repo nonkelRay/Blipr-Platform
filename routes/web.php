@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -74,3 +75,7 @@ Route::get('/venue/events/{id}/upload', 'EventController@uploadVideo');
 Route::post('/venue/events/{id}/upload', 'EventController@storeVideo');
 
 Route::resource('events', 'EventController');
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
