@@ -10,13 +10,15 @@
                 <span>Wat een blip</span>
             </div>
             @endfor --}}
-            @foreach ($blips as $blip)
+            @forelse($blips as $blip)
             <a href="blips/{{$blip->id}}">
                 <div class="blip">   
                     <span>{{ $blip->description }}</span>
                 </div>
             </a>
-            @endforeach
+            @empty
+                <span>Download the app and make some blips!</span>
+            @endforelse
         </div>
     </div>
 </div>
