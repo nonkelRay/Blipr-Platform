@@ -56,7 +56,9 @@
                     <span class="venue">{{ $blip->event->venue_name }}</span>
                 </div>
             </a>
-            @endforeach
+            @empty
+                <span>Download the app and make some blips!</span>
+            @endforelse
         </div>
     </div>
 </div>
