@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blipr</title>
 
-        <link rel="icon" type="image/png" href="images/favicon/Favicon.png" media="screen">
+        <link rel="icon" type="image/png" href="{{ @asset('images/favicon/Favicon.png') }}" media="screen">
 
         <!-- SEO -->
 
