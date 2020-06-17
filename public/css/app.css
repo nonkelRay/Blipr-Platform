@@ -676,7 +676,7 @@ h3 {
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .container {
@@ -699,7 +699,7 @@ button {
   background-color: #F72806;
   display: inline-block;
   color: #F2F2F2;
-  padding: 10px 20px;
+  padding: 15px 25px;
   border-radius: 24px;
   text-transform: uppercase;
   transition: all 0.3s ease;
@@ -1013,6 +1013,7 @@ button {
 }
 .slider .artist h2 {
   padding: 25px 0;
+  color: #F2F2F2;
 }
 
 @media print, screen and (min-width: 1024px) {
@@ -1174,6 +1175,7 @@ button {
 }
 .frontpage .hero .container .img-container img {
   width: 100%;
+  transform: scale(-1);
 }
 .frontpage .hero .container .text p {
   margin-bottom: 25px;
@@ -1190,6 +1192,7 @@ button {
 }
 .frontpage .tutorial .container .steps .img-container {
   width: 100%;
+  position: relative;
 }
 .frontpage .tutorial .container .steps .img-container span {
   color: #F2F2F2;
@@ -1200,6 +1203,12 @@ button {
 .frontpage .tutorial .container .steps .img-container img {
   width: 100%;
   border-radius: 100%;
+}
+.frontpage .tutorial .container .steps .img-container .number {
+  border-radius: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .frontpage .tutorial .container .btn {
   margin-top: 25px;
@@ -1248,11 +1257,12 @@ button {
   padding-bottom: 50px;
 }
 .frontpage .shows h1 {
+  color: #F2F2F2;
   padding-left: 25px;
   margin-bottom: 50px;
 }
 .frontpage .shows h1::after {
-  color: #F2F2F2;
+  color: black;
 }
 .frontpage .partners .container .partner-logos {
   padding: 50px 0;
@@ -1890,6 +1900,58 @@ button {
   padding-left: 25px;
   padding-right: 25px;
 }
+.main-app .your-blips .container .filters {
+  display: flex;
+  flex-direction: column;
+}
+.main-app .your-blips .container .filters .button-group {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+.main-app .your-blips .container .filters .button-group span {
+  position: relative;
+}
+.main-app .your-blips .container .filters .button-group span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+}
+.main-app .your-blips .container .filters .button-group button {
+  text-transform: capitalize;
+}
+.main-app .your-blips .container .filters .button-group .emo {
+  background-image: url("/images/emotional_red.png");
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 99999px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  margin: 0 5px;
+}
+.main-app .your-blips .container .filters .button-group .hap {
+  background-image: url("/images/happy_red.png");
+}
+.main-app .your-blips .container .filters .button-group .ene {
+  background-image: url("/images/energetic_red.png");
+}
+.main-app .your-blips .container .filters .button-group .rel {
+  background-image: url("/images/relaxed_red.png");
+}
+.main-app .your-blips .container .filters .button-group .spe {
+  background-image: url("/images/speechless_red.png");
+}
+.main-app .your-blips .container .filters .button-group .is-checked {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  color: #F72806;
+}
 .main-app .your-blips .container .blips-container {
   display: grid;
   justify-items: center;
@@ -1904,16 +1966,24 @@ button {
   height: 150px;
   margin: 25px;
   display: flex;
+  flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
 }
-.main-app .your-blips .container .blips-container .blip span {
+.main-app .your-blips .container .blips-container .blip .description {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 @media print, screen and (min-width: 768px) {
+  .main-app .your-blips .container .filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1924,6 +1994,15 @@ button {
   }
 }
 @media print, screen and (min-width: 1440px) {
+  .main-app .your-blips .container .filters {
+    align-items: center;
+  }
+  .main-app .your-blips .container .filters .filter-container {
+    display: flex;
+  }
+  .main-app .your-blips .container .filters .filter-container .button-group {
+    margin: 50px;
+  }
   .main-app .your-blips .container .blips-container {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -2089,8 +2168,11 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.calendar .container .header-shows h1:after {
+.calendar .container .header-shows h1 {
   color: #F2F2F2;
+}
+.calendar .container .header-shows h1:after {
+  color: black;
 }
 .calendar .container .header-shows form .input-group {
   display: flex;
@@ -2125,6 +2207,7 @@ button {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  color: #F2F2F2;
 }
 
 @media print, screen and (min-width: 768px) {

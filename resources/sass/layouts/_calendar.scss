@@ -6,8 +6,9 @@
     .container {
         .header-shows {
             h1 {
+                color: $white;
                 &:after {
-                    color: $white;
+                    color: $black;
                 }
             }
             form {
@@ -46,6 +47,7 @@
                     font-size: 24px;
                     font-weight: bold;
                     text-align: center;
+                    color: $white;
                 }
            }
         }

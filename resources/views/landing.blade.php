@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Blipr</title>
 
-        <link rel="icon" type="image/png" href="images/favicon/Favicon.png" media="screen">
+        <link rel="icon" type="image/png" href="{{ @asset('images/favicon/Favicon.png') }}" media="screen">
 
         <!-- SEO -->
 
@@ -110,16 +110,19 @@
                 <h1>How it works</h1>
                 <div class="steps">
                     <div class="img-container">
+                        <img class="number" src="{{ asset('images/number-1.png') }}" alt="">
                         <img src="{{ asset('images/animation-1.gif') }}" alt="">
                         <span>Connect your wearable</span>
                     </div>
                     <div class="img-container">
+                        <img class="number" src="{{ asset('images/number-2.png') }}" alt="">
                         <img src="{{ asset('images/animation-2.gif') }}" alt="">
                         <span>Blip your favourite moments</span>
                     </div>
                     <div class="img-container">
+                        <img class="number" src="{{ asset('images/number-3.png') }}" alt="">
                         <img src="{{ asset('images/animation-3.gif') }}" alt="">
-                        <span>Relive them at any time</span>
+                        <span>Relive your concerts at any time</span>
                     </div>
                 </div>
                 {{-- <a href="#" class="btn">read more</a> --}}
