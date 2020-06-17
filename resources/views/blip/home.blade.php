@@ -48,7 +48,7 @@
                 </div>
             </a> --}}
             {{-- @endfor --}}
-            @foreach ($blips as $blip)
+            @forelse ($blips as $blip)
             <a href="blips/{{$blip->id}}" class="isotope-item {{ $blip->feeling }}">
                 <div class="blip">   
                     <span class="description">{{ $blip->description }}</span>
