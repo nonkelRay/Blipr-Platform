@@ -49,7 +49,7 @@
                 @default
                     <img src="{{ @asset('images/happy_red.png') }}" alt="">
             @endswitch
-            <img src="{{ @asset('images/happy_red.png') }}" alt="">
+           
             <div class="heart">
                 <img src="{{ @asset('images/heart.png') }}" alt="">
                 <span>{{ $blip->heartbeat }}</span>
