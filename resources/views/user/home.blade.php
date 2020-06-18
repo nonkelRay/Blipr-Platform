@@ -40,9 +40,9 @@
         <h1>{{ $hello }}, {{ Auth::user()->name }}</h1>
         <div class="welcome-container">
             <div class="info">
-                <p>You have made <span>36</span> blips at <span>6</span> concerts</p>
+                <p>You have made <span>7</span> blips at <span>3</span> concerts</p>
                 <p>Your highest heartbeat at a concert was <span>146</span> BPM</p>
-                <p>You experienced <span>14</span> of your blips as <span>happy</span></p>
+                <p>You experienced <span>3</span> of your blips as <span>happy</span></p>
             </div>
             <div class="img-container">
                 <img src="{{ @asset('images/party.png') }}" alt="">
