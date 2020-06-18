@@ -156,7 +156,7 @@
                 <h1>Upcoming shows</h1>
                 <div class="slider">
                     @foreach ($events as $event)
-                        <div class="artist">
+                        <div class="artist" style="background-image: url('{{ asset('storage/' . $event->image) }}')">
                             <a href="{{ route('calendar') }}"><h2>{{ $event->artist }}</h2></a>
                         </div>
                     @endforeach
